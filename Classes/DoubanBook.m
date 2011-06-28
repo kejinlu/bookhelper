@@ -31,6 +31,25 @@
 			title,author,summary,alternateURL,coverImageURL,isbn10,isbn13,pages,tranlator,price,publisher,binding,authorIntro,rating];
 }
 
+- (void)dealloc{
+	[self setApiURL:nil];
+	[self setTitle:nil];
+	[self setAuthor:nil];
+	[self setSummary:nil];
+	[self setAlternateURL:nil];
+	[self setCoverImageURL:nil];
+	[self setIsbn10:nil];
+	[self setIsbn13:nil];
+	[self setPages:nil];
+	[self setTranlator:nil];
+	[self setPrice:nil];
+	[self setPublisher:nil];
+	[self setBinding:nil];
+	[self setAuthorIntro:nil];
+	[self setRating:nil];
+	
+	[super dealloc];
+}
 + (DoubanBook *)doubanBookFromXMLElement:(GDataXMLElement *)rootElement{
 	DoubanBook *book = [[DoubanBook alloc] init];
 	book.title = [[[rootElement elementsForName:@"title"] objectAtIndex:0] stringValue];
