@@ -1,0 +1,698 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* bookhelperAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* bookhelperAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		28216C970DB411BC00E5133A /* BookSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* BookSearchViewController.m */; };
+		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
+		A303133913B9F8C4000BD08C /* PathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A303133813B9F8C4000BD08C /* PathUtilities.m */; };
+		A303139C13BA2123000BD08C /* BookGetHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = A303139B13BA2123000BD08C /* BookGetHistory.m */; };
+		A303142713BA32BF000BD08C /* BookGetHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A303142613BA32BF000BD08C /* BookGetHistoryViewController.m */; };
+		A3791DB813B5C13B0061C4DC /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A3791DB613B5C13B0061C4DC /* icon.png */; };
+		A3791DB913B5C13B0061C4DC /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3791DB713B5C13B0061C4DC /* icon@2x.png */; };
+		A3791DC413B5D1240061C4DC /* BarCodeScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3791DC313B5D1240061C4DC /* BarCodeScannerViewController.m */; };
+		A3791DC613B5D1460061C4DC /* BarCodeScannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3791DC513B5D1460061C4DC /* BarCodeScannerView.xib */; };
+		A3791F7213B62AA90061C4DC /* ScannerOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3791F7113B62AA90061C4DC /* ScannerOverlayView.m */; };
+		A3791F7613B632D30061C4DC /* scan.wav in Resources */ = {isa = PBXBuildFile; fileRef = A3791F7513B632D30061C4DC /* scan.wav */; };
+		A379223713B7258A0061C4DC /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A379223613B7258A0061C4DC /* LoadingViewController.m */; };
+		A379225A13B725A30061C4DC /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A379225913B725A30061C4DC /* LoadingView.xib */; };
+		A391AC8F13B90986003CFB40 /* BookGetHistoryDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A391AC8E13B90986003CFB40 /* BookGetHistoryDatabase.m */; };
+		A3B17E2C13B78D3F007B100E /* comment.png in Resources */ = {isa = PBXBuildFile; fileRef = A3B17E2A13B78D3F007B100E /* comment.png */; };
+		A3B17E2D13B78D3F007B100E /* comment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3B17E2B13B78D3F007B100E /* comment@2x.png */; };
+		A3B17EBD13B79A23007B100E /* CHANGES_AND_TODO_LIST.txt in Resources */ = {isa = PBXBuildFile; fileRef = A3B17EB213B79A23007B100E /* CHANGES_AND_TODO_LIST.txt */; };
+		A3B17EBE13B79A23007B100E /* CONTRIBUTORS.txt in Resources */ = {isa = PBXBuildFile; fileRef = A3B17EB313B79A23007B100E /* CONTRIBUTORS.txt */; };
+		A3B17EBF13B79A23007B100E /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B17EB513B79A23007B100E /* FMDatabase.m */; };
+		A3B17EC013B79A23007B100E /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B17EB713B79A23007B100E /* FMDatabaseAdditions.m */; };
+		A3B17EC213B79A23007B100E /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B17EBA13B79A23007B100E /* FMResultSet.m */; };
+		A3B17EC313B79A23007B100E /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = A3B17EBB13B79A23007B100E /* LICENSE.txt */; };
+		A3B17EC413B79A23007B100E /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = A3B17EBC13B79A23007B100E /* README.markdown */; };
+		A3B17ED813B79A7A007B100E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B17ED713B79A7A007B100E /* libsqlite3.dylib */; };
+		A3B1864713B8CB84007B100E /* ShadowedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B1864113B8CB84007B100E /* ShadowedTableView.m */; };
+		A3B1864813B8CB84007B100E /* ClearLabelsCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B1864213B8CB84007B100E /* ClearLabelsCellView.m */; };
+		A3B1864913B8CB84007B100E /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B1864313B8CB84007B100E /* GradientView.m */; };
+		A3D375EB13B35C8B00632293 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D375EA13B35C8B00632293 /* history.png */; };
+		A3D3775213B395FC00632293 /* DoubanURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D3775113B395FC00632293 /* DoubanURLConnection.m */; };
+		A3D377EB13B39FD200632293 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D377E513B39FD200632293 /* libzbar.a */; };
+		A3D377EC13B39FD200632293 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D377E713B39FD200632293 /* zbar-back.png */; };
+		A3D377ED13B39FD200632293 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = A3D377E813B39FD200632293 /* zbar-help.html */; };
+		A3D377EE13B39FD200632293 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D377E913B39FD200632293 /* zbar-helpicons.png */; };
+		A3D377EF13B39FD200632293 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D377EA13B39FD200632293 /* zbar-samples.png */; };
+		A3D3780813B3A4F800632293 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D3780713B3A4F800632293 /* QuartzCore.framework */; };
+		A3D3781E13B3A51300632293 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D3781D13B3A51300632293 /* CoreVideo.framework */; };
+		A3D3783113B3A56100632293 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D3782D13B3A55C00632293 /* libiconv.dylib */; };
+		A3D3783213B3A56100632293 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D3782F13B3A55C00632293 /* libicucore.dylib */; };
+		A3D3787113B3A6AE00632293 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D3787013B3A6AE00632293 /* CoreMedia.framework */; };
+		A3D3787D13B3A6E700632293 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D3787C13B3A6E700632293 /* AVFoundation.framework */; };
+		A3D37FCF13B4D6A800632293 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D37FCE13B4D6A800632293 /* NSString+URLEncoding.m */; };
+		A3D37FD913B4D83500632293 /* BookDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D37FD813B4D83500632293 /* BookDetailViewController.m */; };
+		A3D37FDB13B4D85800632293 /* BookDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3D37FDA13B4D85800632293 /* BookDetailView.xib */; };
+		A3D37FE213B4E1CE00632293 /* BookPriceComparisonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D37FE113B4E1CE00632293 /* BookPriceComparisonViewController.m */; };
+		A3D3807D13B50DAC00632293 /* BookPriceComparisonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3D3807C13B50DAC00632293 /* BookPriceComparisonView.xib */; };
+		A3D380C513B5147900632293 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D380C413B5147900632293 /* barcode.png */; };
+		A3D382DA13B57D5E00632293 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D382D813B57D5E00632293 /* home.png */; };
+		A3D382DB13B57D5E00632293 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D382D913B57D5E00632293 /* home@2x.png */; };
+		A3D382E213B57EA100632293 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D382E113B57EA100632293 /* search.png */; };
+		A3D3833713B5889800632293 /* archive.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D3833513B5889800632293 /* archive.png */; };
+		A3D3833813B5889800632293 /* archive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D3833613B5889800632293 /* archive@2x.png */; };
+		A3D383C313B5B51100632293 /* bookSearchTableViewCell.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D383C113B5B51100632293 /* bookSearchTableViewCell.png */; };
+		A3D383C413B5B51100632293 /* bookSearchTableViewCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D383C213B5B51100632293 /* bookSearchTableViewCell@2x.png */; };
+		A3E3FA7E13B22F590023DC27 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E3FA7C13B22F590023DC27 /* GDataXMLNode.m */; };
+		A3E3FA9413B22FE40023DC27 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E3FA9313B22FE40023DC27 /* libxml2.dylib */; };
+		A3E3FAA213B230500023DC27 /* DoubanBook.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E3FAA113B230500023DC27 /* DoubanBook.m */; };
+		A3E3FB2C13B23BD50023DC27 /* DoubanConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E3FB2B13B23BD50023DC27 /* DoubanConnector.m */; };
+		A3E3FD2E13B2D1520023DC27 /* BookSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3E3FD2A13B2D1520023DC27 /* BookSearchView.xib */; };
+		A3E3FD2F13B2D1520023DC27 /* HistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3E3FD2B13B2D1520023DC27 /* HistoryView.xib */; };
+		A3E3FD3013B2D1520023DC27 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3E3FD2C13B2D1520023DC27 /* MainWindow.xib */; };
+		A3E3FE6E13B2F20F0023DC27 /* history@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E3FE6D13B2F20F0023DC27 /* history@2x.png */; };
+		A3E3FE7D13B2F2660023DC27 /* bookhelper-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3E3FE7C13B2F2660023DC27 /* bookhelper-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* bookhelperAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bookhelperAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* bookhelperAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bookhelperAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* bookhelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bookhelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28216C950DB411BC00E5133A /* BookSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookSearchViewController.h; sourceTree = "<group>"; };
+		28216C960DB411BC00E5133A /* BookSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookSearchViewController.m; sourceTree = "<group>"; };
+		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28A0AB4B0D9B1048005BE974 /* bookhelper_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bookhelper_Prefix.pch; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A303133713B9F8C4000BD08C /* PathUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathUtilities.h; sourceTree = "<group>"; };
+		A303133813B9F8C4000BD08C /* PathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathUtilities.m; sourceTree = "<group>"; };
+		A303139A13BA2123000BD08C /* BookGetHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookGetHistory.h; sourceTree = "<group>"; };
+		A303139B13BA2123000BD08C /* BookGetHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookGetHistory.m; sourceTree = "<group>"; };
+		A303142513BA32BF000BD08C /* BookGetHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookGetHistoryViewController.h; sourceTree = "<group>"; };
+		A303142613BA32BF000BD08C /* BookGetHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookGetHistoryViewController.m; sourceTree = "<group>"; };
+		A3791DB613B5C13B0061C4DC /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = /Users/Luke/Projects/bookhelper/Resources/icon.png; sourceTree = "<absolute>"; };
+		A3791DB713B5C13B0061C4DC /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/icon@2x.png"; sourceTree = "<absolute>"; };
+		A3791DC213B5D1240061C4DC /* BarCodeScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarCodeScannerViewController.h; sourceTree = "<group>"; };
+		A3791DC313B5D1240061C4DC /* BarCodeScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarCodeScannerViewController.m; sourceTree = "<group>"; };
+		A3791DC513B5D1460061C4DC /* BarCodeScannerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BarCodeScannerView.xib; path = /Users/Luke/Projects/bookhelper/Resources/BarCodeScannerView.xib; sourceTree = "<absolute>"; };
+		A3791F7013B62AA90061C4DC /* ScannerOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScannerOverlayView.h; sourceTree = "<group>"; };
+		A3791F7113B62AA90061C4DC /* ScannerOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScannerOverlayView.m; sourceTree = "<group>"; };
+		A3791F7513B632D30061C4DC /* scan.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = scan.wav; path = /Users/Luke/Projects/bookhelper/Resources/scan.wav; sourceTree = "<absolute>"; };
+		A379223513B7258A0061C4DC /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
+		A379223613B7258A0061C4DC /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewController.m; sourceTree = "<group>"; };
+		A379225913B725A30061C4DC /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoadingView.xib; path = /Users/Luke/Projects/bookhelper/Resources/LoadingView.xib; sourceTree = "<absolute>"; };
+		A391AC8D13B90986003CFB40 /* BookGetHistoryDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookGetHistoryDatabase.h; sourceTree = "<group>"; };
+		A391AC8E13B90986003CFB40 /* BookGetHistoryDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookGetHistoryDatabase.m; sourceTree = "<group>"; };
+		A3B17E2A13B78D3F007B100E /* comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = comment.png; path = /Users/Luke/Projects/bookhelper/Resources/comment.png; sourceTree = "<absolute>"; };
+		A3B17E2B13B78D3F007B100E /* comment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "comment@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/comment@2x.png"; sourceTree = "<absolute>"; };
+		A3B17EB213B79A23007B100E /* CHANGES_AND_TODO_LIST.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CHANGES_AND_TODO_LIST.txt; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/CHANGES_AND_TODO_LIST.txt; sourceTree = "<absolute>"; };
+		A3B17EB313B79A23007B100E /* CONTRIBUTORS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CONTRIBUTORS.txt; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/CONTRIBUTORS.txt; sourceTree = "<absolute>"; };
+		A3B17EB413B79A23007B100E /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/FMDatabase.h; sourceTree = "<absolute>"; };
+		A3B17EB513B79A23007B100E /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/FMDatabase.m; sourceTree = "<absolute>"; };
+		A3B17EB613B79A23007B100E /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/FMDatabaseAdditions.h; sourceTree = "<absolute>"; };
+		A3B17EB713B79A23007B100E /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/FMDatabaseAdditions.m; sourceTree = "<absolute>"; };
+		A3B17EB913B79A23007B100E /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/FMResultSet.h; sourceTree = "<absolute>"; };
+		A3B17EBA13B79A23007B100E /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/FMResultSet.m; sourceTree = "<absolute>"; };
+		A3B17EBB13B79A23007B100E /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/LICENSE.txt; sourceTree = "<absolute>"; };
+		A3B17EBC13B79A23007B100E /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.markdown; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/README.markdown; sourceTree = "<absolute>"; };
+		A3B17ED713B79A7A007B100E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		A3B1864113B8CB84007B100E /* ShadowedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShadowedTableView.m; path = /Users/Luke/Projects/bookhelper/Classes/ShadowedTableView.m; sourceTree = "<absolute>"; };
+		A3B1864213B8CB84007B100E /* ClearLabelsCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClearLabelsCellView.m; path = /Users/Luke/Projects/bookhelper/Classes/ClearLabelsCellView.m; sourceTree = "<absolute>"; };
+		A3B1864313B8CB84007B100E /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GradientView.m; path = /Users/Luke/Projects/bookhelper/Classes/GradientView.m; sourceTree = "<absolute>"; };
+		A3B1864413B8CB84007B100E /* ShadowedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShadowedTableView.h; path = /Users/Luke/Projects/bookhelper/Classes/ShadowedTableView.h; sourceTree = "<absolute>"; };
+		A3B1864513B8CB84007B100E /* ClearLabelsCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClearLabelsCellView.h; path = /Users/Luke/Projects/bookhelper/Classes/ClearLabelsCellView.h; sourceTree = "<absolute>"; };
+		A3B1864613B8CB84007B100E /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GradientView.h; path = /Users/Luke/Projects/bookhelper/Classes/GradientView.h; sourceTree = "<absolute>"; };
+		A3D375EA13B35C8B00632293 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = history.png; path = /Users/Luke/Projects/bookhelper/Resources/history.png; sourceTree = "<absolute>"; };
+		A3D3775013B395FC00632293 /* DoubanURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanURLConnection.h; sourceTree = "<group>"; };
+		A3D3775113B395FC00632293 /* DoubanURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanURLConnection.m; sourceTree = "<group>"; };
+		A3D377D213B39FD200632293 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Decoder.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar/Decoder.h; sourceTree = "<absolute>"; };
+		A3D377D313B39FD200632293 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Exception.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar/Exception.h; sourceTree = "<absolute>"; };
+		A3D377D413B39FD200632293 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Image.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar/Image.h; sourceTree = "<absolute>"; };
+		A3D377D513B39FD200632293 /* ImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageScanner.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar/ImageScanner.h; sourceTree = "<absolute>"; };
+		A3D377D613B39FD200632293 /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Processor.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar/Processor.h; sourceTree = "<absolute>"; };
+		A3D377D713B39FD200632293 /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scanner.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar/Scanner.h; sourceTree = "<absolute>"; };
+		A3D377D813B39FD200632293 /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Symbol.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar/Symbol.h; sourceTree = "<absolute>"; };
+		A3D377D913B39FD200632293 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Video.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar/Video.h; sourceTree = "<absolute>"; };
+		A3D377DA13B39FD200632293 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Window.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar/Window.h; sourceTree = "<absolute>"; };
+		A3D377DB13B39FD200632293 /* zbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zbar.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar.h; sourceTree = "<absolute>"; };
+		A3D377DC13B39FD200632293 /* ZBarCaptureReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBarCaptureReader.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/ZBarCaptureReader.h; sourceTree = "<absolute>"; };
+		A3D377DD13B39FD200632293 /* ZBarHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBarHelpController.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/ZBarHelpController.h; sourceTree = "<absolute>"; };
+		A3D377DE13B39FD200632293 /* ZBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBarImage.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/ZBarImage.h; sourceTree = "<absolute>"; };
+		A3D377DF13B39FD200632293 /* ZBarImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBarImageScanner.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/ZBarImageScanner.h; sourceTree = "<absolute>"; };
+		A3D377E013B39FD200632293 /* ZBarReaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBarReaderController.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/ZBarReaderController.h; sourceTree = "<absolute>"; };
+		A3D377E113B39FD200632293 /* ZBarReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBarReaderView.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/ZBarReaderView.h; sourceTree = "<absolute>"; };
+		A3D377E213B39FD200632293 /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBarReaderViewController.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/ZBarReaderViewController.h; sourceTree = "<absolute>"; };
+		A3D377E313B39FD200632293 /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBarSDK.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/ZBarSDK.h; sourceTree = "<absolute>"; };
+		A3D377E413B39FD200632293 /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBarSymbol.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/ZBarSymbol.h; sourceTree = "<absolute>"; };
+		A3D377E513B39FD200632293 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzbar.a; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/libzbar.a; sourceTree = "<absolute>"; };
+		A3D377E713B39FD200632293 /* zbar-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zbar-back.png"; path = "/Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Resources/zbar-back.png"; sourceTree = "<absolute>"; };
+		A3D377E813B39FD200632293 /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "zbar-help.html"; path = "/Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Resources/zbar-help.html"; sourceTree = "<absolute>"; };
+		A3D377E913B39FD200632293 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zbar-helpicons.png"; path = "/Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Resources/zbar-helpicons.png"; sourceTree = "<absolute>"; };
+		A3D377EA13B39FD200632293 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zbar-samples.png"; path = "/Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Resources/zbar-samples.png"; sourceTree = "<absolute>"; };
+		A3D3780713B3A4F800632293 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A3D3781D13B3A51300632293 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		A3D3782D13B3A55C00632293 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		A3D3782F13B3A55C00632293 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		A3D3787013B3A6AE00632293 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		A3D3787C13B3A6E700632293 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A3D37FCD13B4D6A800632293 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		A3D37FCE13B4D6A800632293 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		A3D37FD713B4D83500632293 /* BookDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetailViewController.h; sourceTree = "<group>"; };
+		A3D37FD813B4D83500632293 /* BookDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetailViewController.m; sourceTree = "<group>"; };
+		A3D37FDA13B4D85800632293 /* BookDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BookDetailView.xib; path = /Users/Luke/Projects/bookhelper/Resources/BookDetailView.xib; sourceTree = "<absolute>"; };
+		A3D37FE013B4E1CE00632293 /* BookPriceComparisonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookPriceComparisonViewController.h; sourceTree = "<group>"; };
+		A3D37FE113B4E1CE00632293 /* BookPriceComparisonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookPriceComparisonViewController.m; sourceTree = "<group>"; };
+		A3D3807C13B50DAC00632293 /* BookPriceComparisonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BookPriceComparisonView.xib; path = /Users/Luke/Projects/bookhelper/Resources/BookPriceComparisonView.xib; sourceTree = "<absolute>"; };
+		A3D380C413B5147900632293 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = barcode.png; path = /Users/Luke/Projects/bookhelper/Resources/barcode.png; sourceTree = "<absolute>"; };
+		A3D382D813B57D5E00632293 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = /Users/Luke/Projects/bookhelper/Resources/home.png; sourceTree = "<absolute>"; };
+		A3D382D913B57D5E00632293 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/home@2x.png"; sourceTree = "<absolute>"; };
+		A3D382E113B57EA100632293 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = search.png; path = /Users/Luke/Projects/bookhelper/Resources/search.png; sourceTree = "<absolute>"; };
+		A3D3833513B5889800632293 /* archive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = archive.png; path = /Users/Luke/Projects/bookhelper/Resources/archive.png; sourceTree = "<absolute>"; };
+		A3D3833613B5889800632293 /* archive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "archive@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/archive@2x.png"; sourceTree = "<absolute>"; };
+		A3D383C113B5B51100632293 /* bookSearchTableViewCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bookSearchTableViewCell.png; path = /Users/Luke/Projects/bookhelper/Resources/bookSearchTableViewCell.png; sourceTree = "<absolute>"; };
+		A3D383C213B5B51100632293 /* bookSearchTableViewCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bookSearchTableViewCell@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/bookSearchTableViewCell@2x.png"; sourceTree = "<absolute>"; };
+		A3E3FA7C13B22F590023DC27 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = /Users/Luke/Projects/bookhelper/Classes/GDataXMLNode.m; sourceTree = "<absolute>"; };
+		A3E3FA7D13B22F590023DC27 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = /Users/Luke/Projects/bookhelper/Classes/GDataXMLNode.h; sourceTree = "<absolute>"; };
+		A3E3FA9313B22FE40023DC27 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		A3E3FAA013B230500023DC27 /* DoubanBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanBook.h; sourceTree = "<group>"; };
+		A3E3FAA113B230500023DC27 /* DoubanBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanBook.m; sourceTree = "<group>"; };
+		A3E3FB2A13B23BD50023DC27 /* DoubanConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanConnector.h; sourceTree = "<group>"; };
+		A3E3FB2B13B23BD50023DC27 /* DoubanConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanConnector.m; sourceTree = "<group>"; };
+		A3E3FD2A13B2D1520023DC27 /* BookSearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BookSearchView.xib; path = /Users/Luke/Projects/bookhelper/Resources/BookSearchView.xib; sourceTree = "<absolute>"; };
+		A3E3FD2B13B2D1520023DC27 /* HistoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HistoryView.xib; path = /Users/Luke/Projects/bookhelper/Resources/HistoryView.xib; sourceTree = "<absolute>"; };
+		A3E3FD2C13B2D1520023DC27 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = /Users/Luke/Projects/bookhelper/Resources/MainWindow.xib; sourceTree = "<absolute>"; };
+		A3E3FE6D13B2F20F0023DC27 /* history@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "history@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/history@2x.png"; sourceTree = "<absolute>"; };
+		A3E3FE7C13B2F2660023DC27 /* bookhelper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "bookhelper-Info.plist"; path = "/Users/Luke/Projects/bookhelper/bookhelper-Info.plist"; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3D3783113B3A56100632293 /* libiconv.dylib in Frameworks */,
+				A3D3783213B3A56100632293 /* libicucore.dylib in Frameworks */,
+				A3D3781E13B3A51300632293 /* CoreVideo.framework in Frameworks */,
+				A3D3780813B3A4F800632293 /* QuartzCore.framework in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */,
+				A3E3FA9413B22FE40023DC27 /* libxml2.dylib in Frameworks */,
+				A3D377EB13B39FD200632293 /* libzbar.a in Frameworks */,
+				A3D3787113B3A6AE00632293 /* CoreMedia.framework in Frameworks */,
+				A3D3787D13B3A6E700632293 /* AVFoundation.framework in Frameworks */,
+				A3B17ED813B79A7A007B100E /* libsqlite3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A391AC8C13B90748003CFB40 /* Database */,
+				A3791F6F13B62A790061C4DC /* View */,
+				A3E3FE4D13B2EE800023DC27 /* Utilities */,
+				A3E3FD2213B2D0FD0023DC27 /* Controller */,
+				A3E3FA9E13B230310023DC27 /* Douban */,
+				1D3623240D0F684500981E51 /* bookhelperAppDelegate.h */,
+				1D3623250D0F684500981E51 /* bookhelperAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* bookhelper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* bookhelper */ = {
+			isa = PBXGroup;
+			children = (
+				A3D377CD13B39FD200632293 /* Libraries */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				A3E3FD2813B2D1520023DC27 /* Resources */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = bookhelper;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				28A0AB4B0D9B1048005BE974 /* bookhelper_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3E3FA9313B22FE40023DC27 /* libxml2.dylib */,
+				A3D3780713B3A4F800632293 /* QuartzCore.framework */,
+				A3D3781D13B3A51300632293 /* CoreVideo.framework */,
+				A3D3782D13B3A55C00632293 /* libiconv.dylib */,
+				A3D3782F13B3A55C00632293 /* libicucore.dylib */,
+				A3D3787013B3A6AE00632293 /* CoreMedia.framework */,
+				A3D3787C13B3A6E700632293 /* AVFoundation.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765070DF74369002DB57D /* CoreGraphics.framework */,
+				A3B17ED713B79A7A007B100E /* libsqlite3.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3791F6F13B62A790061C4DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A3B1864413B8CB84007B100E /* ShadowedTableView.h */,
+				A3B1864113B8CB84007B100E /* ShadowedTableView.m */,
+				A3B1864613B8CB84007B100E /* GradientView.h */,
+				A3B1864313B8CB84007B100E /* GradientView.m */,
+				A3B1864513B8CB84007B100E /* ClearLabelsCellView.h */,
+				A3B1864213B8CB84007B100E /* ClearLabelsCellView.m */,
+				A3791F7013B62AA90061C4DC /* ScannerOverlayView.h */,
+				A3791F7113B62AA90061C4DC /* ScannerOverlayView.m */,
+				A379223513B7258A0061C4DC /* LoadingViewController.h */,
+				A379223613B7258A0061C4DC /* LoadingViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A391AC8C13B90748003CFB40 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				A391AC8D13B90986003CFB40 /* BookGetHistoryDatabase.h */,
+				A391AC8E13B90986003CFB40 /* BookGetHistoryDatabase.m */,
+				A303139A13BA2123000BD08C /* BookGetHistory.h */,
+				A303139B13BA2123000BD08C /* BookGetHistory.m */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		A3B17EB113B79A23007B100E /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				A3B17EB213B79A23007B100E /* CHANGES_AND_TODO_LIST.txt */,
+				A3B17EB313B79A23007B100E /* CONTRIBUTORS.txt */,
+				A3B17EB413B79A23007B100E /* FMDatabase.h */,
+				A3B17EB513B79A23007B100E /* FMDatabase.m */,
+				A3B17EB613B79A23007B100E /* FMDatabaseAdditions.h */,
+				A3B17EB713B79A23007B100E /* FMDatabaseAdditions.m */,
+				A3B17EB913B79A23007B100E /* FMResultSet.h */,
+				A3B17EBA13B79A23007B100E /* FMResultSet.m */,
+				A3B17EBB13B79A23007B100E /* LICENSE.txt */,
+				A3B17EBC13B79A23007B100E /* README.markdown */,
+			);
+			name = fmdb;
+			path = /Users/Luke/Projects/bookhelper/Libraries/fmdb;
+			sourceTree = "<absolute>";
+		};
+		A3D377CD13B39FD200632293 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A3B17EB113B79A23007B100E /* fmdb */,
+				A3D377CE13B39FD200632293 /* ZBarSDK */,
+			);
+			name = Libraries;
+			path = /Users/Luke/Projects/bookhelper/Libraries;
+			sourceTree = "<absolute>";
+		};
+		A3D377CE13B39FD200632293 /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				A3D377CF13B39FD200632293 /* Headers */,
+				A3D377E513B39FD200632293 /* libzbar.a */,
+				A3D377E613B39FD200632293 /* Resources */,
+			);
+			name = ZBarSDK;
+			path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK;
+			sourceTree = "<absolute>";
+		};
+		A3D377CF13B39FD200632293 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				A3D377D013B39FD200632293 /* ZBarSDK */,
+			);
+			name = Headers;
+			path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers;
+			sourceTree = "<absolute>";
+		};
+		A3D377D013B39FD200632293 /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				A3D377D113B39FD200632293 /* zbar */,
+				A3D377DB13B39FD200632293 /* zbar.h */,
+				A3D377DC13B39FD200632293 /* ZBarCaptureReader.h */,
+				A3D377DD13B39FD200632293 /* ZBarHelpController.h */,
+				A3D377DE13B39FD200632293 /* ZBarImage.h */,
+				A3D377DF13B39FD200632293 /* ZBarImageScanner.h */,
+				A3D377E013B39FD200632293 /* ZBarReaderController.h */,
+				A3D377E113B39FD200632293 /* ZBarReaderView.h */,
+				A3D377E213B39FD200632293 /* ZBarReaderViewController.h */,
+				A3D377E313B39FD200632293 /* ZBarSDK.h */,
+				A3D377E413B39FD200632293 /* ZBarSymbol.h */,
+			);
+			name = ZBarSDK;
+			path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK;
+			sourceTree = "<absolute>";
+		};
+		A3D377D113B39FD200632293 /* zbar */ = {
+			isa = PBXGroup;
+			children = (
+				A3D377D213B39FD200632293 /* Decoder.h */,
+				A3D377D313B39FD200632293 /* Exception.h */,
+				A3D377D413B39FD200632293 /* Image.h */,
+				A3D377D513B39FD200632293 /* ImageScanner.h */,
+				A3D377D613B39FD200632293 /* Processor.h */,
+				A3D377D713B39FD200632293 /* Scanner.h */,
+				A3D377D813B39FD200632293 /* Symbol.h */,
+				A3D377D913B39FD200632293 /* Video.h */,
+				A3D377DA13B39FD200632293 /* Window.h */,
+			);
+			name = zbar;
+			path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar;
+			sourceTree = "<absolute>";
+		};
+		A3D377E613B39FD200632293 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A3D377E713B39FD200632293 /* zbar-back.png */,
+				A3D377E813B39FD200632293 /* zbar-help.html */,
+				A3D377E913B39FD200632293 /* zbar-helpicons.png */,
+				A3D377EA13B39FD200632293 /* zbar-samples.png */,
+			);
+			name = Resources;
+			path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Resources;
+			sourceTree = "<absolute>";
+		};
+		A3E3FA7B13B22F430023DC27 /* Gdata */ = {
+			isa = PBXGroup;
+			children = (
+				A3E3FA7C13B22F590023DC27 /* GDataXMLNode.m */,
+				A3E3FA7D13B22F590023DC27 /* GDataXMLNode.h */,
+			);
+			name = Gdata;
+			sourceTree = "<group>";
+		};
+		A3E3FA9E13B230310023DC27 /* Douban */ = {
+			isa = PBXGroup;
+			children = (
+				A3D3775013B395FC00632293 /* DoubanURLConnection.h */,
+				A3D3775113B395FC00632293 /* DoubanURLConnection.m */,
+				A3E3FB2A13B23BD50023DC27 /* DoubanConnector.h */,
+				A3E3FB2B13B23BD50023DC27 /* DoubanConnector.m */,
+				A3E3FA9F13B2303D0023DC27 /* Models */,
+				A3E3FA7B13B22F430023DC27 /* Gdata */,
+			);
+			name = Douban;
+			sourceTree = "<group>";
+		};
+		A3E3FA9F13B2303D0023DC27 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A3E3FAA013B230500023DC27 /* DoubanBook.h */,
+				A3E3FAA113B230500023DC27 /* DoubanBook.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A3E3FD2213B2D0FD0023DC27 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				28216C950DB411BC00E5133A /* BookSearchViewController.h */,
+				28216C960DB411BC00E5133A /* BookSearchViewController.m */,
+				A3D37FD713B4D83500632293 /* BookDetailViewController.h */,
+				A3D37FD813B4D83500632293 /* BookDetailViewController.m */,
+				A3D37FE013B4E1CE00632293 /* BookPriceComparisonViewController.h */,
+				A3D37FE113B4E1CE00632293 /* BookPriceComparisonViewController.m */,
+				A3791DC213B5D1240061C4DC /* BarCodeScannerViewController.h */,
+				A3791DC313B5D1240061C4DC /* BarCodeScannerViewController.m */,
+				A303142513BA32BF000BD08C /* BookGetHistoryViewController.h */,
+				A303142613BA32BF000BD08C /* BookGetHistoryViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A3E3FD2813B2D1520023DC27 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A3B17E2A13B78D3F007B100E /* comment.png */,
+				A3B17E2B13B78D3F007B100E /* comment@2x.png */,
+				A3791F7513B632D30061C4DC /* scan.wav */,
+				A3791DB613B5C13B0061C4DC /* icon.png */,
+				A3791DB713B5C13B0061C4DC /* icon@2x.png */,
+				A3D383C113B5B51100632293 /* bookSearchTableViewCell.png */,
+				A3D383C213B5B51100632293 /* bookSearchTableViewCell@2x.png */,
+				A3D3833513B5889800632293 /* archive.png */,
+				A3D3833613B5889800632293 /* archive@2x.png */,
+				A3D382E113B57EA100632293 /* search.png */,
+				A3D382D813B57D5E00632293 /* home.png */,
+				A3D382D913B57D5E00632293 /* home@2x.png */,
+				A3D380C413B5147900632293 /* barcode.png */,
+				A3D375EA13B35C8B00632293 /* history.png */,
+				A3E3FE7C13B2F2660023DC27 /* bookhelper-Info.plist */,
+				A3E3FE6D13B2F20F0023DC27 /* history@2x.png */,
+				A3E3FD2A13B2D1520023DC27 /* BookSearchView.xib */,
+				A3E3FD2B13B2D1520023DC27 /* HistoryView.xib */,
+				A3E3FD2C13B2D1520023DC27 /* MainWindow.xib */,
+				A3D37FDA13B4D85800632293 /* BookDetailView.xib */,
+				A3D3807C13B50DAC00632293 /* BookPriceComparisonView.xib */,
+				A3791DC513B5D1460061C4DC /* BarCodeScannerView.xib */,
+				A379225913B725A30061C4DC /* LoadingView.xib */,
+			);
+			name = Resources;
+			path = /Users/Luke/Projects/bookhelper/Resources;
+			sourceTree = "<absolute>";
+		};
+		A3E3FE4D13B2EE800023DC27 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A3D37FCD13B4D6A800632293 /* NSString+URLEncoding.h */,
+				A3D37FCE13B4D6A800632293 /* NSString+URLEncoding.m */,
+				A303133713B9F8C4000BD08C /* PathUtilities.h */,
+				A303133813B9F8C4000BD08C /* PathUtilities.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* bookhelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "bookhelper" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bookhelper;
+			productName = bookhelper;
+			productReference = 1D6058910D05DD3D006BFB54 /* bookhelper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "bookhelper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* bookhelper */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* bookhelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3E3FD2E13B2D1520023DC27 /* BookSearchView.xib in Resources */,
+				A3E3FD2F13B2D1520023DC27 /* HistoryView.xib in Resources */,
+				A3E3FD3013B2D1520023DC27 /* MainWindow.xib in Resources */,
+				A3E3FE6E13B2F20F0023DC27 /* history@2x.png in Resources */,
+				A3E3FE7D13B2F2660023DC27 /* bookhelper-Info.plist in Resources */,
+				A3D375EB13B35C8B00632293 /* history.png in Resources */,
+				A3D377EC13B39FD200632293 /* zbar-back.png in Resources */,
+				A3D377ED13B39FD200632293 /* zbar-help.html in Resources */,
+				A3D377EE13B39FD200632293 /* zbar-helpicons.png in Resources */,
+				A3D377EF13B39FD200632293 /* zbar-samples.png in Resources */,
+				A3D37FDB13B4D85800632293 /* BookDetailView.xib in Resources */,
+				A3D3807D13B50DAC00632293 /* BookPriceComparisonView.xib in Resources */,
+				A3D380C513B5147900632293 /* barcode.png in Resources */,
+				A3D382DA13B57D5E00632293 /* home.png in Resources */,
+				A3D382DB13B57D5E00632293 /* home@2x.png in Resources */,
+				A3D382E213B57EA100632293 /* search.png in Resources */,
+				A3D3833713B5889800632293 /* archive.png in Resources */,
+				A3D3833813B5889800632293 /* archive@2x.png in Resources */,
+				A3D383C313B5B51100632293 /* bookSearchTableViewCell.png in Resources */,
+				A3D383C413B5B51100632293 /* bookSearchTableViewCell@2x.png in Resources */,
+				A3791DB813B5C13B0061C4DC /* icon.png in Resources */,
+				A3791DB913B5C13B0061C4DC /* icon@2x.png in Resources */,
+				A3791DC613B5D1460061C4DC /* BarCodeScannerView.xib in Resources */,
+				A3791F7613B632D30061C4DC /* scan.wav in Resources */,
+				A379225A13B725A30061C4DC /* LoadingView.xib in Resources */,
+				A3B17E2C13B78D3F007B100E /* comment.png in Resources */,
+				A3B17E2D13B78D3F007B100E /* comment@2x.png in Resources */,
+				A3B17EBD13B79A23007B100E /* CHANGES_AND_TODO_LIST.txt in Resources */,
+				A3B17EBE13B79A23007B100E /* CONTRIBUTORS.txt in Resources */,
+				A3B17EC313B79A23007B100E /* LICENSE.txt in Resources */,
+				A3B17EC413B79A23007B100E /* README.markdown in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* bookhelperAppDelegate.m in Sources */,
+				28216C970DB411BC00E5133A /* BookSearchViewController.m in Sources */,
+				A3E3FA7E13B22F590023DC27 /* GDataXMLNode.m in Sources */,
+				A3E3FAA213B230500023DC27 /* DoubanBook.m in Sources */,
+				A3E3FB2C13B23BD50023DC27 /* DoubanConnector.m in Sources */,
+				A3D3775213B395FC00632293 /* DoubanURLConnection.m in Sources */,
+				A3D37FCF13B4D6A800632293 /* NSString+URLEncoding.m in Sources */,
+				A3D37FD913B4D83500632293 /* BookDetailViewController.m in Sources */,
+				A3D37FE213B4E1CE00632293 /* BookPriceComparisonViewController.m in Sources */,
+				A3791DC413B5D1240061C4DC /* BarCodeScannerViewController.m in Sources */,
+				A3791F7213B62AA90061C4DC /* ScannerOverlayView.m in Sources */,
+				A379223713B7258A0061C4DC /* LoadingViewController.m in Sources */,
+				A3B17EBF13B79A23007B100E /* FMDatabase.m in Sources */,
+				A3B17EC013B79A23007B100E /* FMDatabaseAdditions.m in Sources */,
+				A3B17EC213B79A23007B100E /* FMResultSet.m in Sources */,
+				A3B1864713B8CB84007B100E /* ShadowedTableView.m in Sources */,
+				A3B1864813B8CB84007B100E /* ClearLabelsCellView.m in Sources */,
+				A3B1864913B8CB84007B100E /* GradientView.m in Sources */,
+				A391AC8F13B90986003CFB40 /* BookGetHistoryDatabase.m in Sources */,
+				A303133913B9F8C4000BD08C /* PathUtilities.m in Sources */,
+				A303139C13BA2123000BD08C /* BookGetHistory.m in Sources */,
+				A303142713BA32BF000BD08C /* BookGetHistoryViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = bookhelper_Prefix.pch;
+				INFOPLIST_FILE = "bookhelper-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Luke/Projects/bookhelper/Libraries/ZBarSDK,
+				);
+				PRODUCT_NAME = bookhelper;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = bookhelper_Prefix.pch;
+				INFOPLIST_FILE = "bookhelper-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Luke/Projects/bookhelper/Libraries/ZBarSDK,
+				);
+				PRODUCT_NAME = bookhelper;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lu kejin (7ES269D2MX)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C3B85B81-DF62-4D70-839A-50D4815A3156";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lu kejin (7ES269D2MX)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C3B85B81-DF62-4D70-839A-50D4815A3156";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "bookhelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "bookhelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
