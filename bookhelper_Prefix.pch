@@ -6,3 +6,8 @@
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
 #endif
+
+//used for view tag
+#define STAR_BUTTON 12344
+#define BOOK_TITLE 12345
+#define BOOK_INFO  12346

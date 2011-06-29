@@ -24,6 +24,7 @@
 }
 
 
+
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
 	self.searchString = [searchBar text];
 	[data removeAllObjects];
@@ -91,9 +92,7 @@
 	if (!bookDetailViewController) {
 		bookDetailViewController = [[BookDetailViewController alloc] initWithNibName:@"BookDetailView" bundle:nil];
 		bookDetailViewController.title = @"图书详情";
-		//bookDetailViewController.navigationController = [self navigationController];
 	}
-	bookDetailViewController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Books" style:UIBarButtonItemStyleBordered target:self action:@selector(dismissView:)];
 	bookDetailViewController.book = book;
 	
 	[[self navigationController ] pushViewController:bookDetailViewController animated:YES];
@@ -123,7 +122,7 @@
 		cell = [[[ClearLabelsCellView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
 		cell.backgroundView = [[[GradientView alloc] init] autorelease];
 		UILabel	*myTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 5, 280, 31)];
-		myTextLabel.tag = @"BOOK_TITLE";
+		myTextLabel.tag = BOOK_TITLE;
 		myTextLabel.backgroundColor = [UIColor clearColor];
 		myTextLabel.textColor = [UIColor blackColor];
 		myTextLabel.textAlignment = UITextAlignmentLeft;
@@ -131,7 +130,7 @@
 		[cell.contentView addSubview:myTextLabel];
 		
 		UILabel	*myDetailLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 29, 280, 21)];
-		myDetailLabel.tag = @"BOOK_INFO";
+		myDetailLabel.tag = BOOK_INFO;
 		myDetailLabel.backgroundColor = [UIColor clearColor];
 		myDetailLabel.textColor = [UIColor grayColor];
 		myDetailLabel.textAlignment = UITextAlignmentLeft;
@@ -142,8 +141,8 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.textLabel.backgroundColor = [UIColor clearColor];
 	}
-	UILabel *textLabel = (UILabel *)[cell viewWithTag:@"BOOK_TITLE"];
-	UILabel	*detailLabel = (UILabel *)[cell viewWithTag:@"BOOK_INFO"];
+	UILabel *textLabel = (UILabel *)[cell viewWithTag:BOOK_TITLE];
+	UILabel	*detailLabel = (UILabel *)[cell viewWithTag:BOOK_INFO];
 	textLabel.text = ((DoubanBook *)[data objectAtIndex:indexPath.row]).title;
 	detailLabel.text = [NSString stringWithFormat:@"%@ / %@",
 						((DoubanBook *)[data objectAtIndex:indexPath.row]).author,
@@ -151,9 +150,7 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-	
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {	
 	NSString *urlString = ((DoubanBook *)[data objectAtIndex:indexPath.row]).apiURL;
 	if (!bookDetailViewController||![bookDetailViewController.book.apiURL isEqual:urlString]) {
 			[doubanConnector requestBookDataWithApiURL:urlString];
@@ -161,26 +158,13 @@
 	}else {
 		[[self navigationController ] pushViewController:bookDetailViewController animated:YES];
 	}
-
-
-	/*
-	if (!bookDetailViewController) {
-		bookDetailViewController = [[BookDetailViewController alloc] initWithNibName:@"BookDetailView" bundle:nil];
-		bookDetailViewController.title = @"图书详情";
-		//bookDetailViewController.navigationController = [self navigationController];
-	}
-	bookDetailViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
-																											  target:self
-																											  action:@selector(dismissView:)];
-	
-	[[self navigationController ] pushViewController:bookDetailViewController animated:YES];
-	 */
 }
 
-- (IBAction)dismissView:(id)sender{
-	[[self navigationController ] popViewControllerAnimated:YES];
-}
 	
+- (void)viewDidAppear:(BOOL)animated{
+	[resultTableView deselectRowAtIndexPath:[resultTableView indexPathForSelectedRow] animated:YES];
+
+}
 
 - (void)loadMore {
 	if (startIndex > totalResults) {

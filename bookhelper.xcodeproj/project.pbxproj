@@ -38,6 +38,11 @@
 		A3B1864713B8CB84007B100E /* ShadowedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B1864113B8CB84007B100E /* ShadowedTableView.m */; };
 		A3B1864813B8CB84007B100E /* ClearLabelsCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B1864213B8CB84007B100E /* ClearLabelsCellView.m */; };
 		A3B1864913B8CB84007B100E /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B1864313B8CB84007B100E /* GradientView.m */; };
+		A3B8C89513BB7FDC00028546 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = A3B8C89113BB7FDC00028546 /* star.png */; };
+		A3B8C89613BB7FDC00028546 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3B8C89213BB7FDC00028546 /* star@2x.png */; };
+		A3B8C89713BB7FDC00028546 /* unstar.png in Resources */ = {isa = PBXBuildFile; fileRef = A3B8C89313BB7FDC00028546 /* unstar.png */; };
+		A3B8C89813BB7FDC00028546 /* unstar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3B8C89413BB7FDC00028546 /* unstar@2x.png */; };
+		A3B8C93B13BB8A6600028546 /* TableUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B8C93A13BB8A6600028546 /* TableUIButton.m */; };
 		A3D375EB13B35C8B00632293 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D375EA13B35C8B00632293 /* history.png */; };
 		A3D3775213B395FC00632293 /* DoubanURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D3775113B395FC00632293 /* DoubanURLConnection.m */; };
 		A3D377EB13B39FD200632293 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D377E513B39FD200632293 /* libzbar.a */; };
@@ -73,6 +78,10 @@
 		A3E3FD3013B2D1520023DC27 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3E3FD2C13B2D1520023DC27 /* MainWindow.xib */; };
 		A3E3FE6E13B2F20F0023DC27 /* history@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E3FE6D13B2F20F0023DC27 /* history@2x.png */; };
 		A3E3FE7D13B2F2660023DC27 /* bookhelper-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3E3FE7C13B2F2660023DC27 /* bookhelper-Info.plist */; };
+		A3F0F8F613BA4C9700E8C732 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F0F8F413BA4C9700E8C732 /* more.png */; };
+		A3F0F8F713BA4C9700E8C732 /* more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F0F8F513BA4C9700E8C732 /* more@2x.png */; };
+		A3F0F8FA13BA4CA900E8C732 /* barcode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F0F8F813BA4CA900E8C732 /* barcode@2x.png */; };
+		A3F0F8FB13BA4CA900E8C732 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F0F8F913BA4CA900E8C732 /* search@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +133,12 @@
 		A3B1864413B8CB84007B100E /* ShadowedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShadowedTableView.h; path = /Users/Luke/Projects/bookhelper/Classes/ShadowedTableView.h; sourceTree = "<absolute>"; };
 		A3B1864513B8CB84007B100E /* ClearLabelsCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClearLabelsCellView.h; path = /Users/Luke/Projects/bookhelper/Classes/ClearLabelsCellView.h; sourceTree = "<absolute>"; };
 		A3B1864613B8CB84007B100E /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GradientView.h; path = /Users/Luke/Projects/bookhelper/Classes/GradientView.h; sourceTree = "<absolute>"; };
+		A3B8C89113BB7FDC00028546 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = /Users/Luke/Projects/bookhelper/Resources/star.png; sourceTree = "<absolute>"; };
+		A3B8C89213BB7FDC00028546 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/star@2x.png"; sourceTree = "<absolute>"; };
+		A3B8C89313BB7FDC00028546 /* unstar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = unstar.png; path = /Users/Luke/Projects/bookhelper/Resources/unstar.png; sourceTree = "<absolute>"; };
+		A3B8C89413BB7FDC00028546 /* unstar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "unstar@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/unstar@2x.png"; sourceTree = "<absolute>"; };
+		A3B8C93913BB8A6600028546 /* TableUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableUIButton.h; sourceTree = "<group>"; };
+		A3B8C93A13BB8A6600028546 /* TableUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableUIButton.m; sourceTree = "<group>"; };
 		A3D375EA13B35C8B00632293 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = history.png; path = /Users/Luke/Projects/bookhelper/Resources/history.png; sourceTree = "<absolute>"; };
 		A3D3775013B395FC00632293 /* DoubanURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanURLConnection.h; sourceTree = "<group>"; };
 		A3D3775113B395FC00632293 /* DoubanURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanURLConnection.m; sourceTree = "<group>"; };
@@ -185,6 +200,10 @@
 		A3E3FD2C13B2D1520023DC27 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = /Users/Luke/Projects/bookhelper/Resources/MainWindow.xib; sourceTree = "<absolute>"; };
 		A3E3FE6D13B2F20F0023DC27 /* history@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "history@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/history@2x.png"; sourceTree = "<absolute>"; };
 		A3E3FE7C13B2F2660023DC27 /* bookhelper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "bookhelper-Info.plist"; path = "/Users/Luke/Projects/bookhelper/bookhelper-Info.plist"; sourceTree = "<absolute>"; };
+		A3F0F8F413BA4C9700E8C732 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = more.png; path = /Users/Luke/Projects/bookhelper/Resources/more.png; sourceTree = "<absolute>"; };
+		A3F0F8F513BA4C9700E8C732 /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "more@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/more@2x.png"; sourceTree = "<absolute>"; };
+		A3F0F8F813BA4CA900E8C732 /* barcode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "barcode@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/barcode@2x.png"; sourceTree = "<absolute>"; };
+		A3F0F8F913BA4CA900E8C732 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "search@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/search@2x.png"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +304,8 @@
 				A3791F7113B62AA90061C4DC /* ScannerOverlayView.m */,
 				A379223513B7258A0061C4DC /* LoadingViewController.h */,
 				A379223613B7258A0061C4DC /* LoadingViewController.m */,
+				A3B8C93913BB8A6600028546 /* TableUIButton.h */,
+				A3B8C93A13BB8A6600028546 /* TableUIButton.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -447,6 +468,14 @@
 		A3E3FD2813B2D1520023DC27 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A3B8C89113BB7FDC00028546 /* star.png */,
+				A3B8C89213BB7FDC00028546 /* star@2x.png */,
+				A3B8C89313BB7FDC00028546 /* unstar.png */,
+				A3B8C89413BB7FDC00028546 /* unstar@2x.png */,
+				A3F0F8F813BA4CA900E8C732 /* barcode@2x.png */,
+				A3F0F8F913BA4CA900E8C732 /* search@2x.png */,
+				A3F0F8F413BA4C9700E8C732 /* more.png */,
+				A3F0F8F513BA4C9700E8C732 /* more@2x.png */,
 				A3B17E2A13B78D3F007B100E /* comment.png */,
 				A3B17E2B13B78D3F007B100E /* comment@2x.png */,
 				A3791F7513B632D30061C4DC /* scan.wav */,
@@ -566,6 +595,14 @@
 				A3B17EBE13B79A23007B100E /* CONTRIBUTORS.txt in Resources */,
 				A3B17EC313B79A23007B100E /* LICENSE.txt in Resources */,
 				A3B17EC413B79A23007B100E /* README.markdown in Resources */,
+				A3F0F8F613BA4C9700E8C732 /* more.png in Resources */,
+				A3F0F8F713BA4C9700E8C732 /* more@2x.png in Resources */,
+				A3F0F8FA13BA4CA900E8C732 /* barcode@2x.png in Resources */,
+				A3F0F8FB13BA4CA900E8C732 /* search@2x.png in Resources */,
+				A3B8C89513BB7FDC00028546 /* star.png in Resources */,
+				A3B8C89613BB7FDC00028546 /* star@2x.png in Resources */,
+				A3B8C89713BB7FDC00028546 /* unstar.png in Resources */,
+				A3B8C89813BB7FDC00028546 /* unstar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +636,7 @@
 				A303133913B9F8C4000BD08C /* PathUtilities.m in Sources */,
 				A303139C13BA2123000BD08C /* BookGetHistory.m in Sources */,
 				A303142713BA32BF000BD08C /* BookGetHistoryViewController.m in Sources */,
+				A3B8C93B13BB8A6600028546 /* TableUIButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

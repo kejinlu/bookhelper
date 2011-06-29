@@ -46,7 +46,8 @@
 
 - (id)initWithFrame:(CGRect)frame{
 	if (self = [super initWithFrame:frame]) {
-		    self.backgroundColor = [UIColor clearColor];
+		self.backgroundColor = [UIColor clearColor];
+		[self configOverlayOrientation];
 		[self initInfoView];
 		[self addSubview: infoView];
 		[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
@@ -76,7 +77,7 @@
 	CGContextSaveGState(context);
 	
 	CGRect squareRect;
-	switch (orientation) {
+	switch (overlayOrientation) {
 		case VERTICAL:
 			[[UIColor colorWithRed:0 green:0.675 blue:0.855 alpha:1.0] set];
 			squareRect = CGRectInset(rect, rect.size.width*0.1, rect.size.height*0.2);
@@ -127,20 +128,24 @@
 	CGContextRestoreGState(context);
 }
 
-- (void)cameraRotate:(NSNotification *)notification {
+- (void)configOverlayOrientation{
 	switch ([[UIDevice currentDevice] orientation]) {
 		case UIDeviceOrientationPortrait:
 		case UIDeviceOrientationPortraitUpsideDown:
-			orientation = VERTICAL;
+			overlayOrientation = VERTICAL;
 			break;
 		case UIDeviceOrientationLandscapeLeft:
 		case UIDeviceOrientationLandscapeRight:
-			orientation = HORIZONTAL;
+			overlayOrientation = HORIZONTAL;
 			break;
 		default:
 			break;
 	}
 	
+}
+
+- (void)cameraRotate:(NSNotification *)notification {
+	[self configOverlayOrientation];
 	[self setNeedsDisplay];
 }
 @end

@@ -13,7 +13,7 @@
 
 
 static BookGetHistoryDatabase *bookGetHistoryDatabase = nil;
-#define MAX_RESULTS_PERPAGE 16
+#define MAX_RESULTS_PERPAGE 10
 @implementation BookGetHistoryDatabase
 
 
@@ -63,10 +63,16 @@ static BookGetHistoryDatabase *bookGetHistoryDatabase = nil;
 	return result;
 }
 
+
+- (BOOL)updateBookHistory:(BookGetHistory *)history WithStarred:(BOOL)starred{
+	NSString *sql = @"update bookHistory set starred = ? where uid = ?";
+	return [db executeUpdate:sql,[NSNumber numberWithBool:starred],[NSNumber numberWithInt:history.uid]];
+}
+
 //delete
-- (BOOL)deleteBookHistoryWithId:(NSString *)id{
-	NSString *sql = @"delete from bookHistory where id = ?";
-	return [db executeUpdate:sql,id];
+- (BOOL)deleteBookHistoryWithUID:(NSInteger)uid{
+	NSString *sql = @"delete from bookHistory where uid = ?";
+	return [db executeUpdate:sql,[NSNumber numberWithInt:uid]];
 }
 
 - (BOOL)deleteAllBookHistories{

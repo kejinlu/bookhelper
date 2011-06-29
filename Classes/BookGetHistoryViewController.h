@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface BookGetHistoryViewController : UIViewController {
+@interface BookGetHistoryViewController : UIViewController<UIActionSheetDelegate> {
 	IBOutlet UITableView *historyTable;
 	
 	BOOL filterByStarred;
@@ -18,4 +18,11 @@
 	NSMutableArray *histories;
 }
 
+- (void)checkNavigationItemButtons;
+- (void)launchTrashMenu;
+- (void)edit:(id)sender;
+- (void)cancel:(id)sender;
+
+- (void)starHistory:(id)sender;
+- (void)segmentSwitch:(id)sender;
 @end

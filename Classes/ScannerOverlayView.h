@@ -15,9 +15,9 @@ typedef enum{
 
 @interface ScannerOverlayView : UIView {
 	UIView *infoView;
-	OverlayOrientation orientation;
+	OverlayOrientation overlayOrientation;
 }
-
+- (void)configOverlayOrientation;
 - (void)cameraRotate:(NSNotification *)notification ;
 - (void)drawSquareIndicatorWithContext:(CGContextRef)context;
 

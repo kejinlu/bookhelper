@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "FMDatabase.h"
 #import "DoubanBook.h"
+#import "BookGetHistory.h"
 
 @interface BookGetHistoryDatabase : NSObject {
 	FMDatabase *db;
@@ -18,9 +19,9 @@
 
 //add
 - (BOOL)addBookHistory:(DoubanBook*)doubanBook;
-
+- (BOOL)updateBookHistory:(BookGetHistory *)history WithStarred:(BOOL)starred;
 //delete
-- (BOOL)deleteBookHistoryWithId:(NSString *)id;
+- (BOOL)deleteBookHistoryWithUID:(NSInteger)uid;
 - (BOOL)deleteAllBookHistories;
 - (BOOL)deleteUnStarredBookHitories;
 
