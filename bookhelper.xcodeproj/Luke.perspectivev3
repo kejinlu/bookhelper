@@ -231,6 +231,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -271,8 +273,6 @@
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>A391AC8C13B90748003CFB40</string>
 								<string>A3791F6F13B62A790061C4DC</string>
-								<string>A3E3FD2213B2D0FD0023DC27</string>
-								<string>A3E3FA9E13B230310023DC27</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>A3E3FD2813B2D1520023DC27</string>
 								<string>1C37FBAC04509CD000000102</string>
@@ -281,14 +281,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>34</integer>
-									<integer>24</integer>
+									<integer>25</integer>
 									<integer>4</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 116}, {357, 760}}</string>
+							<string>{{0, 0}, {357, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -305,7 +304,7 @@
 							<real>357</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>0 59 1440 819 0 0 1440 878 </string>
+						<string>1 59 1440 819 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -316,14 +315,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>A38A88DE13B1EDAF009EECBC</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>BookGetHistoryViewController.m</string>
+								<string>BookSearchViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -331,11 +328,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>A38A88DF13B1EDAF009EECBC</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>BookGetHistoryViewController.m</string>
+										<string>BookSearchViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>A3B8CABA13BBA33600028546</string>
+										<string>A3B8CAC113BBA68000028546</string>
 										<key>history</key>
 										<array>
 											<string>A3E3FA9A13B2300E0023DC27</string>
@@ -451,19 +448,19 @@
 											<string>A3B8C97113BB8FC200028546</string>
 											<string>A3B8C98513BB917300028546</string>
 											<string>A3B8C98613BB917300028546</string>
-											<string>A3B8C99213BB920000028546</string>
 											<string>A3B8C99313BB920000028546</string>
 											<string>A3B8C9A213BB948E00028546</string>
 											<string>A3B8C9A313BB948E00028546</string>
 											<string>A3B8C9A513BB948E00028546</string>
 											<string>A3B8C9B813BB96A600028546</string>
 											<string>A3B8C9B913BB96A600028546</string>
-											<string>A3B8C9C313BB97B800028546</string>
 											<string>A3B8C9FC13BB9A2300028546</string>
 											<string>A3B8CA0513BB9A5800028546</string>
 											<string>A3B8CA7C13BBA01F00028546</string>
-											<string>A3B8CAAA13BBA30900028546</string>
-											<string>A3B8CAAB13BBA30900028546</string>
+											<string>A3B8CABD13BBA68000028546</string>
+											<string>A3B8CABE13BBA68000028546</string>
+											<string>A3B8CABF13BBA68000028546</string>
+											<string>A3B8CAC013BBA68000028546</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -479,7 +476,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1061, 596}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 59 1440 819 0 0 1440 878 </string>
+								<string>1 59 1440 819 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -558,7 +555,7 @@
 										<key>Frame</key>
 										<string>{{10, 27}, {1061, 150}}</string>
 										<key>RubberWindowFrame</key>
-										<string>0 59 1440 819 0 0 1440 878 </string>
+										<string>1 59 1440 819 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -780,13 +777,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>A3B8CAAD13BBA30900028546</string>
 		<string>A3B8C78313BB5F3300028546</string>
 		<string>A3B8C78413BB5F3300028546</string>
 		<string>/users/Luke/Projects/bookhelper/bookhelper.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>0 59 1440 819 0 0 1440 878 </string>
+	<string>1 59 1440 819 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
