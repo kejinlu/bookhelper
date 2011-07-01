@@ -29,33 +29,42 @@
 - (void)setupGradientLayer
 {
 	CAGradientLayer *gradientLayer = (CAGradientLayer *)self.layer;
-	gradientLayer.colors =
-		[NSArray arrayWithObjects:
-			(id)[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0].CGColor,
-			(id)[UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.0].CGColor,
-		nil];
+	switch (type) {
+		case WHITE_GRADIENT:
+			gradientLayer.colors =
+			[NSArray arrayWithObjects:
+			 (id)[UIColor colorWithRed:0.996 green:0.996 blue:0.996 alpha:1.0].CGColor,
+			 (id)[UIColor colorWithRed:0.953 green:0.953 blue:0.953 alpha:1.0].CGColor,
+			 nil];
+			
+			break;
+		case GREEN_GRADIENT:
+			gradientLayer.colors =
+			[NSArray arrayWithObjects:
+			 (id)[UIColor colorWithRed:0.157 green:0.627 blue:0.247 alpha:1.0].CGColor,
+			 (id)[UIColor colorWithRed:0.384 green:0.753 blue:0.384 alpha:1.0].CGColor,
+			 (id)[UIColor colorWithRed:0.302 green:0.659 blue:0.353 alpha:1.0].CGColor,
+			 nil];
+			gradientLayer.locations = 
+			[NSArray arrayWithObjects:
+			 [NSNumber numberWithFloat:0],
+			 [NSNumber numberWithFloat:0.1],
+			 [NSNumber numberWithFloat:1.0],nil];
+			
+			break;
+
+		default:
+			break;
+	}
+
 	self.backgroundColor = [UIColor clearColor];
 }
 
-//
-// initWithFrame:
-//
-// Initialise the view.
-//
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-	if (self)
-	{
-		CAGradientLayer *gradientLayer = (CAGradientLayer *)self.layer;
-		gradientLayer.colors =
-			[NSArray arrayWithObjects:
-				(id)[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0].CGColor,
-				(id)[UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.0].CGColor,
-			nil];
-		self.backgroundColor = [UIColor clearColor];
-    }
-    return self;
+- (id)initWithGradientType:(GradientType)_type{
+	if (self = [super initWithFrame:CGRectZero]) {
+		type = _type;
+		[self setupGradientLayer];
+	}
+	return self;
 }
-
 @end

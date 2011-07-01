@@ -7,13 +7,14 @@
 //
 #import "BookPriceComparisonViewController.h"
 #import "DoubanBook.h"
+#import "ASImageView.h"
 
 @interface BookDetailViewController : UIViewController {
 	BookPriceComparisonViewController *bookPriceComparisonViewController;
 	DoubanBook *book;
 	//IBOutlet UITableView *tableView;
 	
-	IBOutlet UIImageView *coverImageView;
+	IBOutlet ASImageView *coverImageView;
 	IBOutlet UITableViewCell *coverCell;
 	
 	IBOutlet UITableViewCell *bookIntroCell;

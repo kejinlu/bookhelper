@@ -11,10 +11,11 @@
 #import "DoubanConnector.h"
 #import "BookDetailViewController.h"
 #import "LoadingViewController.h"
+#import "BookSearchBarViewController.h"
 
 #define MAX_RESULTS 10
 @class DoubanBook;
-@interface BookSearchViewController : UIViewController<DoubanConnectorDelegate> {
+@interface BookSearchViewController : UIViewController<DoubanConnectorDelegate,BookSearchBarViewControllerDelegate> {
 	DoubanConnector *doubanConnector;
 
 	NSMutableArray *data;
@@ -26,14 +27,17 @@
 	
 	UIActivityIndicatorView *activityFooter;
 	
+	BookSearchBarViewController *searchBarViewController;
+	
 	BOOL isLoading;
 	
-	NSString *searchString;
+	NSString *searchedString;
 	NSInteger totalResults;
 	NSInteger startIndex;
 	
 }
-@property(nonatomic,copy)	NSString *searchString;
+@property(nonatomic,copy)	NSString *searchedString;
 
 - (IBAction)dismissView:(id)sender;
+- (void)showSearchBarWithSearchString;
 @end

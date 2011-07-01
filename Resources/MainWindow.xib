@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="140"/>
+			<integer value="165"/>
 			<integer value="2"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
@@ -68,12 +68,12 @@
 				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<bool key="IBUIHorizontal">NO</bool>
-				<object class="IBUINavigationController" key="IBUISelectedViewController" id="1051660493">
-					<object class="IBUITabBarItem" key="IBUITabBarItem" id="726802219">
-						<string key="IBUITitle">历史</string>
+				<object class="IBUINavigationController" key="IBUISelectedViewController" id="82776040">
+					<object class="IBUITabBarItem" key="IBUITabBarItem" id="128528900">
+						<string key="IBUITitle">更多</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">history.png</string>
+							<string key="NSResourceName">more.png</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<reference key="IBUITabBar"/>
@@ -85,7 +85,7 @@
 					</object>
 					<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					<bool key="IBUIHorizontal">NO</bool>
-					<object class="IBUINavigationBar" key="IBUINavigationBar" id="327878006">
+					<object class="IBUINavigationBar" key="IBUINavigationBar" id="319679826">
 						<nil key="NSNextResponder"/>
 						<int key="NSvFlags">256</int>
 						<string key="NSFrameSize">{0, 0}</string>
@@ -96,13 +96,14 @@
 					</object>
 					<object class="NSMutableArray" key="IBUIViewControllers">
 						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="IBUIViewController" id="41298379">
-							<object class="IBUINavigationItem" key="IBUINavigationItem" id="802959141">
+						<object class="IBUIViewController" id="410071312">
+							<object class="IBUINavigationItem" key="IBUINavigationItem" id="981925571">
 								<reference key="IBUINavigationBar"/>
+								<string key="IBUITitle">更多</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
-							<reference key="IBUIParentViewController" ref="1051660493"/>
-							<string key="IBUINibName">HistoryView</string>
+							<reference key="IBUIParentViewController" ref="82776040"/>
+							<string key="IBUINibName">MoreView</string>
 							<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 								<int key="interfaceOrientation">1</int>
 							</object>
@@ -199,13 +200,12 @@
 							</object>
 						</object>
 					</object>
-					<reference ref="1051660493"/>
-					<object class="IBUINavigationController" id="82776040">
-						<object class="IBUITabBarItem" key="IBUITabBarItem" id="128528900">
-							<string key="IBUITitle">更多</string>
+					<object class="IBUINavigationController" id="1051660493">
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="726802219">
+							<string key="IBUITitle">历史</string>
 							<object class="NSCustomResource" key="IBUIImage">
 								<string key="NSClassName">NSImage</string>
-								<string key="NSResourceName">more.png</string>
+								<string key="NSResourceName">history.png</string>
 							</object>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							<reference key="IBUITabBar"/>
@@ -217,7 +217,7 @@
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUIHorizontal">NO</bool>
-						<object class="IBUINavigationBar" key="IBUINavigationBar" id="319679826">
+						<object class="IBUINavigationBar" key="IBUINavigationBar" id="327878006">
 							<nil key="NSNextResponder"/>
 							<int key="NSvFlags">256</int>
 							<string key="NSFrameSize">{0, 0}</string>
@@ -228,12 +228,12 @@
 						</object>
 						<object class="NSMutableArray" key="IBUIViewControllers">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUIViewController" id="410071312">
-								<object class="IBUINavigationItem" key="IBUINavigationItem" id="981925571">
-									<string key="IBUITitle">Root View Controller</string>
+							<object class="IBUIViewController" id="41298379">
+								<object class="IBUINavigationItem" key="IBUINavigationItem" id="802959141">
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								</object>
-								<reference key="IBUIParentViewController" ref="82776040"/>
+								<reference key="IBUIParentViewController" ref="1051660493"/>
+								<string key="IBUINibName">HistoryView</string>
 								<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 									<int key="interfaceOrientation">1</int>
 								</object>
@@ -242,6 +242,7 @@
 							</object>
 						</object>
 					</object>
+					<reference ref="82776040"/>
 				</object>
 				<object class="IBUITabBar" key="IBUITabBar" id="795333663">
 					<nil key="NSNextResponder"/>
@@ -505,6 +506,7 @@
 					<string>150.IBPluginDependency</string>
 					<string>151.IBPluginDependency</string>
 					<string>164.IBPluginDependency</string>
+					<string>165.CustomClassName</string>
 					<string>165.IBPluginDependency</string>
 					<string>166.IBPluginDependency</string>
 					<string>167.IBPluginDependency</string>
@@ -537,6 +539,7 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>MoreViewController</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>

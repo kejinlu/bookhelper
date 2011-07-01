@@ -112,7 +112,7 @@
 	}
 	[self performSelector: @selector(playBeep)
 			   withObject: nil
-			   afterDelay: 0.005];
+			   afterDelay: 0.0];
 
 	[doubanConnector requestBookDataWithISBN:sym.data];
 	searching = YES;

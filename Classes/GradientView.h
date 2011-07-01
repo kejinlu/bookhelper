@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum{
+	WHITE_GRADIENT = 0,
+	GREEN_GRADIENT
+} GradientType;
+
 @interface GradientView : UIView
 {
+	GradientType type;
 }
 
+- (id)initWithGradientType:(GradientType)_type;
 @end

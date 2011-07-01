@@ -10,6 +10,7 @@
 #import "BookGetHistory.h"
 #import "BookGetHistoryDatabase.h"
 #import "TableUIButton.h"
+#import "GradientView.h"
 #define TRASH_ACTION_SHEET 100
 @implementation BookGetHistoryViewController
 
@@ -71,24 +72,29 @@
 	UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+		cell.backgroundView = [[[GradientView alloc] initWithGradientType:WHITE_GRADIENT] autorelease];
+		cell.selectedBackgroundView = [[[GradientView alloc] initWithGradientType:GREEN_GRADIENT] autorelease];
+		
 		TableUIButton *starButton = [TableUIButton buttonWithType:UIButtonTypeCustom];
-		starButton.frame = CGRectMake(2, 10, 40, 40);
+		starButton.frame = CGRectMake(1, 6, 40, 40);
 		starButton.tag = STAR_BUTTON;
 		[starButton addTarget:self action:@selector(starHistory:) forControlEvents:UIControlEventTouchUpInside];
 		[cell.contentView addSubview:starButton];
 		
-		UILabel	*myTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(32, 5, 280, 31)];
+		UILabel	*myTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, 5, 280, 31)];
 		myTextLabel.tag = BOOK_TITLE;
 		myTextLabel.backgroundColor = [UIColor clearColor];
+		myTextLabel.highlightedTextColor = [UIColor whiteColor];
 		myTextLabel.textColor = [UIColor blackColor];
 		myTextLabel.textAlignment = UITextAlignmentLeft;
 		myTextLabel.font = [UIFont systemFontOfSize:18];
 		[cell.contentView addSubview:myTextLabel];
 		
-		UILabel	*myDetailLabel = [[UILabel alloc] initWithFrame:CGRectMake(32, 29, 280, 21)];
+		UILabel	*myDetailLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, 29, 280, 21)];
 		myDetailLabel.tag = BOOK_INFO;
 		myDetailLabel.backgroundColor = [UIColor clearColor];
 		myDetailLabel.textColor = [UIColor grayColor];
+		myDetailLabel.highlightedTextColor = [UIColor whiteColor];
 		myDetailLabel.textAlignment = UITextAlignmentLeft;
 		myDetailLabel.font = [UIFont systemFontOfSize:14];
 		[cell.contentView addSubview:myDetailLabel];

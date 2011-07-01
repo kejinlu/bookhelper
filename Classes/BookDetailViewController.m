@@ -28,7 +28,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
 	//[coverImageView setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:book.coverImageURL]]]];
-
+	coverImageView.urlString = book.coverImageURL;
 	[bookIntroLabel setText:book.summary];
 }
 

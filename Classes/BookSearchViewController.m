@@ -13,38 +13,42 @@
 #import "GradientView.h"
 #import "ClearLabelsCellView.h"
 @implementation BookSearchViewController
-@synthesize searchString;
+@synthesize searchedString;
 
+
+- (void)setupSearchBar{
+	if (!searchBarViewController) {
+		searchBarViewController = [[BookSearchBarViewController alloc] init];
+		searchBarViewController.delegate = self;
+	}
+	UIBarButtonItem *searchButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"搜索" 
+																		 style:UIBarButtonItemStyleBordered
+																		target:self
+																		action:@selector(showSearchBarWithSearchString)];
+	self.navigationItem.leftBarButtonItem = searchButtonItem;
+	[searchButtonItem release];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 	data = [[NSMutableArray alloc] initWithCapacity:0];	
 	loadingViewController = [[LoadingViewController alloc] init];
 	doubanConnector = [[DoubanConnector alloc] initWithDelegate:self];
+	[self setupSearchBar];
 }
 
 
-
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
-	self.searchString = [searchBar text];
-	[data removeAllObjects];
-	startIndex = 1;
-	NSString *queryString = [NSString stringWithFormat:@"q=%@&start-index=%d&max-results=%d",[self.searchString urlEncodeString]
-							 ,startIndex,MAX_RESULTS];
-	startIndex += MAX_RESULTS;
-	[doubanConnector requestQueryBooksWithQueryString:queryString];
-	NSLog(@"发出搜索请求.");
-	//[searchBar resignFirstResponder];
-	//[searchBar setShowsCancelButton:NO animated:YES];  
-	[[self searchDisplayController] setActive:NO animated:YES];
-	[[loadingViewController view] setFrame:[resultTableView frame]];
-	[[self view] addSubview:[loadingViewController view]];
+- (void)viewWillAppear:(BOOL)animated{
+	if (searchedString == nil||[searchedString isEqualToString:@""]) {
+		[self.navigationController presentModalViewController:searchBarViewController animated:YES];
+	}
 }
 
-
-
-
-
+- (void)showSearchBarWithSearchString{
+	searchBarViewController.searchString = self.searchedString;
+	[self.navigationController presentModalViewController:searchBarViewController
+												 animated:YES];
+}
 /*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -71,6 +75,19 @@
     [super dealloc];
 }
 
+#pragma mark  search bar view controller delegate
+- (void)beginSearchWithString:(NSString *)searchString{
+	self.searchedString = searchString;
+	[data removeAllObjects];
+	startIndex = 1;
+	NSString *queryString = [NSString stringWithFormat:@"q=%@&start-index=%d&max-results=%d",[searchString urlEncodeString]
+							 ,startIndex,MAX_RESULTS];
+	startIndex += MAX_RESULTS;
+	[doubanConnector requestQueryBooksWithQueryString:queryString];
+	[[self searchDisplayController] setActive:NO animated:YES];
+	[[loadingViewController view] setFrame:[resultTableView frame]];
+	[[self view] addSubview:[loadingViewController view]];
+}
 
 #pragma mark Book
 - (void)didGetDoubanBooks:(NSArray *)books withTotalResults:(NSInteger)_totalResults startIndex:(NSInteger)index{
@@ -120,11 +137,13 @@
 	UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
 		cell = [[[ClearLabelsCellView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-		cell.backgroundView = [[[GradientView alloc] init] autorelease];
+		cell.backgroundView = [[[GradientView alloc] initWithGradientType:WHITE_GRADIENT] autorelease];
+		cell.selectedBackgroundView = [[[GradientView alloc] initWithGradientType:GREEN_GRADIENT] autorelease];
 		UILabel	*myTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 5, 280, 31)];
 		myTextLabel.tag = BOOK_TITLE;
 		myTextLabel.backgroundColor = [UIColor clearColor];
 		myTextLabel.textColor = [UIColor blackColor];
+		myTextLabel.highlightedTextColor = [UIColor whiteColor];
 		myTextLabel.textAlignment = UITextAlignmentLeft;
 		myTextLabel.font = [UIFont systemFontOfSize:18];
 		[cell.contentView addSubview:myTextLabel];
@@ -133,6 +152,7 @@
 		myDetailLabel.tag = BOOK_INFO;
 		myDetailLabel.backgroundColor = [UIColor clearColor];
 		myDetailLabel.textColor = [UIColor grayColor];
+		myDetailLabel.highlightedTextColor = [UIColor whiteColor];
 		myDetailLabel.textAlignment = UITextAlignmentLeft;
 		myDetailLabel.font = [UIFont systemFontOfSize:14];
 		[cell.contentView addSubview:myDetailLabel];
@@ -170,7 +190,7 @@
 	if (startIndex > totalResults) {
 		[activityFooter stopAnimating];
 	}else {
-		NSString *queryString = [NSString stringWithFormat:@"q=%@&start-index=%d&max-results=%d",[self.searchString urlEncodeString],startIndex,MAX_RESULTS];
+		NSString *queryString = [NSString stringWithFormat:@"q=%@&start-index=%d&max-results=%d",[self.searchedString urlEncodeString],startIndex,MAX_RESULTS];
 		startIndex += MAX_RESULTS;
 		[doubanConnector requestQueryBooksWithQueryString:queryString];
 	}

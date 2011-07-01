@@ -16,15 +16,38 @@
 		A303133913B9F8C4000BD08C /* PathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A303133813B9F8C4000BD08C /* PathUtilities.m */; };
 		A303139C13BA2123000BD08C /* BookGetHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = A303139B13BA2123000BD08C /* BookGetHistory.m */; };
 		A303142713BA32BF000BD08C /* BookGetHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A303142613BA32BF000BD08C /* BookGetHistoryViewController.m */; };
-		A3791DB813B5C13B0061C4DC /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A3791DB613B5C13B0061C4DC /* icon.png */; };
-		A3791DB913B5C13B0061C4DC /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3791DB713B5C13B0061C4DC /* icon@2x.png */; };
+		A3317F0D13BC8ED500D0E7A6 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3317F0C13BC8ED500D0E7A6 /* MoreViewController.m */; };
+		A3317F0F13BC8EF700D0E7A6 /* MoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3317F0E13BC8EF700D0E7A6 /* MoreView.xib */; };
 		A3791DC413B5D1240061C4DC /* BarCodeScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3791DC313B5D1240061C4DC /* BarCodeScannerViewController.m */; };
 		A3791DC613B5D1460061C4DC /* BarCodeScannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3791DC513B5D1460061C4DC /* BarCodeScannerView.xib */; };
 		A3791F7213B62AA90061C4DC /* ScannerOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3791F7113B62AA90061C4DC /* ScannerOverlayView.m */; };
 		A3791F7613B632D30061C4DC /* scan.wav in Resources */ = {isa = PBXBuildFile; fileRef = A3791F7513B632D30061C4DC /* scan.wav */; };
 		A379223713B7258A0061C4DC /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A379223613B7258A0061C4DC /* LoadingViewController.m */; };
 		A379225A13B725A30061C4DC /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A379225913B725A30061C4DC /* LoadingView.xib */; };
+		A38EDA5213BCC736004CABBC /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = A38EDA4B13BCC736004CABBC /* Icon-72.png */; };
+		A38EDA5313BCC736004CABBC /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A38EDA4C13BCC736004CABBC /* Icon-Small-50.png */; };
+		A38EDA5413BCC736004CABBC /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = A38EDA4D13BCC736004CABBC /* Icon-Small.png */; };
+		A38EDA5513BCC736004CABBC /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A38EDA4E13BCC736004CABBC /* Icon-Small@2x.png */; };
+		A38EDA5613BCC736004CABBC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A38EDA4F13BCC736004CABBC /* Icon.png */; };
+		A38EDA5713BCC736004CABBC /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A38EDA5013BCC736004CABBC /* Icon@2x.png */; };
+		A38EDA5813BCC736004CABBC /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = A38EDA5113BCC736004CABBC /* iTunesArtwork */; };
 		A391AC8F13B90986003CFB40 /* BookGetHistoryDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A391AC8E13B90986003CFB40 /* BookGetHistoryDatabase.m */; };
+		A39A9A1A13BDDB8A00937489 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A39A9A0513BDDB8A00937489 /* ASIAuthenticationDialog.m */; };
+		A39A9A1B13BDDB8A00937489 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = A39A9A0813BDDB8A00937489 /* ASIDataCompressor.m */; };
+		A39A9A1C13BDDB8A00937489 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = A39A9A0A13BDDB8A00937489 /* ASIDataDecompressor.m */; };
+		A39A9A1D13BDDB8A00937489 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A39A9A0C13BDDB8A00937489 /* ASIDownloadCache.m */; };
+		A39A9A1E13BDDB8A00937489 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A39A9A0E13BDDB8A00937489 /* ASIFormDataRequest.m */; };
+		A39A9A1F13BDDB8A00937489 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A39A9A1013BDDB8A00937489 /* ASIHTTPRequest.m */; };
+		A39A9A2013BDDB8A00937489 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = A39A9A1413BDDB8A00937489 /* ASIInputStream.m */; };
+		A39A9A2113BDDB8A00937489 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A39A9A1613BDDB8A00937489 /* ASINetworkQueue.m */; };
+		A39A9A2213BDDB8A00937489 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A39A9A1913BDDB8A00937489 /* Reachability.m */; };
+		A39A9A3413BDDBAA00937489 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A39A9A3313BDDBAA00937489 /* CFNetwork.framework */; };
+		A39A9A3A13BDDBDD00937489 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A39A9A3913BDDBDD00937489 /* SystemConfiguration.framework */; };
+		A39A9A3C13BDDC1800937489 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A39A9A3B13BDDC1800937489 /* MobileCoreServices.framework */; };
+		A39A9A5B13BDDC9100937489 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A39A9A5A13BDDC9100937489 /* libz.dylib */; };
+		A39A9A6013BDDE4D00937489 /* ASImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A39A9A5F13BDDE4D00937489 /* ASImageView.m */; };
+		A39A9BB213BE21D900937489 /* SearchBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A39A9BB113BE21D900937489 /* SearchBarView.xib */; };
+		A39A9BBA13BE22FA00937489 /* BookSearchBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A39A9BB913BE22FA00937489 /* BookSearchBarViewController.m */; };
 		A3B17E2C13B78D3F007B100E /* comment.png in Resources */ = {isa = PBXBuildFile; fileRef = A3B17E2A13B78D3F007B100E /* comment.png */; };
 		A3B17E2D13B78D3F007B100E /* comment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3B17E2B13B78D3F007B100E /* comment@2x.png */; };
 		A3B17EBD13B79A23007B100E /* CHANGES_AND_TODO_LIST.txt in Resources */ = {isa = PBXBuildFile; fileRef = A3B17EB213B79A23007B100E /* CHANGES_AND_TODO_LIST.txt */; };
@@ -62,13 +85,7 @@
 		A3D37FE213B4E1CE00632293 /* BookPriceComparisonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D37FE113B4E1CE00632293 /* BookPriceComparisonViewController.m */; };
 		A3D3807D13B50DAC00632293 /* BookPriceComparisonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3D3807C13B50DAC00632293 /* BookPriceComparisonView.xib */; };
 		A3D380C513B5147900632293 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D380C413B5147900632293 /* barcode.png */; };
-		A3D382DA13B57D5E00632293 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D382D813B57D5E00632293 /* home.png */; };
-		A3D382DB13B57D5E00632293 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D382D913B57D5E00632293 /* home@2x.png */; };
 		A3D382E213B57EA100632293 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D382E113B57EA100632293 /* search.png */; };
-		A3D3833713B5889800632293 /* archive.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D3833513B5889800632293 /* archive.png */; };
-		A3D3833813B5889800632293 /* archive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D3833613B5889800632293 /* archive@2x.png */; };
-		A3D383C313B5B51100632293 /* bookSearchTableViewCell.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D383C113B5B51100632293 /* bookSearchTableViewCell.png */; };
-		A3D383C413B5B51100632293 /* bookSearchTableViewCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D383C213B5B51100632293 /* bookSearchTableViewCell@2x.png */; };
 		A3E3FA7E13B22F590023DC27 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E3FA7C13B22F590023DC27 /* GDataXMLNode.m */; };
 		A3E3FA9413B22FE40023DC27 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E3FA9313B22FE40023DC27 /* libxml2.dylib */; };
 		A3E3FAA213B230500023DC27 /* DoubanBook.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E3FAA113B230500023DC27 /* DoubanBook.m */; };
@@ -101,8 +118,9 @@
 		A303139B13BA2123000BD08C /* BookGetHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookGetHistory.m; sourceTree = "<group>"; };
 		A303142513BA32BF000BD08C /* BookGetHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookGetHistoryViewController.h; sourceTree = "<group>"; };
 		A303142613BA32BF000BD08C /* BookGetHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookGetHistoryViewController.m; sourceTree = "<group>"; };
-		A3791DB613B5C13B0061C4DC /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = /Users/Luke/Projects/bookhelper/Resources/icon.png; sourceTree = "<absolute>"; };
-		A3791DB713B5C13B0061C4DC /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/icon@2x.png"; sourceTree = "<absolute>"; };
+		A3317F0B13BC8ED500D0E7A6 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		A3317F0C13BC8ED500D0E7A6 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		A3317F0E13BC8EF700D0E7A6 /* MoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MoreView.xib; path = /Users/Luke/Projects/bookhelper/Resources/MoreView.xib; sourceTree = "<absolute>"; };
 		A3791DC213B5D1240061C4DC /* BarCodeScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarCodeScannerViewController.h; sourceTree = "<group>"; };
 		A3791DC313B5D1240061C4DC /* BarCodeScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarCodeScannerViewController.m; sourceTree = "<group>"; };
 		A3791DC513B5D1460061C4DC /* BarCodeScannerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BarCodeScannerView.xib; path = /Users/Luke/Projects/bookhelper/Resources/BarCodeScannerView.xib; sourceTree = "<absolute>"; };
@@ -112,10 +130,48 @@
 		A379223513B7258A0061C4DC /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
 		A379223613B7258A0061C4DC /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewController.m; sourceTree = "<group>"; };
 		A379225913B725A30061C4DC /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoadingView.xib; path = /Users/Luke/Projects/bookhelper/Resources/LoadingView.xib; sourceTree = "<absolute>"; };
+		A38EDA4B13BCC736004CABBC /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "/Users/Luke/Projects/bookhelper/Resources/appicons/Icon-72.png"; sourceTree = "<absolute>"; };
+		A38EDA4C13BCC736004CABBC /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "/Users/Luke/Projects/bookhelper/Resources/appicons/Icon-Small-50.png"; sourceTree = "<absolute>"; };
+		A38EDA4D13BCC736004CABBC /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "/Users/Luke/Projects/bookhelper/Resources/appicons/Icon-Small.png"; sourceTree = "<absolute>"; };
+		A38EDA4E13BCC736004CABBC /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/appicons/Icon-Small@2x.png"; sourceTree = "<absolute>"; };
+		A38EDA4F13BCC736004CABBC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = /Users/Luke/Projects/bookhelper/Resources/appicons/Icon.png; sourceTree = "<absolute>"; };
+		A38EDA5013BCC736004CABBC /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/appicons/Icon@2x.png"; sourceTree = "<absolute>"; };
+		A38EDA5113BCC736004CABBC /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = /Users/Luke/Projects/bookhelper/Resources/appicons/iTunesArtwork; sourceTree = "<absolute>"; };
 		A391AC8D13B90986003CFB40 /* BookGetHistoryDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookGetHistoryDatabase.h; sourceTree = "<group>"; };
 		A391AC8E13B90986003CFB40 /* BookGetHistoryDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookGetHistoryDatabase.m; sourceTree = "<group>"; };
-		A3B17E2A13B78D3F007B100E /* comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = comment.png; path = /Users/Luke/Projects/bookhelper/Resources/comment.png; sourceTree = "<absolute>"; };
-		A3B17E2B13B78D3F007B100E /* comment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "comment@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/comment@2x.png"; sourceTree = "<absolute>"; };
+		A39A9A0413BDDB8A00937489 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIAuthenticationDialog.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIAuthenticationDialog.h; sourceTree = "<absolute>"; };
+		A39A9A0513BDDB8A00937489 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIAuthenticationDialog.m; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIAuthenticationDialog.m; sourceTree = "<absolute>"; };
+		A39A9A0613BDDB8A00937489 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICacheDelegate.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASICacheDelegate.h; sourceTree = "<absolute>"; };
+		A39A9A0713BDDB8A00937489 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIDataCompressor.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIDataCompressor.h; sourceTree = "<absolute>"; };
+		A39A9A0813BDDB8A00937489 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIDataCompressor.m; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIDataCompressor.m; sourceTree = "<absolute>"; };
+		A39A9A0913BDDB8A00937489 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIDataDecompressor.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIDataDecompressor.h; sourceTree = "<absolute>"; };
+		A39A9A0A13BDDB8A00937489 /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIDataDecompressor.m; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIDataDecompressor.m; sourceTree = "<absolute>"; };
+		A39A9A0B13BDDB8A00937489 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIDownloadCache.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIDownloadCache.h; sourceTree = "<absolute>"; };
+		A39A9A0C13BDDB8A00937489 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIDownloadCache.m; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIDownloadCache.m; sourceTree = "<absolute>"; };
+		A39A9A0D13BDDB8A00937489 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIFormDataRequest.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIFormDataRequest.h; sourceTree = "<absolute>"; };
+		A39A9A0E13BDDB8A00937489 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIFormDataRequest.m; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIFormDataRequest.m; sourceTree = "<absolute>"; };
+		A39A9A0F13BDDB8A00937489 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequest.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIHTTPRequest.h; sourceTree = "<absolute>"; };
+		A39A9A1013BDDB8A00937489 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIHTTPRequest.m; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIHTTPRequest.m; sourceTree = "<absolute>"; };
+		A39A9A1113BDDB8A00937489 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestConfig.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIHTTPRequestConfig.h; sourceTree = "<absolute>"; };
+		A39A9A1213BDDB8A00937489 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestDelegate.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIHTTPRequestDelegate.h; sourceTree = "<absolute>"; };
+		A39A9A1313BDDB8A00937489 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIInputStream.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIInputStream.h; sourceTree = "<absolute>"; };
+		A39A9A1413BDDB8A00937489 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIInputStream.m; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIInputStream.m; sourceTree = "<absolute>"; };
+		A39A9A1513BDDB8A00937489 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASINetworkQueue.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASINetworkQueue.h; sourceTree = "<absolute>"; };
+		A39A9A1613BDDB8A00937489 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASINetworkQueue.m; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASINetworkQueue.m; sourceTree = "<absolute>"; };
+		A39A9A1713BDDB8A00937489 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIProgressDelegate.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIProgressDelegate.h; sourceTree = "<absolute>"; };
+		A39A9A1813BDDB8A00937489 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/Reachability.h; sourceTree = "<absolute>"; };
+		A39A9A1913BDDB8A00937489 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/Reachability.m; sourceTree = "<absolute>"; };
+		A39A9A3313BDDBAA00937489 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A39A9A3913BDDBDD00937489 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A39A9A3B13BDDC1800937489 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A39A9A5A13BDDC9100937489 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A39A9A5E13BDDE4D00937489 /* ASImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASImageView.h; sourceTree = "<group>"; };
+		A39A9A5F13BDDE4D00937489 /* ASImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASImageView.m; sourceTree = "<group>"; };
+		A39A9BB113BE21D900937489 /* SearchBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchBarView.xib; path = /Users/Luke/Projects/bookhelper/Resources/SearchBarView.xib; sourceTree = "<absolute>"; };
+		A39A9BB813BE22FA00937489 /* BookSearchBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookSearchBarViewController.h; sourceTree = "<group>"; };
+		A39A9BB913BE22FA00937489 /* BookSearchBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookSearchBarViewController.m; sourceTree = "<group>"; };
+		A3B17E2A13B78D3F007B100E /* comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comment.png; sourceTree = "<group>"; };
+		A3B17E2B13B78D3F007B100E /* comment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "comment@2x.png"; sourceTree = "<group>"; };
 		A3B17EB213B79A23007B100E /* CHANGES_AND_TODO_LIST.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CHANGES_AND_TODO_LIST.txt; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/CHANGES_AND_TODO_LIST.txt; sourceTree = "<absolute>"; };
 		A3B17EB313B79A23007B100E /* CONTRIBUTORS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CONTRIBUTORS.txt; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/CONTRIBUTORS.txt; sourceTree = "<absolute>"; };
 		A3B17EB413B79A23007B100E /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/FMDatabase.h; sourceTree = "<absolute>"; };
@@ -133,13 +189,13 @@
 		A3B1864413B8CB84007B100E /* ShadowedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShadowedTableView.h; path = /Users/Luke/Projects/bookhelper/Classes/ShadowedTableView.h; sourceTree = "<absolute>"; };
 		A3B1864513B8CB84007B100E /* ClearLabelsCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClearLabelsCellView.h; path = /Users/Luke/Projects/bookhelper/Classes/ClearLabelsCellView.h; sourceTree = "<absolute>"; };
 		A3B1864613B8CB84007B100E /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GradientView.h; path = /Users/Luke/Projects/bookhelper/Classes/GradientView.h; sourceTree = "<absolute>"; };
-		A3B8C89113BB7FDC00028546 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = /Users/Luke/Projects/bookhelper/Resources/star.png; sourceTree = "<absolute>"; };
-		A3B8C89213BB7FDC00028546 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/star@2x.png"; sourceTree = "<absolute>"; };
-		A3B8C89313BB7FDC00028546 /* unstar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = unstar.png; path = /Users/Luke/Projects/bookhelper/Resources/unstar.png; sourceTree = "<absolute>"; };
-		A3B8C89413BB7FDC00028546 /* unstar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "unstar@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/unstar@2x.png"; sourceTree = "<absolute>"; };
+		A3B8C89113BB7FDC00028546 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		A3B8C89213BB7FDC00028546 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
+		A3B8C89313BB7FDC00028546 /* unstar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unstar.png; sourceTree = "<group>"; };
+		A3B8C89413BB7FDC00028546 /* unstar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unstar@2x.png"; sourceTree = "<group>"; };
 		A3B8C93913BB8A6600028546 /* TableUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableUIButton.h; sourceTree = "<group>"; };
 		A3B8C93A13BB8A6600028546 /* TableUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableUIButton.m; sourceTree = "<group>"; };
-		A3D375EA13B35C8B00632293 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = history.png; path = /Users/Luke/Projects/bookhelper/Resources/history.png; sourceTree = "<absolute>"; };
+		A3D375EA13B35C8B00632293 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
 		A3D3775013B395FC00632293 /* DoubanURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanURLConnection.h; sourceTree = "<group>"; };
 		A3D3775113B395FC00632293 /* DoubanURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanURLConnection.m; sourceTree = "<group>"; };
 		A3D377D213B39FD200632293 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Decoder.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar/Decoder.h; sourceTree = "<absolute>"; };
@@ -180,14 +236,8 @@
 		A3D37FE013B4E1CE00632293 /* BookPriceComparisonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookPriceComparisonViewController.h; sourceTree = "<group>"; };
 		A3D37FE113B4E1CE00632293 /* BookPriceComparisonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookPriceComparisonViewController.m; sourceTree = "<group>"; };
 		A3D3807C13B50DAC00632293 /* BookPriceComparisonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BookPriceComparisonView.xib; path = /Users/Luke/Projects/bookhelper/Resources/BookPriceComparisonView.xib; sourceTree = "<absolute>"; };
-		A3D380C413B5147900632293 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = barcode.png; path = /Users/Luke/Projects/bookhelper/Resources/barcode.png; sourceTree = "<absolute>"; };
-		A3D382D813B57D5E00632293 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = /Users/Luke/Projects/bookhelper/Resources/home.png; sourceTree = "<absolute>"; };
-		A3D382D913B57D5E00632293 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/home@2x.png"; sourceTree = "<absolute>"; };
-		A3D382E113B57EA100632293 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = search.png; path = /Users/Luke/Projects/bookhelper/Resources/search.png; sourceTree = "<absolute>"; };
-		A3D3833513B5889800632293 /* archive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = archive.png; path = /Users/Luke/Projects/bookhelper/Resources/archive.png; sourceTree = "<absolute>"; };
-		A3D3833613B5889800632293 /* archive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "archive@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/archive@2x.png"; sourceTree = "<absolute>"; };
-		A3D383C113B5B51100632293 /* bookSearchTableViewCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bookSearchTableViewCell.png; path = /Users/Luke/Projects/bookhelper/Resources/bookSearchTableViewCell.png; sourceTree = "<absolute>"; };
-		A3D383C213B5B51100632293 /* bookSearchTableViewCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bookSearchTableViewCell@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/bookSearchTableViewCell@2x.png"; sourceTree = "<absolute>"; };
+		A3D380C413B5147900632293 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode.png; sourceTree = "<group>"; };
+		A3D382E113B57EA100632293 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		A3E3FA7C13B22F590023DC27 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = /Users/Luke/Projects/bookhelper/Classes/GDataXMLNode.m; sourceTree = "<absolute>"; };
 		A3E3FA7D13B22F590023DC27 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = /Users/Luke/Projects/bookhelper/Classes/GDataXMLNode.h; sourceTree = "<absolute>"; };
 		A3E3FA9313B22FE40023DC27 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -200,10 +250,10 @@
 		A3E3FD2C13B2D1520023DC27 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = /Users/Luke/Projects/bookhelper/Resources/MainWindow.xib; sourceTree = "<absolute>"; };
 		A3E3FE6D13B2F20F0023DC27 /* history@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "history@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/history@2x.png"; sourceTree = "<absolute>"; };
 		A3E3FE7C13B2F2660023DC27 /* bookhelper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "bookhelper-Info.plist"; path = "/Users/Luke/Projects/bookhelper/bookhelper-Info.plist"; sourceTree = "<absolute>"; };
-		A3F0F8F413BA4C9700E8C732 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = more.png; path = /Users/Luke/Projects/bookhelper/Resources/more.png; sourceTree = "<absolute>"; };
-		A3F0F8F513BA4C9700E8C732 /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "more@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/more@2x.png"; sourceTree = "<absolute>"; };
-		A3F0F8F813BA4CA900E8C732 /* barcode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "barcode@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/barcode@2x.png"; sourceTree = "<absolute>"; };
-		A3F0F8F913BA4CA900E8C732 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "search@2x.png"; path = "/Users/Luke/Projects/bookhelper/Resources/search@2x.png"; sourceTree = "<absolute>"; };
+		A3F0F8F413BA4C9700E8C732 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
+		A3F0F8F513BA4C9700E8C732 /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@2x.png"; sourceTree = "<group>"; };
+		A3F0F8F813BA4CA900E8C732 /* barcode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barcode@2x.png"; sourceTree = "<group>"; };
+		A3F0F8F913BA4CA900E8C732 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +273,10 @@
 				A3D3787113B3A6AE00632293 /* CoreMedia.framework in Frameworks */,
 				A3D3787D13B3A6E700632293 /* AVFoundation.framework in Frameworks */,
 				A3B17ED813B79A7A007B100E /* libsqlite3.dylib in Frameworks */,
+				A39A9A3413BDDBAA00937489 /* CFNetwork.framework in Frameworks */,
+				A39A9A3A13BDDBDD00937489 /* SystemConfiguration.framework in Frameworks */,
+				A39A9A3C13BDDC1800937489 /* MobileCoreServices.framework in Frameworks */,
+				A39A9A5B13BDDC9100937489 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +341,10 @@
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765070DF74369002DB57D /* CoreGraphics.framework */,
 				A3B17ED713B79A7A007B100E /* libsqlite3.dylib */,
+				A39A9A3913BDDBDD00937489 /* SystemConfiguration.framework */,
+				A39A9A3313BDDBAA00937489 /* CFNetwork.framework */,
+				A39A9A3B13BDDC1800937489 /* MobileCoreServices.framework */,
+				A39A9A5A13BDDC9100937489 /* libz.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -306,8 +364,41 @@
 				A379223613B7258A0061C4DC /* LoadingViewController.m */,
 				A3B8C93913BB8A6600028546 /* TableUIButton.h */,
 				A3B8C93A13BB8A6600028546 /* TableUIButton.m */,
+				A39A9A5E13BDDE4D00937489 /* ASImageView.h */,
+				A39A9A5F13BDDE4D00937489 /* ASImageView.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		A38EDA4A13BCC736004CABBC /* appicons */ = {
+			isa = PBXGroup;
+			children = (
+				A38EDA4B13BCC736004CABBC /* Icon-72.png */,
+				A38EDA4C13BCC736004CABBC /* Icon-Small-50.png */,
+				A38EDA4D13BCC736004CABBC /* Icon-Small.png */,
+				A38EDA4E13BCC736004CABBC /* Icon-Small@2x.png */,
+				A38EDA4F13BCC736004CABBC /* Icon.png */,
+				A38EDA5013BCC736004CABBC /* Icon@2x.png */,
+				A38EDA5113BCC736004CABBC /* iTunesArtwork */,
+			);
+			name = appicons;
+			path = /Users/Luke/Projects/bookhelper/Resources/appicons;
+			sourceTree = "<absolute>";
+		};
+		A38EDA5913BCC743004CABBC /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				A3D382E113B57EA100632293 /* search.png */,
+				A3F0F8F913BA4CA900E8C732 /* search@2x.png */,
+				A3D380C413B5147900632293 /* barcode.png */,
+				A3F0F8F813BA4CA900E8C732 /* barcode@2x.png */,
+				A3D375EA13B35C8B00632293 /* history.png */,
+				A3F0F8F413BA4C9700E8C732 /* more.png */,
+				A3F0F8F513BA4C9700E8C732 /* more@2x.png */,
+				A3B17E2A13B78D3F007B100E /* comment.png */,
+				A3B17E2B13B78D3F007B100E /* comment@2x.png */,
+			);
+			name = tabbar;
 			sourceTree = "<group>";
 		};
 		A391AC8C13B90748003CFB40 /* Database */ = {
@@ -320,6 +411,36 @@
 			);
 			name = Database;
 			sourceTree = "<group>";
+		};
+		A39A9A0313BDDB8A00937489 /* ASIHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				A39A9A0413BDDB8A00937489 /* ASIAuthenticationDialog.h */,
+				A39A9A0513BDDB8A00937489 /* ASIAuthenticationDialog.m */,
+				A39A9A0613BDDB8A00937489 /* ASICacheDelegate.h */,
+				A39A9A0713BDDB8A00937489 /* ASIDataCompressor.h */,
+				A39A9A0813BDDB8A00937489 /* ASIDataCompressor.m */,
+				A39A9A0913BDDB8A00937489 /* ASIDataDecompressor.h */,
+				A39A9A0A13BDDB8A00937489 /* ASIDataDecompressor.m */,
+				A39A9A0B13BDDB8A00937489 /* ASIDownloadCache.h */,
+				A39A9A0C13BDDB8A00937489 /* ASIDownloadCache.m */,
+				A39A9A0D13BDDB8A00937489 /* ASIFormDataRequest.h */,
+				A39A9A0E13BDDB8A00937489 /* ASIFormDataRequest.m */,
+				A39A9A0F13BDDB8A00937489 /* ASIHTTPRequest.h */,
+				A39A9A1013BDDB8A00937489 /* ASIHTTPRequest.m */,
+				A39A9A1113BDDB8A00937489 /* ASIHTTPRequestConfig.h */,
+				A39A9A1213BDDB8A00937489 /* ASIHTTPRequestDelegate.h */,
+				A39A9A1313BDDB8A00937489 /* ASIInputStream.h */,
+				A39A9A1413BDDB8A00937489 /* ASIInputStream.m */,
+				A39A9A1513BDDB8A00937489 /* ASINetworkQueue.h */,
+				A39A9A1613BDDB8A00937489 /* ASINetworkQueue.m */,
+				A39A9A1713BDDB8A00937489 /* ASIProgressDelegate.h */,
+				A39A9A1813BDDB8A00937489 /* Reachability.h */,
+				A39A9A1913BDDB8A00937489 /* Reachability.m */,
+			);
+			name = ASIHTTPRequest;
+			path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest;
+			sourceTree = "<absolute>";
 		};
 		A3B17EB113B79A23007B100E /* fmdb */ = {
 			isa = PBXGroup;
@@ -342,6 +463,7 @@
 		A3D377CD13B39FD200632293 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				A39A9A0313BDDB8A00937489 /* ASIHTTPRequest */,
 				A3B17EB113B79A23007B100E /* fmdb */,
 				A3D377CE13B39FD200632293 /* ZBarSDK */,
 			);
@@ -461,6 +583,10 @@
 				A3791DC313B5D1240061C4DC /* BarCodeScannerViewController.m */,
 				A303142513BA32BF000BD08C /* BookGetHistoryViewController.h */,
 				A303142613BA32BF000BD08C /* BookGetHistoryViewController.m */,
+				A3317F0B13BC8ED500D0E7A6 /* MoreViewController.h */,
+				A3317F0C13BC8ED500D0E7A6 /* MoreViewController.m */,
+				A39A9BB813BE22FA00937489 /* BookSearchBarViewController.h */,
+				A39A9BB913BE22FA00937489 /* BookSearchBarViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -468,28 +594,13 @@
 		A3E3FD2813B2D1520023DC27 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A38EDA5913BCC743004CABBC /* tabbar */,
+				A38EDA4A13BCC736004CABBC /* appicons */,
+				A3791F7513B632D30061C4DC /* scan.wav */,
 				A3B8C89113BB7FDC00028546 /* star.png */,
 				A3B8C89213BB7FDC00028546 /* star@2x.png */,
 				A3B8C89313BB7FDC00028546 /* unstar.png */,
 				A3B8C89413BB7FDC00028546 /* unstar@2x.png */,
-				A3F0F8F813BA4CA900E8C732 /* barcode@2x.png */,
-				A3F0F8F913BA4CA900E8C732 /* search@2x.png */,
-				A3F0F8F413BA4C9700E8C732 /* more.png */,
-				A3F0F8F513BA4C9700E8C732 /* more@2x.png */,
-				A3B17E2A13B78D3F007B100E /* comment.png */,
-				A3B17E2B13B78D3F007B100E /* comment@2x.png */,
-				A3791F7513B632D30061C4DC /* scan.wav */,
-				A3791DB613B5C13B0061C4DC /* icon.png */,
-				A3791DB713B5C13B0061C4DC /* icon@2x.png */,
-				A3D383C113B5B51100632293 /* bookSearchTableViewCell.png */,
-				A3D383C213B5B51100632293 /* bookSearchTableViewCell@2x.png */,
-				A3D3833513B5889800632293 /* archive.png */,
-				A3D3833613B5889800632293 /* archive@2x.png */,
-				A3D382E113B57EA100632293 /* search.png */,
-				A3D382D813B57D5E00632293 /* home.png */,
-				A3D382D913B57D5E00632293 /* home@2x.png */,
-				A3D380C413B5147900632293 /* barcode.png */,
-				A3D375EA13B35C8B00632293 /* history.png */,
 				A3E3FE7C13B2F2660023DC27 /* bookhelper-Info.plist */,
 				A3E3FE6D13B2F20F0023DC27 /* history@2x.png */,
 				A3E3FD2A13B2D1520023DC27 /* BookSearchView.xib */,
@@ -499,6 +610,8 @@
 				A3D3807C13B50DAC00632293 /* BookPriceComparisonView.xib */,
 				A3791DC513B5D1460061C4DC /* BarCodeScannerView.xib */,
 				A379225913B725A30061C4DC /* LoadingView.xib */,
+				A3317F0E13BC8EF700D0E7A6 /* MoreView.xib */,
+				A39A9BB113BE21D900937489 /* SearchBarView.xib */,
 			);
 			name = Resources;
 			path = /Users/Luke/Projects/bookhelper/Resources;
@@ -577,15 +690,7 @@
 				A3D37FDB13B4D85800632293 /* BookDetailView.xib in Resources */,
 				A3D3807D13B50DAC00632293 /* BookPriceComparisonView.xib in Resources */,
 				A3D380C513B5147900632293 /* barcode.png in Resources */,
-				A3D382DA13B57D5E00632293 /* home.png in Resources */,
-				A3D382DB13B57D5E00632293 /* home@2x.png in Resources */,
 				A3D382E213B57EA100632293 /* search.png in Resources */,
-				A3D3833713B5889800632293 /* archive.png in Resources */,
-				A3D3833813B5889800632293 /* archive@2x.png in Resources */,
-				A3D383C313B5B51100632293 /* bookSearchTableViewCell.png in Resources */,
-				A3D383C413B5B51100632293 /* bookSearchTableViewCell@2x.png in Resources */,
-				A3791DB813B5C13B0061C4DC /* icon.png in Resources */,
-				A3791DB913B5C13B0061C4DC /* icon@2x.png in Resources */,
 				A3791DC613B5D1460061C4DC /* BarCodeScannerView.xib in Resources */,
 				A3791F7613B632D30061C4DC /* scan.wav in Resources */,
 				A379225A13B725A30061C4DC /* LoadingView.xib in Resources */,
@@ -603,6 +708,15 @@
 				A3B8C89613BB7FDC00028546 /* star@2x.png in Resources */,
 				A3B8C89713BB7FDC00028546 /* unstar.png in Resources */,
 				A3B8C89813BB7FDC00028546 /* unstar@2x.png in Resources */,
+				A3317F0F13BC8EF700D0E7A6 /* MoreView.xib in Resources */,
+				A38EDA5213BCC736004CABBC /* Icon-72.png in Resources */,
+				A38EDA5313BCC736004CABBC /* Icon-Small-50.png in Resources */,
+				A38EDA5413BCC736004CABBC /* Icon-Small.png in Resources */,
+				A38EDA5513BCC736004CABBC /* Icon-Small@2x.png in Resources */,
+				A38EDA5613BCC736004CABBC /* Icon.png in Resources */,
+				A38EDA5713BCC736004CABBC /* Icon@2x.png in Resources */,
+				A38EDA5813BCC736004CABBC /* iTunesArtwork in Resources */,
+				A39A9BB213BE21D900937489 /* SearchBarView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +751,18 @@
 				A303139C13BA2123000BD08C /* BookGetHistory.m in Sources */,
 				A303142713BA32BF000BD08C /* BookGetHistoryViewController.m in Sources */,
 				A3B8C93B13BB8A6600028546 /* TableUIButton.m in Sources */,
+				A3317F0D13BC8ED500D0E7A6 /* MoreViewController.m in Sources */,
+				A39A9A1A13BDDB8A00937489 /* ASIAuthenticationDialog.m in Sources */,
+				A39A9A1B13BDDB8A00937489 /* ASIDataCompressor.m in Sources */,
+				A39A9A1C13BDDB8A00937489 /* ASIDataDecompressor.m in Sources */,
+				A39A9A1D13BDDB8A00937489 /* ASIDownloadCache.m in Sources */,
+				A39A9A1E13BDDB8A00937489 /* ASIFormDataRequest.m in Sources */,
+				A39A9A1F13BDDB8A00937489 /* ASIHTTPRequest.m in Sources */,
+				A39A9A2013BDDB8A00937489 /* ASIInputStream.m in Sources */,
+				A39A9A2113BDDB8A00937489 /* ASINetworkQueue.m in Sources */,
+				A39A9A2213BDDB8A00937489 /* Reachability.m in Sources */,
+				A39A9A6013BDDE4D00937489 /* ASImageView.m in Sources */,
+				A39A9BBA13BE22FA00937489 /* BookSearchBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
