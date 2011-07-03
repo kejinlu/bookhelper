@@ -15,9 +15,7 @@
 
 #define MAX_RESULTS 10
 @class DoubanBook;
-@interface BookSearchViewController : UIViewController<DoubanConnectorDelegate,BookSearchBarViewControllerDelegate> {
-	DoubanConnector *doubanConnector;
-
+@interface BookSearchViewController : UIViewController<BookSearchBarViewControllerDelegate> {
 	NSMutableArray *data;
 	BookDetailViewController *bookDetailViewController;
 	
@@ -38,6 +36,6 @@
 }
 @property(nonatomic,copy)	NSString *searchedString;
 
-- (IBAction)dismissView:(id)sender;
 - (void)showSearchBarWithSearchString;
+- (void)loadMore;
 @end

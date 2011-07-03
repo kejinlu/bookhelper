@@ -9,9 +9,10 @@
 #import "BookSearchViewController.h"
 #import "NSString+URLEncoding.h"
 #import "DoubanBook.h"
-
+#import "BookGetHistoryDatabase.h"
 #import "GradientView.h"
 #import "ClearLabelsCellView.h"
+#import "ASImageView.h"
 @implementation BookSearchViewController
 @synthesize searchedString;
 
@@ -33,7 +34,6 @@
     [super viewDidLoad];
 	data = [[NSMutableArray alloc] initWithCapacity:0];	
 	loadingViewController = [[LoadingViewController alloc] init];
-	doubanConnector = [[DoubanConnector alloc] initWithDelegate:self];
 	[self setupSearchBar];
 }
 
@@ -44,18 +44,16 @@
 	}
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+	[resultTableView deselectRowAtIndexPath:[resultTableView indexPathForSelectedRow] animated:YES];
+}
+
 - (void)showSearchBarWithSearchString{
 	searchBarViewController.searchString = self.searchedString;
 	[self.navigationController presentModalViewController:searchBarViewController
 												 animated:YES];
 }
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
+
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
@@ -71,7 +69,6 @@
 
 
 - (void)dealloc {
-	[doubanConnector release];
     [super dealloc];
 }
 
@@ -83,15 +80,20 @@
 	NSString *queryString = [NSString stringWithFormat:@"q=%@&start-index=%d&max-results=%d",[searchString urlEncodeString]
 							 ,startIndex,MAX_RESULTS];
 	startIndex += MAX_RESULTS;
-	[doubanConnector requestQueryBooksWithQueryString:queryString];
+	[[DoubanConnector sharedDoubanConnector] requestQueryBooksWithQueryString:queryString
+															   responseTarget:self 
+															   responseAction:@selector(didGetDoubanBooks:)];
 	[[self searchDisplayController] setActive:NO animated:YES];
 	[[loadingViewController view] setFrame:[resultTableView frame]];
 	[[self view] addSubview:[loadingViewController view]];
 }
 
 #pragma mark Book
-- (void)didGetDoubanBooks:(NSArray *)books withTotalResults:(NSInteger)_totalResults startIndex:(NSInteger)index{
-	totalResults=_totalResults;
+- (void)didGetDoubanBooks:(NSDictionary *)userInfo{
+	isLoading = NO;
+	totalResults=[[userInfo objectForKey:@"totalResults"] intValue];
+	NSArray *books = [userInfo objectForKey:@"books"];
+	
 	if (startIndex>1) {
 		[activityFooter stopAnimating];
 	}
@@ -107,9 +109,12 @@
 - (void)didGetDoubanBook:(DoubanBook *)book{
 	NSLog(@"%@",book);
 	if (!bookDetailViewController) {
-		bookDetailViewController = [[BookDetailViewController alloc] initWithNibName:@"BookDetailView" bundle:nil];
+		bookDetailViewController = [[BookDetailViewController alloc] init];
 		bookDetailViewController.title = @"图书详情";
 	}
+	//加入历史记录
+	[[BookGetHistoryDatabase sharedInstance] addBookHistory:book]; 
+	
 	bookDetailViewController.book = book;
 	
 	[[self navigationController ] pushViewController:bookDetailViewController animated:YES];
@@ -123,7 +128,7 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return 51.0f;
+	return 100.0f;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -139,68 +144,108 @@
 		cell = [[[ClearLabelsCellView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
 		cell.backgroundView = [[[GradientView alloc] initWithGradientType:WHITE_GRADIENT] autorelease];
 		cell.selectedBackgroundView = [[[GradientView alloc] initWithGradientType:GREEN_GRADIENT] autorelease];
-		UILabel	*myTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 5, 280, 31)];
-		myTextLabel.tag = BOOK_TITLE;
-		myTextLabel.backgroundColor = [UIColor clearColor];
-		myTextLabel.textColor = [UIColor blackColor];
-		myTextLabel.highlightedTextColor = [UIColor whiteColor];
-		myTextLabel.textAlignment = UITextAlignmentLeft;
-		myTextLabel.font = [UIFont systemFontOfSize:18];
-		[cell.contentView addSubview:myTextLabel];
 		
-		UILabel	*myDetailLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 29, 280, 21)];
-		myDetailLabel.tag = BOOK_INFO;
-		myDetailLabel.backgroundColor = [UIColor clearColor];
-		myDetailLabel.textColor = [UIColor grayColor];
-		myDetailLabel.highlightedTextColor = [UIColor whiteColor];
-		myDetailLabel.textAlignment = UITextAlignmentLeft;
-		myDetailLabel.font = [UIFont systemFontOfSize:14];
-		[cell.contentView addSubview:myDetailLabel];
-		[myTextLabel release];
-		[myDetailLabel release];
+		ASImageView *bookCoverView = [[ASImageView alloc] initWithFrame:CGRectMake(5, 10, 60, 80)];
+		bookCoverView.tag = BOOK_COVER;
+		bookCoverView.placeHolderImage = [UIImage imageNamed:@"cover_placeholder.jpg"];
+		[cell.contentView addSubview:bookCoverView];
+		
+		UILabel	*titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(72, 5, 280, 26)];
+		titleLabel.tag = BOOK_TITLE;
+		titleLabel.backgroundColor = [UIColor clearColor];
+		titleLabel.textColor = [UIColor blackColor];
+		titleLabel.highlightedTextColor = [UIColor whiteColor];
+		titleLabel.textAlignment = UITextAlignmentLeft;
+		titleLabel.font = [UIFont systemFontOfSize:18];
+		[cell.contentView addSubview:titleLabel];
+		[titleLabel release];
+		
+		
+		UILabel *authorLabel = [[UILabel alloc] initWithFrame:CGRectMake(72, 32, 280, 16)];
+		authorLabel.tag = BOOK_AUTHOR;
+		authorLabel.backgroundColor = [UIColor clearColor];
+		authorLabel.textColor = [UIColor grayColor];
+		authorLabel.highlightedTextColor = [UIColor whiteColor];
+		authorLabel.textAlignment = UITextAlignmentLeft;
+		authorLabel.font = [UIFont systemFontOfSize:14];
+		[cell.contentView addSubview:authorLabel];
+		[authorLabel release];
+		
+		UILabel *publisherLabel = [[UILabel alloc] initWithFrame:CGRectMake(72, 50, 280, 16)];
+		publisherLabel.tag = BOOK_PUBLISHER;
+		publisherLabel.backgroundColor = [UIColor clearColor];
+		publisherLabel.textColor = [UIColor grayColor];
+		publisherLabel.highlightedTextColor = [UIColor whiteColor];
+		publisherLabel.textAlignment = UITextAlignmentLeft;
+		publisherLabel.font = [UIFont systemFontOfSize:14];
+		[cell.contentView addSubview:publisherLabel];
+		[publisherLabel release];
+		
+		UILabel *pubDateLabel = [[UILabel alloc] initWithFrame:CGRectMake(72, 70, 280, 16)];
+		pubDateLabel.tag = BOOK_PUB_DATE;
+		pubDateLabel.backgroundColor = [UIColor clearColor];
+		pubDateLabel.textColor = [UIColor grayColor];
+		pubDateLabel.highlightedTextColor = [UIColor whiteColor];
+		pubDateLabel.textAlignment = UITextAlignmentLeft;
+		pubDateLabel.font = [UIFont systemFontOfSize:14];
+		[cell.contentView addSubview:pubDateLabel];
+		[pubDateLabel release];
+		
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.textLabel.backgroundColor = [UIColor clearColor];
 	}
-	UILabel *textLabel = (UILabel *)[cell viewWithTag:BOOK_TITLE];
-	UILabel	*detailLabel = (UILabel *)[cell viewWithTag:BOOK_INFO];
-	textLabel.text = ((DoubanBook *)[data objectAtIndex:indexPath.row]).title;
-	detailLabel.text = [NSString stringWithFormat:@"%@ / %@",
-						((DoubanBook *)[data objectAtIndex:indexPath.row]).author,
-						((DoubanBook *)[data objectAtIndex:indexPath.row]).publisher];
+	
+	ASImageView *bookCoverView = (ASImageView *)[cell viewWithTag:BOOK_COVER];
+	UILabel *titleLabel = (UILabel *)[cell viewWithTag:BOOK_TITLE];
+	UILabel	*authorLabel = (UILabel *)[cell viewWithTag:BOOK_AUTHOR];
+	UILabel *publisherLabel =  (UILabel *)[cell viewWithTag:BOOK_PUBLISHER];
+	UILabel *pubDateLabel =  (UILabel *)[cell viewWithTag:BOOK_PUB_DATE];
+	
+
+	DoubanBook *book = (DoubanBook *)[data objectAtIndex:indexPath.row];
+	
+	if (book.coverImageURL) {
+		bookCoverView.urlString = book.coverImageURL;
+	}
+	
+	if (book.title) {
+		titleLabel.text = book.title;
+	}
+	
+	if (book.author) {
+		authorLabel.text = book.author;
+	}
+	if (book.publisher) {
+		publisherLabel.text = book.publisher;
+	}
+	if (book.pubDate) {
+		pubDateLabel.text = book.pubDate;
+	}
+
     return cell;
 }
+
+
+#pragma mark -
+#pragma mark UITableView Delegate 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+
+	return 50;
+}
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {	
 	NSString *urlString = ((DoubanBook *)[data objectAtIndex:indexPath.row]).apiURL;
 	if (!bookDetailViewController||![bookDetailViewController.book.apiURL isEqual:urlString]) {
-			[doubanConnector requestBookDataWithApiURL:urlString];
+		[[DoubanConnector sharedDoubanConnector] requestBookDataWithAPIURLString:urlString
+																  responseTarget:self 
+																  responseAction:@selector(didGetDoubanBook:)];
 		[[self view] addSubview:[loadingViewController view]];
 	}else {
 		[[self navigationController ] pushViewController:bookDetailViewController animated:YES];
 	}
 }
 
-	
-- (void)viewDidAppear:(BOOL)animated{
-	[resultTableView deselectRowAtIndexPath:[resultTableView indexPathForSelectedRow] animated:YES];
-
-}
-
-- (void)loadMore {
-	if (startIndex > totalResults) {
-		[activityFooter stopAnimating];
-	}else {
-		NSString *queryString = [NSString stringWithFormat:@"q=%@&start-index=%d&max-results=%d",[self.searchedString urlEncodeString],startIndex,MAX_RESULTS];
-		startIndex += MAX_RESULTS;
-		[doubanConnector requestQueryBooksWithQueryString:queryString];
-	}
-}
-#pragma mark Tableview Delegate 
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-
-	return 50;
-}
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     if (activityFooter == nil) {
@@ -225,4 +270,19 @@
     }
 }
 
+
+#pragma mark -
+#pragma mark Load Moew Results
+- (void)loadMore {
+	if (startIndex > totalResults) {
+		[activityFooter stopAnimating];
+	}else {
+		NSString *queryString = [NSString stringWithFormat:@"q=%@&start-index=%d&max-results=%d",[self.searchedString urlEncodeString],startIndex,MAX_RESULTS];
+		startIndex += MAX_RESULTS;
+		[[DoubanConnector sharedDoubanConnector] requestQueryBooksWithQueryString:queryString
+																   responseTarget:self
+																   responseAction:@selector(didGetDoubanBooks:)];
+		isLoading = YES;
+	}
+}
 @end

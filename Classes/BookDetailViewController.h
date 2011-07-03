@@ -7,31 +7,24 @@
 //
 #import "BookPriceComparisonViewController.h"
 #import "DoubanBook.h"
+#import "BookReviewsViewController.h"
 #import "ASImageView.h"
 
 @interface BookDetailViewController : UIViewController {
 	BookPriceComparisonViewController *bookPriceComparisonViewController;
+	BookReviewsViewController *reviewsViewController;
 	DoubanBook *book;
 	//IBOutlet UITableView *tableView;
 	
-	IBOutlet ASImageView *coverImageView;
-	IBOutlet UITableViewCell *coverCell;
 	
-	IBOutlet UITableViewCell *bookIntroCell;
-	IBOutlet UILabel *bookIntroLabel;
+	NSArray *bookItemNames;
+	NSArray *bookItemImageNames;
 	
-	IBOutlet UITableViewCell *authorCell;
-	IBOutlet UILabel *authorLabel;
-	
-	IBOutlet UITableViewCell *commentsCell;
-	IBOutlet UITableViewCell *priceComparisonCell;
-
-	 //cell items
+	ASImageView *coverView;
 	
 	
 }
 @property(nonatomic,retain)DoubanBook *book;
-- (IBAction)showBookPriceComparisionView:(id)sender;
 
 - (IBAction)dismissPriceComparisonView:(id)sender;
 

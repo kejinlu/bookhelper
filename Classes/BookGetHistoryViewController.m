@@ -11,6 +11,9 @@
 #import "BookGetHistoryDatabase.h"
 #import "TableUIButton.h"
 #import "GradientView.h"
+#import "UIImage+Scale.h"
+#import "DoubanConnector.h"
+#import "DoubanBook.h"
 #define TRASH_ACTION_SHEET 100
 @implementation BookGetHistoryViewController
 
@@ -20,7 +23,8 @@
 		pageNumber = 1;
 		filterByStarred = NO;
 		histories = [[NSMutableArray alloc] init];
-
+		totalPages = [[BookGetHistoryDatabase sharedInstance] totalPagesFilterByStarred:filterByStarred];
+		loadingViewController = [[LoadingViewController alloc] init];
 	}
 	return self;
 }
@@ -50,18 +54,13 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-	[histories removeAllObjects];
-	totalPages = [[BookGetHistoryDatabase sharedInstance] totalPagesFilterByStarred:NO];
-	[histories addObjectsFromArray:[[BookGetHistoryDatabase sharedInstance] bookHistoriesOnPage:pageNumber filterByStarred:filterByStarred]];
-	[historyTable reloadData];
 	[self checkNavigationItemButtons];
-
+	UISegmentedControl *segmentControl = (UISegmentedControl *)[self navigationItem].titleView;
+	segmentControl.selectedSegmentIndex = 0;
 }
 
+#pragma mark -
 #pragma mark tableView datasource delegate
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return 50.0f;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [histories count];
@@ -76,27 +75,27 @@
 		cell.selectedBackgroundView = [[[GradientView alloc] initWithGradientType:GREEN_GRADIENT] autorelease];
 		
 		TableUIButton *starButton = [TableUIButton buttonWithType:UIButtonTypeCustom];
-		starButton.frame = CGRectMake(1, 6, 40, 40);
+		starButton.frame = CGRectMake(0, 0, 52, 52);
 		starButton.tag = STAR_BUTTON;
 		[starButton addTarget:self action:@selector(starHistory:) forControlEvents:UIControlEventTouchUpInside];
 		[cell.contentView addSubview:starButton];
 		
-		UILabel	*myTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, 5, 280, 31)];
+		UILabel	*myTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(54, 6, 240, 20)];
 		myTextLabel.tag = BOOK_TITLE;
 		myTextLabel.backgroundColor = [UIColor clearColor];
 		myTextLabel.highlightedTextColor = [UIColor whiteColor];
 		myTextLabel.textColor = [UIColor blackColor];
 		myTextLabel.textAlignment = UITextAlignmentLeft;
-		myTextLabel.font = [UIFont systemFontOfSize:18];
+		myTextLabel.font = [UIFont systemFontOfSize:16];
 		[cell.contentView addSubview:myTextLabel];
 		
-		UILabel	*myDetailLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, 29, 280, 21)];
+		UILabel	*myDetailLabel = [[UILabel alloc] initWithFrame:CGRectMake(54, 28, 240, 20)];
 		myDetailLabel.tag = BOOK_INFO;
 		myDetailLabel.backgroundColor = [UIColor clearColor];
 		myDetailLabel.textColor = [UIColor grayColor];
 		myDetailLabel.highlightedTextColor = [UIColor whiteColor];
 		myDetailLabel.textAlignment = UITextAlignmentLeft;
-		myDetailLabel.font = [UIFont systemFontOfSize:14];
+		myDetailLabel.font = [UIFont systemFontOfSize:12];
 		[cell.contentView addSubview:myDetailLabel];
 		[myTextLabel release];
 		[myDetailLabel release];
@@ -107,13 +106,20 @@
 	UILabel *textLabel = (UILabel *)[cell viewWithTag:BOOK_TITLE];
 	UILabel	*detailLabel = (UILabel *)[cell viewWithTag:BOOK_INFO];
 	BookGetHistory *history = (BookGetHistory *)[histories objectAtIndex:indexPath.row];
-	[starButton setImage:[UIImage imageNamed:history.starred ? @"star.png" : @"unstar.png"] 
+	[starButton setImage:[[UIImage imageNamed:history.starred ? @"star.png" : @"unstar.png"] imageScaledToSize:CGSizeMake(16, 16)] 
 				forState:UIControlStateNormal];
 	starButton.row = indexPath.row;
 	textLabel.text = history.bookTitle;
-	detailLabel.text = [NSString stringWithFormat:@"%@ / %@",
-						history.author,
-						history.publisher];
+	
+	if (history.author) {
+		detailLabel.text = history.author;
+	}
+	if (history.publisher) {
+		detailLabel.text = [detailLabel.text stringByAppendingFormat:@" / %@",history.publisher];
+	}
+	if (history.pubDate) {
+		detailLabel.text = [detailLabel.text stringByAppendingFormat:@" %@",history.pubDate];
+	}
     return cell;
 }
 
@@ -130,7 +136,59 @@
 }
 
 
-#pragma mark Edit
+#pragma mark -
+#pragma mark tableview delegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	return 52.0f;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {	
+	BookGetHistory *history = [histories objectAtIndex:indexPath.row];
+	[[DoubanConnector sharedDoubanConnector] requestBookDataWithISBN:history.isbn
+													  responseTarget:self 
+													  responseAction:@selector(didGetDoubanBook:)];
+	[[self view] addSubview:[loadingViewController view]];
+}
+
+
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ((indexPath.row + 1 >= [self tableView:tableView numberOfRowsInSection:indexPath.section])) {
+        if (!isLoading) {
+			pageNumber += 1;
+			[self loadMore];
+        }
+    }
+}
+
+
+- (void)loadMore {
+	if (pageNumber <= totalPages) {
+		isLoading = YES;
+		NSArray *results = [[BookGetHistoryDatabase sharedInstance] bookHistoriesOnPage:pageNumber
+																		filterByStarred:filterByStarred];
+		[histories addObjectsFromArray:results];
+		[historyTable reloadData];
+		isLoading = NO;
+	}
+}
+
+#pragma mark -
+#pragma mark Did GeetBook
+- (void)didGetDoubanBook:(DoubanBook *)book{
+	if (!bookDetailViewController) {
+		bookDetailViewController = [[BookDetailViewController alloc] init];
+		bookDetailViewController.title = @"图书详情";
+	}
+	bookDetailViewController.book = book;
+	
+	[[self navigationController ] pushViewController:bookDetailViewController animated:YES];
+	[[loadingViewController view] removeFromSuperview];
+}
+
+#pragma mark Button Action
 
 - (void)edit:(id)sender {
 	UIBarButtonItem *cancelButton = [[[UIBarButtonItem alloc] initWithTitle:@"完成"
@@ -186,6 +244,8 @@
 	}
 }
 
+
+#pragma mark segment
 - (void)segmentSwitch:(id)sender{
 	UISegmentedControl *segmentedControl = (UISegmentedControl *) sender;
 	NSInteger selectedSegment = segmentedControl.selectedSegmentIndex;
@@ -200,11 +260,12 @@
 			break;
 	}
 	[histories removeAllObjects];
+	pageNumber = 1;
 	totalPages = [[BookGetHistoryDatabase sharedInstance] totalPagesFilterByStarred:filterByStarred];
-	[histories addObjectsFromArray:[[BookGetHistoryDatabase sharedInstance] bookHistoriesOnPage:pageNumber filterByStarred:filterByStarred]];
-	//[historyTable reloadData];
-	//[historyTable deleteSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:YES];
-	//[historyTable insertSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:YES];
-	[historyTable reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:YES];
+	NSArray *results = [[BookGetHistoryDatabase sharedInstance] bookHistoriesOnPage:pageNumber 
+																	filterByStarred:filterByStarred];
+	[histories addObjectsFromArray:results];
+	[historyTable reloadData];
 }
+
 @end

@@ -15,7 +15,6 @@
 @synthesize placeHolderImage;
 
 - (void)setUrlString:(NSString *)_urlString{
-	
 	if (urlString) {
 		[urlString release];
 		urlString = nil;

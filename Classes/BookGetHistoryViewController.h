@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
-
+#import "BookDetailViewController.h"
+#import "LoadingViewController.h"
 @interface BookGetHistoryViewController : UIViewController<UIActionSheetDelegate> {
 	IBOutlet UITableView *historyTable;
 	
@@ -16,6 +16,13 @@
 	NSInteger totalPages;
 	NSInteger pageNumber;
 	NSMutableArray *histories;
+	
+	BookDetailViewController *bookDetailViewController;
+	LoadingViewController *loadingViewController;
+		
+	BOOL isLoading;
+
+
 }
 
 - (void)checkNavigationItemButtons;
@@ -25,4 +32,6 @@
 
 - (void)starHistory:(id)sender;
 - (void)segmentSwitch:(id)sender;
+
+- (void)loadMore;
 @end

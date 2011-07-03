@@ -21,6 +21,7 @@
 	NSString *tranlator;
 	NSString *price;
 	NSString *publisher;
+	NSString *pubDate;
 	NSString *binding;
 	NSString *authorIntro;
 	
@@ -38,6 +39,7 @@
 @property(nonatomic,copy) NSString *tranlator;
 @property(nonatomic,copy) NSString *price;
 @property(nonatomic,copy) NSString *publisher;
+@property(nonatomic,copy) NSString *pubDate;
 @property(nonatomic,copy) NSString *binding;
 @property(nonatomic,copy) NSString *authorIntro;
 @property(nonatomic,copy) NSString *rating;

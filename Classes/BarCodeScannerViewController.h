@@ -14,7 +14,6 @@
 #import "LoadingViewController.h"
 @interface BarCodeScannerViewController : UIViewController<ZBarReaderDelegate> {
 	ZBarReaderViewController *barReaderViewController;
-	DoubanConnector *doubanConnector;
 	BookDetailViewController *bookDetailViewController;
 	//扫描成功之后的声音
 	AVAudioPlayer *beep;

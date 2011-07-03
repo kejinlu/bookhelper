@@ -15,32 +15,40 @@
 
 #define DOUBAN_API_KEY @"04f1ae6738f2fc450ed50b35aad8f4cf"
 
+
 @class DoubanBook;
-
-typedef enum  {
-	GET_BOOK = 0,
-	QUERY_BOOK
-} DoubanRequestType;
-
-
-@protocol DoubanConnectorDelegate
-- (void)didGetDoubanBooks:(NSArray *)books withTotalResults:(NSInteger)totalResults startIndex:(NSInteger)index;
-- (void)didGetDoubanBook:(DoubanBook *)book ;
-@end
 
 @interface DoubanConnector : NSObject {
 	DoubanURLConnection *urlConnection;
 	NSMutableData *responseData;
-	
-	id<DoubanConnectorDelegate> _delegate;
-	
 }
+//获取单例
++ (DoubanConnector *)sharedDoubanConnector;
 
-@property(nonatomic)NSInteger netActivityReqs;
+- (void)requestBookDataWithAPIURLString:(NSString *)urlString 
+						 responseTarget:(id)target 
+						 responseAction:(SEL)action;
 
-- (id)initWithDelegate:(id)delegate;
-- (void)requestBookDataWithApiURL:(NSString *)urlString;
-- (void)requestBookDataWithISBN:(NSString *)isbn;
-- (void)requestQueryBooksWithQueryString:(NSString *)queryString;
+- (void)requestBookDataWithISBN:(NSString *)isbn 
+				 responseTarget:(id)target 
+				 responseAction:(SEL)action;
 
+- (void)requestQueryBooksWithQueryString:(NSString *)queryString 
+						  responseTarget:(id)target 
+						  responseAction:(SEL)action;
+
+- (void)requestBookPriceHTMLWithBookId:(NSString *)bookId 
+						responseTarget:(id)target 
+						responseAction:(SEL)action;
+
+
+- (void)requestBookReviewsWithISBN:(NSString *)isbn 
+					   queryString:(NSString *)string 
+					responseTarget:(id)target 
+					responseAction:(SEL)action;
+
+- (void)sendRequestWithURLString:(NSString *)urlString
+							type:(DoubanConnectionType)connectionType 
+				  responseTarget:(id)target 
+				  responseAction:(SEL)action;
 @end

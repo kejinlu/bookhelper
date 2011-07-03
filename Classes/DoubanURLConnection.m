@@ -11,6 +11,7 @@
 
 @implementation DoubanURLConnection
 @synthesize type;
-
+@synthesize responseTarget;
+@synthesize responseAction;
 
 @end

@@ -22,6 +22,7 @@
 @synthesize tranlator;
 @synthesize price;
 @synthesize publisher;
+@synthesize pubDate;
 @synthesize binding;
 @synthesize authorIntro;
 @synthesize rating;
@@ -44,6 +45,7 @@
 	[self setTranlator:nil];
 	[self setPrice:nil];
 	[self setPublisher:nil];
+	[self setPubDate:nil];
 	[self setBinding:nil];
 	[self setAuthorIntro:nil];
 	[self setRating:nil];
@@ -95,6 +97,9 @@
 		
 		if ([@"publisher" isEqualToString:nameValue]) {
 			book.publisher = [dbElement stringValue];
+		}
+		if ([@"pubdate" isEqualToString:nameValue]) {
+			book.pubDate = [dbElement stringValue];
 		}
 		
 		if ([@"binding" isEqualToString:nameValue]) {

@@ -8,7 +8,7 @@
 
 #import "BarCodeScannerViewController.h"
 #import "ScannerOverlayView.h"
-
+#import "BookGetHistoryDatabase.h"
 @implementation BarCodeScannerViewController
 
 
@@ -35,8 +35,8 @@
 						   to: 0];
 		
 		
-		doubanConnector = [[DoubanConnector alloc] initWithDelegate:self];
 		loadingViewController = [[LoadingViewController alloc] init];
+
 		
 		
 	}
@@ -48,8 +48,6 @@
 	barReaderView.frame = CGRectMake(0.0, 0.0, 320.0, 367.0);
 	ScannerOverlayView *overlay = [[ScannerOverlayView alloc]initWithFrame:[barReaderView bounds]];
 	[barReaderViewController setCameraOverlayView:overlay];
-	[[self view] addSubview:barReaderView];
-
 }
 
 - (void) initAudio
@@ -81,13 +79,17 @@
 }
 
 
-- (void)viewWillAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated{
+	[super viewDidAppear:animated];
+	[[self view] addSubview:[barReaderViewController view]];
 	[barReaderViewController viewWillAppear:animated];
-	[super viewWillAppear:animated];
 	[[UIApplication sharedApplication] setStatusBarHidden:NO];
-
+	
 }
 
+- (void)viewDidDisappear{
+	[[barReaderViewController view] removeFromSuperview];
+}
 
 
 - (void)  imagePickerController: (UIImagePickerController*) picker didFinishPickingMediaWithInfo: (NSDictionary*) info
@@ -114,7 +116,9 @@
 			   withObject: nil
 			   afterDelay: 0.0];
 
-	[doubanConnector requestBookDataWithISBN:sym.data];
+	[[DoubanConnector sharedDoubanConnector] requestBookDataWithISBN:sym.data
+													  responseTarget:self
+													  responseAction:@selector(didGetDoubanBook:)];
 	searching = YES;
 	[[self view] addSubview:[loadingViewController view]];
 	
@@ -128,10 +132,13 @@
 
 - (void)didGetDoubanBook:(DoubanBook *)book{
 	if (!bookDetailViewController) {
-		bookDetailViewController = [[BookDetailViewController alloc] initWithNibName:@"BookDetailView" bundle:nil];
+		bookDetailViewController = [[BookDetailViewController alloc] init];
 		bookDetailViewController.title = @"图书详情";
 		//bookDetailViewController.navigationController = [self navigationController];
 	}
+	//加入历史记录
+	[[BookGetHistoryDatabase sharedInstance] addBookHistory:book]; 
+
 	bookDetailViewController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Books" style:UIBarButtonItemStyleBordered target:self action:@selector(dismissView:)];
 	bookDetailViewController.book = book;
 	

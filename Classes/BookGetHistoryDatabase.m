@@ -35,7 +35,7 @@ static BookGetHistoryDatabase *bookGetHistoryDatabase = nil;
 		
 		[db setShouldCacheStatements:YES];
 		
-		[db executeUpdate:@"create table  if not exists bookHistory (uid  INTEGER PRIMARY KEY ASC, added_time datetime,book_title text,author text, publisher text,starred integer)"]; 
+		[db executeUpdate:@"create table  if not exists bookHistory (uid  INTEGER PRIMARY KEY ASC, added_time datetime,isbn text, book_title text,author text, publisher text, pub_date text, starred integer)"]; 
 		
 		if ([db hadError]) {
 			NSLog(@"Err %d: %@", [db lastErrorCode], [db lastErrorMessage]);
@@ -53,12 +53,14 @@ static BookGetHistoryDatabase *bookGetHistoryDatabase = nil;
 
 //add
 - (BOOL)addBookHistory:(DoubanBook*)doubanBook{
-	NSString *sql = @"insert into bookHistory(added_time,book_title,author,publisher,starred) values(?,?,?,?,?)";
+	NSString *sql = @"insert into bookHistory(added_time,isbn,book_title,author,publisher,pub_date,starred) values(?,?,?,?,?,?,?)";
 	BOOL result = [db executeUpdate:sql,
 				   [NSDate date],
+				   doubanBook.isbn13,
 				   doubanBook.title,
 				   doubanBook.author,
 				   doubanBook.publisher,
+				   doubanBook.pubDate,
 				   [NSNumber numberWithBool:NO]];
 	return result;
 }
@@ -106,10 +108,12 @@ static BookGetHistoryDatabase *bookGetHistoryDatabase = nil;
 	while ([resultSet next]) {
 		BookGetHistory *history = [[BookGetHistory alloc] init];
 		history.uid = [resultSet intForColumn:@"uid"]; 
+		history.isbn = [resultSet stringForColumn:@"isbn"];
 		history.bookTitle = [resultSet stringForColumn:@"book_title"];
 		history.addedTime = [resultSet dateForColumn:@"added_time"];
 		history.author = [resultSet stringForColumn:@"author"];
 		history.publisher = [resultSet stringForColumn:@"publisher"];
+		history.pubDate = [resultSet stringForColumn:@"pub_date"];
 		history.starred = [resultSet boolForColumn:@"starred"];
 		
 		[resultArray addObject:history];

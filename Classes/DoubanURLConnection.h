@@ -8,12 +8,18 @@
 
 typedef enum  {
 	DOUBAN_BOOK = 0,
-	DOUBAN_BOOKS
+	DOUBAN_BOOKS,
+	DOUBAN_PRICE,
+	DOUBAN_BOOK_REVIEWS
 } DoubanConnectionType;
 
 @interface DoubanURLConnection : NSURLConnection {
 	DoubanConnectionType type;
+	id responseTarget;
+	SEL responseAction;
 }
 
-@property(assign)DoubanConnectionType type;
+@property(nonatomic,assign)DoubanConnectionType type;
+@property(nonatomic,assign)id responseTarget;
+@property(nonatomic,assign)SEL responseAction;
 @end
