@@ -11,6 +11,7 @@
 #import "DoubanBookReviewSummary.h"
 #import "ASImageView.h"
 #import <QuartzCore/QuartzCore.h>
+#import "ReviewTableViewCell.h"
 
 @implementation BookReviewsViewController
 @synthesize isbn;
@@ -46,7 +47,7 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return 100.0f;
+	return 110.0f;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -54,37 +55,12 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	static NSString *CellIdentifier = @"BookReviewCell";
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	ReviewTableViewCell *cell = (ReviewTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (!cell) {
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-		//头像
-		ASImageView *authorIcon = [[ASImageView alloc] initWithFrame:CGRectMake(5, 5, 40, 40)];
-		authorIcon.layer.masksToBounds = YES;
-		authorIcon.layer.cornerRadius = 6;
-		authorIcon.tag = BOOK_REVIEW_AUTHOR_ICON;
-		[cell.contentView addSubview:authorIcon];
-		[authorIcon release];
-		//昵称
-		UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(48, 5,100, 20)];
-		nameLabel.tag = BOOK_REVIEW_AUTHOR_NAME;
-		[cell.contentView addSubview:nameLabel];
-		[nameLabel release];
-		
-		UITextView *reviewText = [[UITextView alloc] initWithFrame:CGRectMake(5, 50, 380, 40)];
-		reviewText.tag = BOOK_REVIEW_TEXT;
-		[cell.contentView addSubview:reviewText];
-		[reviewText release];
+		cell = [[[ReviewTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
 	}
 	DoubanBookReviewSummary *review = (DoubanBookReviewSummary *)[reviews objectAtIndex:indexPath.row];
-	ASImageView *authorIcon = (ASImageView *)[cell.contentView viewWithTag:BOOK_REVIEW_AUTHOR_ICON];
-	authorIcon.urlString = review.authorIcon;
-	
-	UILabel *nameLabel = (UILabel *)[cell.contentView viewWithTag:BOOK_REVIEW_AUTHOR_NAME];
-	nameLabel.text = review.authorName;
-	
-	UITextView *reviewText = (UITextView *)[cell.contentView viewWithTag:BOOK_REVIEW_TEXT];
-	reviewText.text = review.summary;
-	
+	cell.review = review;	
 	return cell;
 }
 

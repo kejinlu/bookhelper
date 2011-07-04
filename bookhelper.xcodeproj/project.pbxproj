@@ -18,6 +18,8 @@
 		A303142713BA32BF000BD08C /* BookGetHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A303142613BA32BF000BD08C /* BookGetHistoryViewController.m */; };
 		A3317F0D13BC8ED500D0E7A6 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3317F0C13BC8ED500D0E7A6 /* MoreViewController.m */; };
 		A3317F0F13BC8EF700D0E7A6 /* MoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3317F0E13BC8EF700D0E7A6 /* MoreView.xib */; };
+		A349455713C1FFFE00C25B23 /* ReviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A349455613C1FFFE00C25B23 /* ReviewTableViewCell.m */; };
+		A34945B113C2190600C25B23 /* BookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A34945B013C2190600C25B23 /* BookTableViewCell.m */; };
 		A3791DC413B5D1240061C4DC /* BarCodeScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3791DC313B5D1240061C4DC /* BarCodeScannerViewController.m */; };
 		A3791DC613B5D1460061C4DC /* BarCodeScannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3791DC513B5D1460061C4DC /* BarCodeScannerView.xib */; };
 		A3791F7213B62AA90061C4DC /* ScannerOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3791F7113B62AA90061C4DC /* ScannerOverlayView.m */; };
@@ -136,6 +138,10 @@
 		A3317F0B13BC8ED500D0E7A6 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		A3317F0C13BC8ED500D0E7A6 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		A3317F0E13BC8EF700D0E7A6 /* MoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MoreView.xib; path = ../../../../../Users/Luke/Projects/bookhelper/Resources/MoreView.xib; sourceTree = "<group>"; };
+		A349455513C1FFFE00C25B23 /* ReviewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewTableViewCell.h; sourceTree = "<group>"; };
+		A349455613C1FFFE00C25B23 /* ReviewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewTableViewCell.m; sourceTree = "<group>"; };
+		A34945AF13C2190600C25B23 /* BookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookTableViewCell.h; sourceTree = "<group>"; };
+		A34945B013C2190600C25B23 /* BookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookTableViewCell.m; sourceTree = "<group>"; };
 		A3791DC213B5D1240061C4DC /* BarCodeScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarCodeScannerViewController.h; sourceTree = "<group>"; };
 		A3791DC313B5D1240061C4DC /* BarCodeScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarCodeScannerViewController.m; sourceTree = "<group>"; };
 		A3791DC513B5D1460061C4DC /* BarCodeScannerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BarCodeScannerView.xib; path = /Users/Luke/Projects/bookhelper/Resources/BarCodeScannerView.xib; sourceTree = "<absolute>"; };
@@ -188,7 +194,7 @@
 		A3BDEF8013BF723D0027A336 /* author.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = author.png; path = /Users/Luke/Projects/bookhelper/Resources/author.png; sourceTree = "<absolute>"; };
 		A3BDF00B13BF7B340027A336 /* UIImage+Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
 		A3BDF00C13BF7B340027A336 /* UIImage+Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
-		A3BDF01F13BF80100027A336 /* cover_placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_placeholder.jpg; path = /Users/Luke/Projects/bookhelper/Resources/cover_placeholder.jpg; sourceTree = "<absolute>"; };
+		A3BDF01F13BF80100027A336 /* cover_placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cover_placeholder.jpg; path = ../../../../../Users/Luke/Projects/bookhelper/Resources/cover_placeholder.jpg; sourceTree = "<group>"; };
 		A3BDF06B13C00A950027A336 /* BookReviewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookReviewsViewController.h; sourceTree = "<group>"; };
 		A3BDF06C13C00A950027A336 /* BookReviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookReviewsViewController.m; sourceTree = "<group>"; };
 		A3BDF06E13C00AB00027A336 /* BookReviewsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BookReviewsView.xib; path = /Users/Luke/Projects/bookhelper/Resources/BookReviewsView.xib; sourceTree = "<absolute>"; };
@@ -388,9 +394,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A34945AE13C218D400C25B23 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A349455513C1FFFE00C25B23 /* ReviewTableViewCell.h */,
+				A349455613C1FFFE00C25B23 /* ReviewTableViewCell.m */,
+				A34945AF13C2190600C25B23 /* BookTableViewCell.h */,
+				A34945B013C2190600C25B23 /* BookTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		A3791F6F13B62A790061C4DC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A34945AE13C218D400C25B23 /* Cell */,
 				A3B1864413B8CB84007B100E /* ShadowedTableView.h */,
 				A3B1864113B8CB84007B100E /* ShadowedTableView.m */,
 				A3B1864613B8CB84007B100E /* GradientView.h */,
@@ -421,8 +439,8 @@
 				A38EDA5113BCC736004CABBC /* iTunesArtwork */,
 			);
 			name = appicons;
-			path = /Users/Luke/Projects/bookhelper/Resources/appicons;
-			sourceTree = "<absolute>";
+			path = ../../../../../Users/Luke/Projects/bookhelper/Resources/appicons;
+			sourceTree = "<group>";
 		};
 		A38EDA5913BCC743004CABBC /* tabbar */ = {
 			isa = PBXGroup;
@@ -860,6 +878,8 @@
 				A3BDF1C513C028E20027A336 /* XPathQuery.m in Sources */,
 				A3BDF23C13C02AF50027A336 /* GDataXMLNode.m in Sources */,
 				A3BDF36A13C044C70027A336 /* BookAuthorIntroViewController.m in Sources */,
+				A349455713C1FFFE00C25B23 /* ReviewTableViewCell.m in Sources */,
+				A34945B113C2190600C25B23 /* BookTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

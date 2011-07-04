@@ -104,7 +104,9 @@ static DoubanConnector *doubanConnector;
 			responseAction:(SEL)action
 {
 	NSURL *url = [NSURL URLWithString:urlString];
-	NSURLRequest *theRequest = [NSURLRequest requestWithURL:url];
+	NSURLRequest *theRequest = [NSURLRequest requestWithURL:url
+												cachePolicy:NSURLRequestReturnCacheDataElseLoad 
+											timeoutInterval:30];
 	//如果已经有连接在运行的，取消并释放
 	if (urlConnection) {
 		[urlConnection cancel];
