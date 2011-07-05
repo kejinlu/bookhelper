@@ -269,9 +269,10 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
+								<string>A3C7DA8313C2EFA800472D1F</string>
+								<string>A3C7DA8413C2EFA800472D1F</string>
 								<string>080E96DDFE201D6D7F000001</string>
-								<string>A391AC8C13B90748003CFB40</string>
-								<string>A3C7DA2613C2EDD100472D1F</string>
+								<string>A3791F6F13B62A790061C4DC</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C77FABC04509CD000000102</string>
@@ -280,13 +281,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>3</integer>
-									<integer>2</integer>
+									<integer>37</integer>
+									<integer>31</integer>
+									<integer>29</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 18}, {341, 760}}</string>
+							<string>{{0, 400}, {341, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -319,7 +321,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>A38A88DE13B1EDAF009EECBC</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>BookGetHistoryDatabase.m</string>
+								<string>ScannerOverlayView.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,11 +329,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>A38A88DF13B1EDAF009EECBC</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>BookGetHistoryDatabase.m</string>
+										<string>ScannerOverlayView.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>A3C7DA8213C2EEA400472D1F</string>
+										<string>A3C7DAF413C2F09100472D1F</string>
 										<key>history</key>
 										<array>
 											<string>A3E3FA9A13B2300E0023DC27</string>
@@ -482,18 +484,13 @@
 											<string>A30B7CFD13C0D27A002378F4</string>
 											<string>A30B7D0213C0D27A002378F4</string>
 											<string>A30B7D4813C0D77E002378F4</string>
-											<string>A30B7D6D13C0D985002378F4</string>
 											<string>A30B7D6E13C0D985002378F4</string>
-											<string>A30B7D9413C0DCBD002378F4</string>
 											<string>A30B7DC313C0DEE5002378F4</string>
 											<string>A30B7DF213C0E195002378F4</string>
 											<string>A30B7DF313C0E195002378F4</string>
-											<string>A30B7E0513C0E35B002378F4</string>
 											<string>A30B7E0613C0E35B002378F4</string>
-											<string>A349454113C1FB5A00C25B23</string>
 											<string>A349454213C1FB5A00C25B23</string>
 											<string>A349456C13C2142C00C25B23</string>
-											<string>A349457913C2150A00C25B23</string>
 											<string>A349459213C215E200C25B23</string>
 											<string>A349459313C215E200C25B23</string>
 											<string>A349459413C215E200C25B23</string>
@@ -510,16 +507,21 @@
 											<string>A3C7DA0213C2ED3500472D1F</string>
 											<string>A3C7DA0513C2ED3500472D1F</string>
 											<string>A3C7DA7513C2EE1400472D1F</string>
-											<string>A3C7DA7613C2EE1400472D1F</string>
-											<string>A3C7DA7713C2EE1400472D1F</string>
-											<string>A3C7DA7813C2EE1400472D1F</string>
-											<string>A3C7DA7913C2EE1400472D1F</string>
 											<string>A3C7DA7A13C2EE1400472D1F</string>
 											<string>A3C7DA7B13C2EE1400472D1F</string>
 											<string>A3C7DA7C13C2EE1400472D1F</string>
-											<string>A3C7DA7F13C2EEA400472D1F</string>
 											<string>A3C7DA8013C2EEA400472D1F</string>
-											<string>A3C7DA8113C2EEA400472D1F</string>
+											<string>A3C7DAE813C2F05500472D1F</string>
+											<string>A3C7DAE913C2F05500472D1F</string>
+											<string>A3C7DAEA13C2F05500472D1F</string>
+											<string>A3C7DAEB13C2F05500472D1F</string>
+											<string>A3C7DAEC13C2F05500472D1F</string>
+											<string>A3C7DAED13C2F05500472D1F</string>
+											<string>A3C7DAEE13C2F05500472D1F</string>
+											<string>A3C7DAEF13C2F05500472D1F</string>
+											<string>A3C7DAF013C2F05500472D1F</string>
+											<string>A3C7DAF113C2F05500472D1F</string>
+											<string>A3C7DAF213C2F05500472D1F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

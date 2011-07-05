@@ -38,31 +38,6 @@
 		A3BDF00D13BF7B340027A336 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF00C13BF7B340027A336 /* UIImage+Scale.m */; };
 		A3BDF06D13C00A950027A336 /* BookReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF06C13C00A950027A336 /* BookReviewsViewController.m */; };
 		A3BDF07A13C00DDE0027A336 /* DoubanBookReviewSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF07913C00DDE0027A336 /* DoubanBookReviewSummary.m */; };
-		A3BDF1B213C028E20027A336 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF16D13C028E20027A336 /* ASIAuthenticationDialog.m */; };
-		A3BDF1B313C028E20027A336 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF17013C028E20027A336 /* ASIDataCompressor.m */; };
-		A3BDF1B413C028E20027A336 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF17213C028E20027A336 /* ASIDataDecompressor.m */; };
-		A3BDF1B513C028E20027A336 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF17413C028E20027A336 /* ASIDownloadCache.m */; };
-		A3BDF1B613C028E20027A336 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF17613C028E20027A336 /* ASIFormDataRequest.m */; };
-		A3BDF1B713C028E20027A336 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF17813C028E20027A336 /* ASIHTTPRequest.m */; };
-		A3BDF1B813C028E20027A336 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF17C13C028E20027A336 /* ASIInputStream.m */; };
-		A3BDF1B913C028E20027A336 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF17E13C028E20027A336 /* ASINetworkQueue.m */; };
-		A3BDF1BA13C028E20027A336 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF18113C028E20027A336 /* Reachability.m */; };
-		A3BDF1BB13C028E20027A336 /* CHANGES_AND_TODO_LIST.txt in Resources */ = {isa = PBXBuildFile; fileRef = A3BDF18313C028E20027A336 /* CHANGES_AND_TODO_LIST.txt */; };
-		A3BDF1BC13C028E20027A336 /* CONTRIBUTORS.txt in Resources */ = {isa = PBXBuildFile; fileRef = A3BDF18413C028E20027A336 /* CONTRIBUTORS.txt */; };
-		A3BDF1BD13C028E20027A336 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF18613C028E20027A336 /* FMDatabase.m */; };
-		A3BDF1BE13C028E20027A336 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF18813C028E20027A336 /* FMDatabaseAdditions.m */; };
-		A3BDF1C013C028E20027A336 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF18B13C028E20027A336 /* FMResultSet.m */; };
-		A3BDF1C113C028E20027A336 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = A3BDF18C13C028E20027A336 /* LICENSE.txt */; };
-		A3BDF1C213C028E20027A336 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = A3BDF18D13C028E20027A336 /* README.markdown */; };
-		A3BDF1C313C028E20027A336 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF19013C028E20027A336 /* TFHpple.m */; };
-		A3BDF1C413C028E20027A336 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF19213C028E20027A336 /* TFHppleElement.m */; };
-		A3BDF1C513C028E20027A336 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF19413C028E20027A336 /* XPathQuery.m */; };
-		A3BDF1C613C028E20027A336 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BDF1AC13C028E20027A336 /* libzbar.a */; };
-		A3BDF1C713C028E20027A336 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = A3BDF1AE13C028E20027A336 /* zbar-back.png */; };
-		A3BDF1C813C028E20027A336 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = A3BDF1AF13C028E20027A336 /* zbar-help.html */; };
-		A3BDF1C913C028E20027A336 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = A3BDF1B013C028E20027A336 /* zbar-helpicons.png */; };
-		A3BDF1CA13C028E20027A336 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = A3BDF1B113C028E20027A336 /* zbar-samples.png */; };
-		A3BDF23C13C02AF50027A336 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF23B13C02AF50027A336 /* GDataXMLNode.m */; };
 		A3BDF36A13C044C70027A336 /* BookAuthorIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF36913C044C70027A336 /* BookAuthorIntroViewController.m */; };
 		A3C7DA4F13C2EDD200472D1F /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DA2813C2EDD100472D1F /* Icon-72.png */; };
 		A3C7DA5013C2EDD200472D1F /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DA2913C2EDD100472D1F /* Icon-Small-50.png */; };
@@ -102,6 +77,31 @@
 		A3C7DA7213C2EDD200472D1F /* SearchBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DA4C13C2EDD200472D1F /* SearchBarView.xib */; };
 		A3C7DA7313C2EDD200472D1F /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DA4D13C2EDD200472D1F /* star.png */; };
 		A3C7DA7413C2EDD200472D1F /* unstar.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DA4E13C2EDD200472D1F /* unstar.png */; };
+		A3C7DACE13C2EFA800472D1F /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C7DA8613C2EFA800472D1F /* ASIAuthenticationDialog.m */; };
+		A3C7DACF13C2EFA800472D1F /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C7DA8913C2EFA800472D1F /* ASIDataCompressor.m */; };
+		A3C7DAD013C2EFA800472D1F /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C7DA8B13C2EFA800472D1F /* ASIDataDecompressor.m */; };
+		A3C7DAD113C2EFA800472D1F /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C7DA8D13C2EFA800472D1F /* ASIDownloadCache.m */; };
+		A3C7DAD213C2EFA800472D1F /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C7DA8F13C2EFA800472D1F /* ASIFormDataRequest.m */; };
+		A3C7DAD313C2EFA800472D1F /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C7DA9113C2EFA800472D1F /* ASIHTTPRequest.m */; };
+		A3C7DAD413C2EFA800472D1F /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C7DA9513C2EFA800472D1F /* ASIInputStream.m */; };
+		A3C7DAD513C2EFA800472D1F /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C7DA9713C2EFA800472D1F /* ASINetworkQueue.m */; };
+		A3C7DAD613C2EFA800472D1F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C7DA9A13C2EFA800472D1F /* Reachability.m */; };
+		A3C7DAD713C2EFA800472D1F /* CHANGES_AND_TODO_LIST.txt in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DA9C13C2EFA800472D1F /* CHANGES_AND_TODO_LIST.txt */; };
+		A3C7DAD813C2EFA800472D1F /* CONTRIBUTORS.txt in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DA9D13C2EFA800472D1F /* CONTRIBUTORS.txt */; };
+		A3C7DAD913C2EFA800472D1F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C7DA9F13C2EFA800472D1F /* FMDatabase.m */; };
+		A3C7DADA13C2EFA800472D1F /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C7DAA113C2EFA800472D1F /* FMDatabaseAdditions.m */; };
+		A3C7DADC13C2EFA800472D1F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C7DAA413C2EFA800472D1F /* FMResultSet.m */; };
+		A3C7DADD13C2EFA800472D1F /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DAA513C2EFA800472D1F /* LICENSE.txt */; };
+		A3C7DADE13C2EFA800472D1F /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DAA613C2EFA800472D1F /* README.markdown */; };
+		A3C7DADF13C2EFA800472D1F /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C7DAA913C2EFA800472D1F /* GDataXMLNode.m */; };
+		A3C7DAE013C2EFA800472D1F /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C7DAAC13C2EFA800472D1F /* TFHpple.m */; };
+		A3C7DAE113C2EFA800472D1F /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C7DAAE13C2EFA800472D1F /* TFHppleElement.m */; };
+		A3C7DAE213C2EFA800472D1F /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C7DAB013C2EFA800472D1F /* XPathQuery.m */; };
+		A3C7DAE313C2EFA800472D1F /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C7DAC813C2EFA800472D1F /* libzbar.a */; };
+		A3C7DAE413C2EFA800472D1F /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DACA13C2EFA800472D1F /* zbar-back.png */; };
+		A3C7DAE513C2EFA800472D1F /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DACB13C2EFA800472D1F /* zbar-help.html */; };
+		A3C7DAE613C2EFA800472D1F /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DACC13C2EFA800472D1F /* zbar-helpicons.png */; };
+		A3C7DAE713C2EFA800472D1F /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DACD13C2EFA800472D1F /* zbar-samples.png */; };
 		A3D3775213B395FC00632293 /* DoubanURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D3775113B395FC00632293 /* DoubanURLConnection.m */; };
 		A3D3780813B3A4F800632293 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D3780713B3A4F800632293 /* QuartzCore.framework */; };
 		A3D3781E13B3A51300632293 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D3781D13B3A51300632293 /* CoreVideo.framework */; };
@@ -161,10 +161,10 @@
 		A39A9FE413BEB5F800937489 /* BookPriceUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookPriceUtilities.h; sourceTree = "<group>"; };
 		A39A9FE513BEB5F800937489 /* BookPriceUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookPriceUtilities.m; sourceTree = "<group>"; };
 		A3B17ED713B79A7A007B100E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		A3B1864113B8CB84007B100E /* ShadowedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShadowedTableView.m; path = /Users/Luke/Projects/bookhelper/Classes/ShadowedTableView.m; sourceTree = "<absolute>"; };
-		A3B1864313B8CB84007B100E /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GradientView.m; path = /Users/Luke/Projects/bookhelper/Classes/GradientView.m; sourceTree = "<absolute>"; };
-		A3B1864413B8CB84007B100E /* ShadowedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShadowedTableView.h; path = /Users/Luke/Projects/bookhelper/Classes/ShadowedTableView.h; sourceTree = "<absolute>"; };
-		A3B1864613B8CB84007B100E /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GradientView.h; path = /Users/Luke/Projects/bookhelper/Classes/GradientView.h; sourceTree = "<absolute>"; };
+		A3B1864113B8CB84007B100E /* ShadowedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowedTableView.m; sourceTree = "<group>"; };
+		A3B1864313B8CB84007B100E /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
+		A3B1864413B8CB84007B100E /* ShadowedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowedTableView.h; sourceTree = "<group>"; };
+		A3B1864613B8CB84007B100E /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
 		A3B8C93913BB8A6600028546 /* TableUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableUIButton.h; sourceTree = "<group>"; };
 		A3B8C93A13BB8A6600028546 /* TableUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableUIButton.m; sourceTree = "<group>"; };
 		A3BDF00B13BF7B340027A336 /* UIImage+Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
@@ -173,70 +173,6 @@
 		A3BDF06C13C00A950027A336 /* BookReviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookReviewsViewController.m; sourceTree = "<group>"; };
 		A3BDF07813C00DDE0027A336 /* DoubanBookReviewSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanBookReviewSummary.h; sourceTree = "<group>"; };
 		A3BDF07913C00DDE0027A336 /* DoubanBookReviewSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanBookReviewSummary.m; sourceTree = "<group>"; };
-		A3BDF16C13C028E20027A336 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIAuthenticationDialog.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIAuthenticationDialog.h; sourceTree = "<absolute>"; };
-		A3BDF16D13C028E20027A336 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIAuthenticationDialog.m; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIAuthenticationDialog.m; sourceTree = "<absolute>"; };
-		A3BDF16E13C028E20027A336 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICacheDelegate.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASICacheDelegate.h; sourceTree = "<absolute>"; };
-		A3BDF16F13C028E20027A336 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIDataCompressor.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIDataCompressor.h; sourceTree = "<absolute>"; };
-		A3BDF17013C028E20027A336 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIDataCompressor.m; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIDataCompressor.m; sourceTree = "<absolute>"; };
-		A3BDF17113C028E20027A336 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIDataDecompressor.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIDataDecompressor.h; sourceTree = "<absolute>"; };
-		A3BDF17213C028E20027A336 /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIDataDecompressor.m; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIDataDecompressor.m; sourceTree = "<absolute>"; };
-		A3BDF17313C028E20027A336 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIDownloadCache.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIDownloadCache.h; sourceTree = "<absolute>"; };
-		A3BDF17413C028E20027A336 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIDownloadCache.m; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIDownloadCache.m; sourceTree = "<absolute>"; };
-		A3BDF17513C028E20027A336 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIFormDataRequest.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIFormDataRequest.h; sourceTree = "<absolute>"; };
-		A3BDF17613C028E20027A336 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIFormDataRequest.m; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIFormDataRequest.m; sourceTree = "<absolute>"; };
-		A3BDF17713C028E20027A336 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequest.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIHTTPRequest.h; sourceTree = "<absolute>"; };
-		A3BDF17813C028E20027A336 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIHTTPRequest.m; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIHTTPRequest.m; sourceTree = "<absolute>"; };
-		A3BDF17913C028E20027A336 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestConfig.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIHTTPRequestConfig.h; sourceTree = "<absolute>"; };
-		A3BDF17A13C028E20027A336 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestDelegate.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIHTTPRequestDelegate.h; sourceTree = "<absolute>"; };
-		A3BDF17B13C028E20027A336 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIInputStream.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIInputStream.h; sourceTree = "<absolute>"; };
-		A3BDF17C13C028E20027A336 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIInputStream.m; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIInputStream.m; sourceTree = "<absolute>"; };
-		A3BDF17D13C028E20027A336 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASINetworkQueue.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASINetworkQueue.h; sourceTree = "<absolute>"; };
-		A3BDF17E13C028E20027A336 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASINetworkQueue.m; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASINetworkQueue.m; sourceTree = "<absolute>"; };
-		A3BDF17F13C028E20027A336 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIProgressDelegate.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/ASIProgressDelegate.h; sourceTree = "<absolute>"; };
-		A3BDF18013C028E20027A336 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/Reachability.h; sourceTree = "<absolute>"; };
-		A3BDF18113C028E20027A336 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = /Users/Luke/Projects/bookhelper/Libraries/ASIHTTPRequest/Reachability.m; sourceTree = "<absolute>"; };
-		A3BDF18313C028E20027A336 /* CHANGES_AND_TODO_LIST.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CHANGES_AND_TODO_LIST.txt; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/CHANGES_AND_TODO_LIST.txt; sourceTree = "<absolute>"; };
-		A3BDF18413C028E20027A336 /* CONTRIBUTORS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CONTRIBUTORS.txt; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/CONTRIBUTORS.txt; sourceTree = "<absolute>"; };
-		A3BDF18513C028E20027A336 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/FMDatabase.h; sourceTree = "<absolute>"; };
-		A3BDF18613C028E20027A336 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/FMDatabase.m; sourceTree = "<absolute>"; };
-		A3BDF18713C028E20027A336 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/FMDatabaseAdditions.h; sourceTree = "<absolute>"; };
-		A3BDF18813C028E20027A336 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/FMDatabaseAdditions.m; sourceTree = "<absolute>"; };
-		A3BDF18A13C028E20027A336 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/FMResultSet.h; sourceTree = "<absolute>"; };
-		A3BDF18B13C028E20027A336 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/FMResultSet.m; sourceTree = "<absolute>"; };
-		A3BDF18C13C028E20027A336 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/LICENSE.txt; sourceTree = "<absolute>"; };
-		A3BDF18D13C028E20027A336 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.markdown; path = /Users/Luke/Projects/bookhelper/Libraries/fmdb/README.markdown; sourceTree = "<absolute>"; };
-		A3BDF18F13C028E20027A336 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFHpple.h; path = /Users/Luke/Projects/bookhelper/Libraries/Hpple/TFHpple.h; sourceTree = "<absolute>"; };
-		A3BDF19013C028E20027A336 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFHpple.m; path = /Users/Luke/Projects/bookhelper/Libraries/Hpple/TFHpple.m; sourceTree = "<absolute>"; };
-		A3BDF19113C028E20027A336 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFHppleElement.h; path = /Users/Luke/Projects/bookhelper/Libraries/Hpple/TFHppleElement.h; sourceTree = "<absolute>"; };
-		A3BDF19213C028E20027A336 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFHppleElement.m; path = /Users/Luke/Projects/bookhelper/Libraries/Hpple/TFHppleElement.m; sourceTree = "<absolute>"; };
-		A3BDF19313C028E20027A336 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPathQuery.h; path = /Users/Luke/Projects/bookhelper/Libraries/Hpple/XPathQuery.h; sourceTree = "<absolute>"; };
-		A3BDF19413C028E20027A336 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XPathQuery.m; path = /Users/Luke/Projects/bookhelper/Libraries/Hpple/XPathQuery.m; sourceTree = "<absolute>"; };
-		A3BDF19913C028E20027A336 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Decoder.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar/Decoder.h; sourceTree = "<absolute>"; };
-		A3BDF19A13C028E20027A336 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Exception.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar/Exception.h; sourceTree = "<absolute>"; };
-		A3BDF19B13C028E20027A336 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Image.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar/Image.h; sourceTree = "<absolute>"; };
-		A3BDF19C13C028E20027A336 /* ImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageScanner.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar/ImageScanner.h; sourceTree = "<absolute>"; };
-		A3BDF19D13C028E20027A336 /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Processor.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar/Processor.h; sourceTree = "<absolute>"; };
-		A3BDF19E13C028E20027A336 /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scanner.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar/Scanner.h; sourceTree = "<absolute>"; };
-		A3BDF19F13C028E20027A336 /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Symbol.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar/Symbol.h; sourceTree = "<absolute>"; };
-		A3BDF1A013C028E20027A336 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Video.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar/Video.h; sourceTree = "<absolute>"; };
-		A3BDF1A113C028E20027A336 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Window.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar/Window.h; sourceTree = "<absolute>"; };
-		A3BDF1A213C028E20027A336 /* zbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zbar.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar.h; sourceTree = "<absolute>"; };
-		A3BDF1A313C028E20027A336 /* ZBarCaptureReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBarCaptureReader.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/ZBarCaptureReader.h; sourceTree = "<absolute>"; };
-		A3BDF1A413C028E20027A336 /* ZBarHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBarHelpController.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/ZBarHelpController.h; sourceTree = "<absolute>"; };
-		A3BDF1A513C028E20027A336 /* ZBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBarImage.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/ZBarImage.h; sourceTree = "<absolute>"; };
-		A3BDF1A613C028E20027A336 /* ZBarImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBarImageScanner.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/ZBarImageScanner.h; sourceTree = "<absolute>"; };
-		A3BDF1A713C028E20027A336 /* ZBarReaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBarReaderController.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/ZBarReaderController.h; sourceTree = "<absolute>"; };
-		A3BDF1A813C028E20027A336 /* ZBarReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBarReaderView.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/ZBarReaderView.h; sourceTree = "<absolute>"; };
-		A3BDF1A913C028E20027A336 /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBarReaderViewController.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/ZBarReaderViewController.h; sourceTree = "<absolute>"; };
-		A3BDF1AA13C028E20027A336 /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBarSDK.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/ZBarSDK.h; sourceTree = "<absolute>"; };
-		A3BDF1AB13C028E20027A336 /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBarSymbol.h; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/ZBarSymbol.h; sourceTree = "<absolute>"; };
-		A3BDF1AC13C028E20027A336 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzbar.a; path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/libzbar.a; sourceTree = "<absolute>"; };
-		A3BDF1AE13C028E20027A336 /* zbar-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zbar-back.png"; path = "/Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Resources/zbar-back.png"; sourceTree = "<absolute>"; };
-		A3BDF1AF13C028E20027A336 /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "zbar-help.html"; path = "/Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Resources/zbar-help.html"; sourceTree = "<absolute>"; };
-		A3BDF1B013C028E20027A336 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zbar-helpicons.png"; path = "/Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Resources/zbar-helpicons.png"; sourceTree = "<absolute>"; };
-		A3BDF1B113C028E20027A336 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zbar-samples.png"; path = "/Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Resources/zbar-samples.png"; sourceTree = "<absolute>"; };
-		A3BDF23A13C02AF50027A336 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
-		A3BDF23B13C02AF50027A336 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		A3BDF36813C044C70027A336 /* BookAuthorIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookAuthorIntroViewController.h; sourceTree = "<group>"; };
 		A3BDF36913C044C70027A336 /* BookAuthorIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookAuthorIntroViewController.m; sourceTree = "<group>"; };
 		A3C7DA2813C2EDD100472D1F /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
@@ -277,6 +213,70 @@
 		A3C7DA4C13C2EDD200472D1F /* SearchBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarView.xib; sourceTree = "<group>"; };
 		A3C7DA4D13C2EDD200472D1F /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		A3C7DA4E13C2EDD200472D1F /* unstar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unstar.png; sourceTree = "<group>"; };
+		A3C7DA8513C2EFA800472D1F /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		A3C7DA8613C2EFA800472D1F /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		A3C7DA8713C2EFA800472D1F /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		A3C7DA8813C2EFA800472D1F /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
+		A3C7DA8913C2EFA800472D1F /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
+		A3C7DA8A13C2EFA800472D1F /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
+		A3C7DA8B13C2EFA800472D1F /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataDecompressor.m; sourceTree = "<group>"; };
+		A3C7DA8C13C2EFA800472D1F /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		A3C7DA8D13C2EFA800472D1F /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		A3C7DA8E13C2EFA800472D1F /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		A3C7DA8F13C2EFA800472D1F /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		A3C7DA9013C2EFA800472D1F /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		A3C7DA9113C2EFA800472D1F /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		A3C7DA9213C2EFA800472D1F /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		A3C7DA9313C2EFA800472D1F /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		A3C7DA9413C2EFA800472D1F /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		A3C7DA9513C2EFA800472D1F /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		A3C7DA9613C2EFA800472D1F /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		A3C7DA9713C2EFA800472D1F /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		A3C7DA9813C2EFA800472D1F /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		A3C7DA9913C2EFA800472D1F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		A3C7DA9A13C2EFA800472D1F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		A3C7DA9C13C2EFA800472D1F /* CHANGES_AND_TODO_LIST.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGES_AND_TODO_LIST.txt; sourceTree = "<group>"; };
+		A3C7DA9D13C2EFA800472D1F /* CONTRIBUTORS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CONTRIBUTORS.txt; sourceTree = "<group>"; };
+		A3C7DA9E13C2EFA800472D1F /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		A3C7DA9F13C2EFA800472D1F /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		A3C7DAA013C2EFA800472D1F /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		A3C7DAA113C2EFA800472D1F /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		A3C7DAA313C2EFA800472D1F /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		A3C7DAA413C2EFA800472D1F /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		A3C7DAA513C2EFA800472D1F /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		A3C7DAA613C2EFA800472D1F /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		A3C7DAA813C2EFA800472D1F /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		A3C7DAA913C2EFA800472D1F /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		A3C7DAAB13C2EFA800472D1F /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		A3C7DAAC13C2EFA800472D1F /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		A3C7DAAD13C2EFA800472D1F /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		A3C7DAAE13C2EFA800472D1F /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		A3C7DAAF13C2EFA800472D1F /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		A3C7DAB013C2EFA800472D1F /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		A3C7DAB513C2EFA800472D1F /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
+		A3C7DAB613C2EFA800472D1F /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		A3C7DAB713C2EFA800472D1F /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		A3C7DAB813C2EFA800472D1F /* ImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScanner.h; sourceTree = "<group>"; };
+		A3C7DAB913C2EFA800472D1F /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
+		A3C7DABA13C2EFA800472D1F /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
+		A3C7DABB13C2EFA800472D1F /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symbol.h; sourceTree = "<group>"; };
+		A3C7DABC13C2EFA800472D1F /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		A3C7DABD13C2EFA800472D1F /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		A3C7DABE13C2EFA800472D1F /* zbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zbar.h; sourceTree = "<group>"; };
+		A3C7DABF13C2EFA800472D1F /* ZBarCaptureReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCaptureReader.h; sourceTree = "<group>"; };
+		A3C7DAC013C2EFA800472D1F /* ZBarHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarHelpController.h; sourceTree = "<group>"; };
+		A3C7DAC113C2EFA800472D1F /* ZBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImage.h; sourceTree = "<group>"; };
+		A3C7DAC213C2EFA800472D1F /* ZBarImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImageScanner.h; sourceTree = "<group>"; };
+		A3C7DAC313C2EFA800472D1F /* ZBarReaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderController.h; sourceTree = "<group>"; };
+		A3C7DAC413C2EFA800472D1F /* ZBarReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderView.h; sourceTree = "<group>"; };
+		A3C7DAC513C2EFA800472D1F /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
+		A3C7DAC613C2EFA800472D1F /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
+		A3C7DAC713C2EFA800472D1F /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
+		A3C7DAC813C2EFA800472D1F /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
+		A3C7DACA13C2EFA800472D1F /* zbar-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-back.png"; sourceTree = "<group>"; };
+		A3C7DACB13C2EFA800472D1F /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
+		A3C7DACC13C2EFA800472D1F /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
+		A3C7DACD13C2EFA800472D1F /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
 		A3D3775013B395FC00632293 /* DoubanURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanURLConnection.h; sourceTree = "<group>"; };
 		A3D3775113B395FC00632293 /* DoubanURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanURLConnection.m; sourceTree = "<group>"; };
 		A3D3780713B3A4F800632293 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -318,7 +318,7 @@
 				A39A9A3A13BDDBDD00937489 /* SystemConfiguration.framework in Frameworks */,
 				A39A9A3C13BDDC1800937489 /* MobileCoreServices.framework in Frameworks */,
 				A39A9A5B13BDDC9100937489 /* libz.dylib in Frameworks */,
-				A3BDF1C613C028E20027A336 /* libzbar.a in Frameworks */,
+				A3C7DAE313C2EFA800472D1F /* libzbar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +350,7 @@
 		29B97314FDCFA39411CA2CEA /* bookhelper */ = {
 			isa = PBXGroup;
 			children = (
-				A3BDF16A13C028E20027A336 /* Libraries */,
+				A3C7DA8313C2EFA800472D1F /* Libraries */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -448,153 +448,6 @@
 			name = BookDetail;
 			sourceTree = "<group>";
 		};
-		A3BDF16A13C028E20027A336 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				A3BDF23913C02AF50027A336 /* GData */,
-				A3BDF16B13C028E20027A336 /* ASIHTTPRequest */,
-				A3BDF18213C028E20027A336 /* fmdb */,
-				A3BDF18E13C028E20027A336 /* Hpple */,
-				A3BDF19513C028E20027A336 /* ZBarSDK */,
-			);
-			path = Libraries;
-			sourceTree = "<group>";
-		};
-		A3BDF16B13C028E20027A336 /* ASIHTTPRequest */ = {
-			isa = PBXGroup;
-			children = (
-				A3BDF16C13C028E20027A336 /* ASIAuthenticationDialog.h */,
-				A3BDF16D13C028E20027A336 /* ASIAuthenticationDialog.m */,
-				A3BDF16E13C028E20027A336 /* ASICacheDelegate.h */,
-				A3BDF16F13C028E20027A336 /* ASIDataCompressor.h */,
-				A3BDF17013C028E20027A336 /* ASIDataCompressor.m */,
-				A3BDF17113C028E20027A336 /* ASIDataDecompressor.h */,
-				A3BDF17213C028E20027A336 /* ASIDataDecompressor.m */,
-				A3BDF17313C028E20027A336 /* ASIDownloadCache.h */,
-				A3BDF17413C028E20027A336 /* ASIDownloadCache.m */,
-				A3BDF17513C028E20027A336 /* ASIFormDataRequest.h */,
-				A3BDF17613C028E20027A336 /* ASIFormDataRequest.m */,
-				A3BDF17713C028E20027A336 /* ASIHTTPRequest.h */,
-				A3BDF17813C028E20027A336 /* ASIHTTPRequest.m */,
-				A3BDF17913C028E20027A336 /* ASIHTTPRequestConfig.h */,
-				A3BDF17A13C028E20027A336 /* ASIHTTPRequestDelegate.h */,
-				A3BDF17B13C028E20027A336 /* ASIInputStream.h */,
-				A3BDF17C13C028E20027A336 /* ASIInputStream.m */,
-				A3BDF17D13C028E20027A336 /* ASINetworkQueue.h */,
-				A3BDF17E13C028E20027A336 /* ASINetworkQueue.m */,
-				A3BDF17F13C028E20027A336 /* ASIProgressDelegate.h */,
-				A3BDF18013C028E20027A336 /* Reachability.h */,
-				A3BDF18113C028E20027A336 /* Reachability.m */,
-			);
-			path = ASIHTTPRequest;
-			sourceTree = "<group>";
-		};
-		A3BDF18213C028E20027A336 /* fmdb */ = {
-			isa = PBXGroup;
-			children = (
-				A3BDF18313C028E20027A336 /* CHANGES_AND_TODO_LIST.txt */,
-				A3BDF18413C028E20027A336 /* CONTRIBUTORS.txt */,
-				A3BDF18513C028E20027A336 /* FMDatabase.h */,
-				A3BDF18613C028E20027A336 /* FMDatabase.m */,
-				A3BDF18713C028E20027A336 /* FMDatabaseAdditions.h */,
-				A3BDF18813C028E20027A336 /* FMDatabaseAdditions.m */,
-				A3BDF18A13C028E20027A336 /* FMResultSet.h */,
-				A3BDF18B13C028E20027A336 /* FMResultSet.m */,
-				A3BDF18C13C028E20027A336 /* LICENSE.txt */,
-				A3BDF18D13C028E20027A336 /* README.markdown */,
-			);
-			path = fmdb;
-			sourceTree = "<group>";
-		};
-		A3BDF18E13C028E20027A336 /* Hpple */ = {
-			isa = PBXGroup;
-			children = (
-				A3BDF18F13C028E20027A336 /* TFHpple.h */,
-				A3BDF19013C028E20027A336 /* TFHpple.m */,
-				A3BDF19113C028E20027A336 /* TFHppleElement.h */,
-				A3BDF19213C028E20027A336 /* TFHppleElement.m */,
-				A3BDF19313C028E20027A336 /* XPathQuery.h */,
-				A3BDF19413C028E20027A336 /* XPathQuery.m */,
-			);
-			path = Hpple;
-			sourceTree = "<group>";
-		};
-		A3BDF19513C028E20027A336 /* ZBarSDK */ = {
-			isa = PBXGroup;
-			children = (
-				A3BDF19613C028E20027A336 /* Headers */,
-				A3BDF1AC13C028E20027A336 /* libzbar.a */,
-				A3BDF1AD13C028E20027A336 /* Resources */,
-			);
-			path = ZBarSDK;
-			sourceTree = "<group>";
-		};
-		A3BDF19613C028E20027A336 /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				A3BDF19713C028E20027A336 /* ZBarSDK */,
-			);
-			name = Headers;
-			path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers;
-			sourceTree = "<absolute>";
-		};
-		A3BDF19713C028E20027A336 /* ZBarSDK */ = {
-			isa = PBXGroup;
-			children = (
-				A3BDF19813C028E20027A336 /* zbar */,
-				A3BDF1A213C028E20027A336 /* zbar.h */,
-				A3BDF1A313C028E20027A336 /* ZBarCaptureReader.h */,
-				A3BDF1A413C028E20027A336 /* ZBarHelpController.h */,
-				A3BDF1A513C028E20027A336 /* ZBarImage.h */,
-				A3BDF1A613C028E20027A336 /* ZBarImageScanner.h */,
-				A3BDF1A713C028E20027A336 /* ZBarReaderController.h */,
-				A3BDF1A813C028E20027A336 /* ZBarReaderView.h */,
-				A3BDF1A913C028E20027A336 /* ZBarReaderViewController.h */,
-				A3BDF1AA13C028E20027A336 /* ZBarSDK.h */,
-				A3BDF1AB13C028E20027A336 /* ZBarSymbol.h */,
-			);
-			name = ZBarSDK;
-			path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK;
-			sourceTree = "<absolute>";
-		};
-		A3BDF19813C028E20027A336 /* zbar */ = {
-			isa = PBXGroup;
-			children = (
-				A3BDF19913C028E20027A336 /* Decoder.h */,
-				A3BDF19A13C028E20027A336 /* Exception.h */,
-				A3BDF19B13C028E20027A336 /* Image.h */,
-				A3BDF19C13C028E20027A336 /* ImageScanner.h */,
-				A3BDF19D13C028E20027A336 /* Processor.h */,
-				A3BDF19E13C028E20027A336 /* Scanner.h */,
-				A3BDF19F13C028E20027A336 /* Symbol.h */,
-				A3BDF1A013C028E20027A336 /* Video.h */,
-				A3BDF1A113C028E20027A336 /* Window.h */,
-			);
-			name = zbar;
-			path = /Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Headers/ZBarSDK/zbar;
-			sourceTree = "<absolute>";
-		};
-		A3BDF1AD13C028E20027A336 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A3BDF1AE13C028E20027A336 /* zbar-back.png */,
-				A3BDF1AF13C028E20027A336 /* zbar-help.html */,
-				A3BDF1B013C028E20027A336 /* zbar-helpicons.png */,
-				A3BDF1B113C028E20027A336 /* zbar-samples.png */,
-			);
-			name = Resources;
-			path = ../../../../../../Users/Luke/Projects/bookhelper/Libraries/ZBarSDK/Resources;
-			sourceTree = "<group>";
-		};
-		A3BDF23913C02AF50027A336 /* GData */ = {
-			isa = PBXGroup;
-			children = (
-				A3BDF23A13C02AF50027A336 /* GDataXMLNode.h */,
-				A3BDF23B13C02AF50027A336 /* GDataXMLNode.m */,
-			);
-			path = GData;
-			sourceTree = "<group>";
-		};
 		A3C7DA2613C2EDD100472D1F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -654,6 +507,149 @@
 				A3C7DA3B13C2EDD100472D1F /* joyo.png */,
 			);
 			path = bookstorelogos;
+			sourceTree = "<group>";
+		};
+		A3C7DA8313C2EFA800472D1F /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A3C7DA8413C2EFA800472D1F /* ASIHTTPRequest */,
+				A3C7DA9B13C2EFA800472D1F /* fmdb */,
+				A3C7DAA713C2EFA800472D1F /* GData */,
+				A3C7DAAA13C2EFA800472D1F /* Hpple */,
+				A3C7DAB113C2EFA800472D1F /* ZBarSDK */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		A3C7DA8413C2EFA800472D1F /* ASIHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				A3C7DA8513C2EFA800472D1F /* ASIAuthenticationDialog.h */,
+				A3C7DA8613C2EFA800472D1F /* ASIAuthenticationDialog.m */,
+				A3C7DA8713C2EFA800472D1F /* ASICacheDelegate.h */,
+				A3C7DA8813C2EFA800472D1F /* ASIDataCompressor.h */,
+				A3C7DA8913C2EFA800472D1F /* ASIDataCompressor.m */,
+				A3C7DA8A13C2EFA800472D1F /* ASIDataDecompressor.h */,
+				A3C7DA8B13C2EFA800472D1F /* ASIDataDecompressor.m */,
+				A3C7DA8C13C2EFA800472D1F /* ASIDownloadCache.h */,
+				A3C7DA8D13C2EFA800472D1F /* ASIDownloadCache.m */,
+				A3C7DA8E13C2EFA800472D1F /* ASIFormDataRequest.h */,
+				A3C7DA8F13C2EFA800472D1F /* ASIFormDataRequest.m */,
+				A3C7DA9013C2EFA800472D1F /* ASIHTTPRequest.h */,
+				A3C7DA9113C2EFA800472D1F /* ASIHTTPRequest.m */,
+				A3C7DA9213C2EFA800472D1F /* ASIHTTPRequestConfig.h */,
+				A3C7DA9313C2EFA800472D1F /* ASIHTTPRequestDelegate.h */,
+				A3C7DA9413C2EFA800472D1F /* ASIInputStream.h */,
+				A3C7DA9513C2EFA800472D1F /* ASIInputStream.m */,
+				A3C7DA9613C2EFA800472D1F /* ASINetworkQueue.h */,
+				A3C7DA9713C2EFA800472D1F /* ASINetworkQueue.m */,
+				A3C7DA9813C2EFA800472D1F /* ASIProgressDelegate.h */,
+				A3C7DA9913C2EFA800472D1F /* Reachability.h */,
+				A3C7DA9A13C2EFA800472D1F /* Reachability.m */,
+			);
+			path = ASIHTTPRequest;
+			sourceTree = "<group>";
+		};
+		A3C7DA9B13C2EFA800472D1F /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				A3C7DA9C13C2EFA800472D1F /* CHANGES_AND_TODO_LIST.txt */,
+				A3C7DA9D13C2EFA800472D1F /* CONTRIBUTORS.txt */,
+				A3C7DA9E13C2EFA800472D1F /* FMDatabase.h */,
+				A3C7DA9F13C2EFA800472D1F /* FMDatabase.m */,
+				A3C7DAA013C2EFA800472D1F /* FMDatabaseAdditions.h */,
+				A3C7DAA113C2EFA800472D1F /* FMDatabaseAdditions.m */,
+				A3C7DAA313C2EFA800472D1F /* FMResultSet.h */,
+				A3C7DAA413C2EFA800472D1F /* FMResultSet.m */,
+				A3C7DAA513C2EFA800472D1F /* LICENSE.txt */,
+				A3C7DAA613C2EFA800472D1F /* README.markdown */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		A3C7DAA713C2EFA800472D1F /* GData */ = {
+			isa = PBXGroup;
+			children = (
+				A3C7DAA813C2EFA800472D1F /* GDataXMLNode.h */,
+				A3C7DAA913C2EFA800472D1F /* GDataXMLNode.m */,
+			);
+			path = GData;
+			sourceTree = "<group>";
+		};
+		A3C7DAAA13C2EFA800472D1F /* Hpple */ = {
+			isa = PBXGroup;
+			children = (
+				A3C7DAAB13C2EFA800472D1F /* TFHpple.h */,
+				A3C7DAAC13C2EFA800472D1F /* TFHpple.m */,
+				A3C7DAAD13C2EFA800472D1F /* TFHppleElement.h */,
+				A3C7DAAE13C2EFA800472D1F /* TFHppleElement.m */,
+				A3C7DAAF13C2EFA800472D1F /* XPathQuery.h */,
+				A3C7DAB013C2EFA800472D1F /* XPathQuery.m */,
+			);
+			path = Hpple;
+			sourceTree = "<group>";
+		};
+		A3C7DAB113C2EFA800472D1F /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				A3C7DAB213C2EFA800472D1F /* Headers */,
+				A3C7DAC813C2EFA800472D1F /* libzbar.a */,
+				A3C7DAC913C2EFA800472D1F /* Resources */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		A3C7DAB213C2EFA800472D1F /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				A3C7DAB313C2EFA800472D1F /* ZBarSDK */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		A3C7DAB313C2EFA800472D1F /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				A3C7DAB413C2EFA800472D1F /* zbar */,
+				A3C7DABE13C2EFA800472D1F /* zbar.h */,
+				A3C7DABF13C2EFA800472D1F /* ZBarCaptureReader.h */,
+				A3C7DAC013C2EFA800472D1F /* ZBarHelpController.h */,
+				A3C7DAC113C2EFA800472D1F /* ZBarImage.h */,
+				A3C7DAC213C2EFA800472D1F /* ZBarImageScanner.h */,
+				A3C7DAC313C2EFA800472D1F /* ZBarReaderController.h */,
+				A3C7DAC413C2EFA800472D1F /* ZBarReaderView.h */,
+				A3C7DAC513C2EFA800472D1F /* ZBarReaderViewController.h */,
+				A3C7DAC613C2EFA800472D1F /* ZBarSDK.h */,
+				A3C7DAC713C2EFA800472D1F /* ZBarSymbol.h */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		A3C7DAB413C2EFA800472D1F /* zbar */ = {
+			isa = PBXGroup;
+			children = (
+				A3C7DAB513C2EFA800472D1F /* Decoder.h */,
+				A3C7DAB613C2EFA800472D1F /* Exception.h */,
+				A3C7DAB713C2EFA800472D1F /* Image.h */,
+				A3C7DAB813C2EFA800472D1F /* ImageScanner.h */,
+				A3C7DAB913C2EFA800472D1F /* Processor.h */,
+				A3C7DABA13C2EFA800472D1F /* Scanner.h */,
+				A3C7DABB13C2EFA800472D1F /* Symbol.h */,
+				A3C7DABC13C2EFA800472D1F /* Video.h */,
+				A3C7DABD13C2EFA800472D1F /* Window.h */,
+			);
+			path = zbar;
+			sourceTree = "<group>";
+		};
+		A3C7DAC913C2EFA800472D1F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A3C7DACA13C2EFA800472D1F /* zbar-back.png */,
+				A3C7DACB13C2EFA800472D1F /* zbar-help.html */,
+				A3C7DACC13C2EFA800472D1F /* zbar-helpicons.png */,
+				A3C7DACD13C2EFA800472D1F /* zbar-samples.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		A3E3FA9E13B230310023DC27 /* Douban */ = {
@@ -763,14 +759,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3BDF1BB13C028E20027A336 /* CHANGES_AND_TODO_LIST.txt in Resources */,
-				A3BDF1BC13C028E20027A336 /* CONTRIBUTORS.txt in Resources */,
-				A3BDF1C113C028E20027A336 /* LICENSE.txt in Resources */,
-				A3BDF1C213C028E20027A336 /* README.markdown in Resources */,
-				A3BDF1C713C028E20027A336 /* zbar-back.png in Resources */,
-				A3BDF1C813C028E20027A336 /* zbar-help.html in Resources */,
-				A3BDF1C913C028E20027A336 /* zbar-helpicons.png in Resources */,
-				A3BDF1CA13C028E20027A336 /* zbar-samples.png in Resources */,
 				A3C7DA4F13C2EDD200472D1F /* Icon-72.png in Resources */,
 				A3C7DA5013C2EDD200472D1F /* Icon-Small-50.png in Resources */,
 				A3C7DA5113C2EDD200472D1F /* Icon-Small.png in Resources */,
@@ -809,6 +797,14 @@
 				A3C7DA7213C2EDD200472D1F /* SearchBarView.xib in Resources */,
 				A3C7DA7313C2EDD200472D1F /* star.png in Resources */,
 				A3C7DA7413C2EDD200472D1F /* unstar.png in Resources */,
+				A3C7DAD713C2EFA800472D1F /* CHANGES_AND_TODO_LIST.txt in Resources */,
+				A3C7DAD813C2EFA800472D1F /* CONTRIBUTORS.txt in Resources */,
+				A3C7DADD13C2EFA800472D1F /* LICENSE.txt in Resources */,
+				A3C7DADE13C2EFA800472D1F /* README.markdown in Resources */,
+				A3C7DAE413C2EFA800472D1F /* zbar-back.png in Resources */,
+				A3C7DAE513C2EFA800472D1F /* zbar-help.html in Resources */,
+				A3C7DAE613C2EFA800472D1F /* zbar-helpicons.png in Resources */,
+				A3C7DAE713C2EFA800472D1F /* zbar-samples.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -846,25 +842,25 @@
 				A3BDF00D13BF7B340027A336 /* UIImage+Scale.m in Sources */,
 				A3BDF06D13C00A950027A336 /* BookReviewsViewController.m in Sources */,
 				A3BDF07A13C00DDE0027A336 /* DoubanBookReviewSummary.m in Sources */,
-				A3BDF1B213C028E20027A336 /* ASIAuthenticationDialog.m in Sources */,
-				A3BDF1B313C028E20027A336 /* ASIDataCompressor.m in Sources */,
-				A3BDF1B413C028E20027A336 /* ASIDataDecompressor.m in Sources */,
-				A3BDF1B513C028E20027A336 /* ASIDownloadCache.m in Sources */,
-				A3BDF1B613C028E20027A336 /* ASIFormDataRequest.m in Sources */,
-				A3BDF1B713C028E20027A336 /* ASIHTTPRequest.m in Sources */,
-				A3BDF1B813C028E20027A336 /* ASIInputStream.m in Sources */,
-				A3BDF1B913C028E20027A336 /* ASINetworkQueue.m in Sources */,
-				A3BDF1BA13C028E20027A336 /* Reachability.m in Sources */,
-				A3BDF1BD13C028E20027A336 /* FMDatabase.m in Sources */,
-				A3BDF1BE13C028E20027A336 /* FMDatabaseAdditions.m in Sources */,
-				A3BDF1C013C028E20027A336 /* FMResultSet.m in Sources */,
-				A3BDF1C313C028E20027A336 /* TFHpple.m in Sources */,
-				A3BDF1C413C028E20027A336 /* TFHppleElement.m in Sources */,
-				A3BDF1C513C028E20027A336 /* XPathQuery.m in Sources */,
-				A3BDF23C13C02AF50027A336 /* GDataXMLNode.m in Sources */,
 				A3BDF36A13C044C70027A336 /* BookAuthorIntroViewController.m in Sources */,
 				A349455713C1FFFE00C25B23 /* ReviewTableViewCell.m in Sources */,
 				A34945B113C2190600C25B23 /* BookTableViewCell.m in Sources */,
+				A3C7DACE13C2EFA800472D1F /* ASIAuthenticationDialog.m in Sources */,
+				A3C7DACF13C2EFA800472D1F /* ASIDataCompressor.m in Sources */,
+				A3C7DAD013C2EFA800472D1F /* ASIDataDecompressor.m in Sources */,
+				A3C7DAD113C2EFA800472D1F /* ASIDownloadCache.m in Sources */,
+				A3C7DAD213C2EFA800472D1F /* ASIFormDataRequest.m in Sources */,
+				A3C7DAD313C2EFA800472D1F /* ASIHTTPRequest.m in Sources */,
+				A3C7DAD413C2EFA800472D1F /* ASIInputStream.m in Sources */,
+				A3C7DAD513C2EFA800472D1F /* ASINetworkQueue.m in Sources */,
+				A3C7DAD613C2EFA800472D1F /* Reachability.m in Sources */,
+				A3C7DAD913C2EFA800472D1F /* FMDatabase.m in Sources */,
+				A3C7DADA13C2EFA800472D1F /* FMDatabaseAdditions.m in Sources */,
+				A3C7DADC13C2EFA800472D1F /* FMResultSet.m in Sources */,
+				A3C7DADF13C2EFA800472D1F /* GDataXMLNode.m in Sources */,
+				A3C7DAE013C2EFA800472D1F /* TFHpple.m in Sources */,
+				A3C7DAE113C2EFA800472D1F /* TFHppleElement.m in Sources */,
+				A3C7DAE213C2EFA800472D1F /* XPathQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -882,7 +878,10 @@
 				GCC_PREFIX_HEADER = bookhelper_Prefix.pch;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "bookhelper-Info.plist";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries/ZBarSDK\"",
+				);
 				PRODUCT_NAME = bookhelper;
 			};
 			name = Debug;
@@ -896,7 +895,10 @@
 				GCC_PREFIX_HEADER = bookhelper_Prefix.pch;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "bookhelper-Info.plist";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries/ZBarSDK\"",
+				);
 				PRODUCT_NAME = bookhelper;
 				VALIDATE_PRODUCT = YES;
 			};
