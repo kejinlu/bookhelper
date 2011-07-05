@@ -11,7 +11,6 @@
 #import "DoubanBook.h"
 #import "BookGetHistoryDatabase.h"
 #import "GradientView.h"
-#import "ClearLabelsCellView.h"
 #import "ASImageView.h"
 #import "BookTableViewCell.h"
 
