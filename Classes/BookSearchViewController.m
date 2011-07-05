@@ -13,6 +13,8 @@
 #import "GradientView.h"
 #import "ClearLabelsCellView.h"
 #import "ASImageView.h"
+#import "BookTableViewCell.h"
+
 @implementation BookSearchViewController
 @synthesize searchedString;
 
@@ -139,89 +141,12 @@
     static NSString *CellIdentifier = @"BookCell";
 	
 	
-	UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	BookTableViewCell *cell = (BookTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-		cell = [[[ClearLabelsCellView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-		cell.backgroundView = [[[GradientView alloc] initWithGradientType:WHITE_GRADIENT] autorelease];
-		cell.selectedBackgroundView = [[[GradientView alloc] initWithGradientType:GREEN_GRADIENT] autorelease];
-		
-		ASImageView *bookCoverView = [[ASImageView alloc] initWithFrame:CGRectMake(5, 10, 60, 80)];
-		bookCoverView.tag = BOOK_COVER;
-		bookCoverView.placeHolderImage = [UIImage imageNamed:@"cover_placeholder.jpg"];
-		[cell.contentView addSubview:bookCoverView];
-		
-		UILabel	*titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(72, 5, 280, 26)];
-		titleLabel.tag = BOOK_TITLE;
-		titleLabel.backgroundColor = [UIColor clearColor];
-		titleLabel.textColor = [UIColor blackColor];
-		titleLabel.highlightedTextColor = [UIColor whiteColor];
-		titleLabel.textAlignment = UITextAlignmentLeft;
-		titleLabel.font = [UIFont systemFontOfSize:18];
-		[cell.contentView addSubview:titleLabel];
-		[titleLabel release];
-		
-		
-		UILabel *authorLabel = [[UILabel alloc] initWithFrame:CGRectMake(72, 32, 280, 16)];
-		authorLabel.tag = BOOK_AUTHOR;
-		authorLabel.backgroundColor = [UIColor clearColor];
-		authorLabel.textColor = [UIColor grayColor];
-		authorLabel.highlightedTextColor = [UIColor whiteColor];
-		authorLabel.textAlignment = UITextAlignmentLeft;
-		authorLabel.font = [UIFont systemFontOfSize:14];
-		[cell.contentView addSubview:authorLabel];
-		[authorLabel release];
-		
-		UILabel *publisherLabel = [[UILabel alloc] initWithFrame:CGRectMake(72, 50, 280, 16)];
-		publisherLabel.tag = BOOK_PUBLISHER;
-		publisherLabel.backgroundColor = [UIColor clearColor];
-		publisherLabel.textColor = [UIColor grayColor];
-		publisherLabel.highlightedTextColor = [UIColor whiteColor];
-		publisherLabel.textAlignment = UITextAlignmentLeft;
-		publisherLabel.font = [UIFont systemFontOfSize:14];
-		[cell.contentView addSubview:publisherLabel];
-		[publisherLabel release];
-		
-		UILabel *pubDateLabel = [[UILabel alloc] initWithFrame:CGRectMake(72, 70, 280, 16)];
-		pubDateLabel.tag = BOOK_PUB_DATE;
-		pubDateLabel.backgroundColor = [UIColor clearColor];
-		pubDateLabel.textColor = [UIColor grayColor];
-		pubDateLabel.highlightedTextColor = [UIColor whiteColor];
-		pubDateLabel.textAlignment = UITextAlignmentLeft;
-		pubDateLabel.font = [UIFont systemFontOfSize:14];
-		[cell.contentView addSubview:pubDateLabel];
-		[pubDateLabel release];
-		
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.textLabel.backgroundColor = [UIColor clearColor];
+		cell = [[[BookTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
 	}
-	
-	ASImageView *bookCoverView = (ASImageView *)[cell viewWithTag:BOOK_COVER];
-	UILabel *titleLabel = (UILabel *)[cell viewWithTag:BOOK_TITLE];
-	UILabel	*authorLabel = (UILabel *)[cell viewWithTag:BOOK_AUTHOR];
-	UILabel *publisherLabel =  (UILabel *)[cell viewWithTag:BOOK_PUBLISHER];
-	UILabel *pubDateLabel =  (UILabel *)[cell viewWithTag:BOOK_PUB_DATE];
-	
-
 	DoubanBook *book = (DoubanBook *)[data objectAtIndex:indexPath.row];
-	
-	if (book.coverImageURL) {
-		bookCoverView.urlString = book.coverImageURL;
-	}
-	
-	if (book.title) {
-		titleLabel.text = book.title;
-	}
-	
-	if (book.author) {
-		authorLabel.text = book.author;
-	}
-	if (book.publisher) {
-		publisherLabel.text = book.publisher;
-	}
-	if (book.pubDate) {
-		pubDateLabel.text = book.pubDate;
-	}
-
+	cell.book = book;
     return cell;
 }
 

@@ -44,10 +44,10 @@
 
 - (void)setReview:(DoubanBookReviewSummary *)bookReview{
 	review = bookReview;
-	authorAvatarImage.urlString = bookReview.authorIcon;
-	titleLabel.text = bookReview.title;
-	authorNameLabel.text = bookReview.authorName;
-	reviewLabel.text = bookReview.summary;	
+	authorAvatarImage.urlString = review.authorIcon;
+	titleLabel.text = review.title;
+	authorNameLabel.text = review.authorName;
+	reviewLabel.text = review.summary;	
 }
 
 - (void)addAuthorAvatarImage{
