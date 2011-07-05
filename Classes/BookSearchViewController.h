@@ -12,22 +12,19 @@
 #import "BookDetailViewController.h"
 #import "LoadingViewController.h"
 #import "BookSearchBarViewController.h"
+#import "ContinuousTableView.h"
 
 #define MAX_RESULTS 10
 @class DoubanBook;
 @interface BookSearchViewController : UIViewController<BookSearchBarViewControllerDelegate> {
-	NSMutableArray *data;
+	NSMutableArray *results;
 	BookDetailViewController *bookDetailViewController;
 	
-	IBOutlet UITableView *resultTableView;
+	IBOutlet ContinuousTableView *resultTableView;
 	
 	LoadingViewController *loadingViewController;
-	
-	UIActivityIndicatorView *activityFooter;
-	
+		
 	BookSearchBarViewController *searchBarViewController;
-	
-	BOOL isLoading;
 	
 	NSString *searchedString;
 	NSInteger totalResults;
@@ -38,4 +35,5 @@
 
 - (void)showSearchBarWithSearchString;
 - (void)loadMore;
+
 @end

@@ -13,7 +13,7 @@
 #import "GradientView.h"
 #import "ASImageView.h"
 #import "BookTableViewCell.h"
-
+#import "ASIHTTPRequest.h"
 @implementation BookSearchViewController
 @synthesize searchedString;
 
@@ -33,7 +33,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	data = [[NSMutableArray alloc] initWithCapacity:0];	
+	results = [[NSMutableArray alloc] initWithCapacity:0];	
 	loadingViewController = [[LoadingViewController alloc] init];
 	[self setupSearchBar];
 }
@@ -76,7 +76,7 @@
 #pragma mark  search bar view controller delegate
 - (void)beginSearchWithString:(NSString *)searchString{
 	self.searchedString = searchString;
-	[data removeAllObjects];
+	[results removeAllObjects];
 	startIndex = 1;
 	NSString *queryString = [NSString stringWithFormat:@"q=%@&start-index=%d&max-results=%d",[searchString urlEncodeString]
 							 ,startIndex,MAX_RESULTS];
@@ -91,17 +91,13 @@
 
 #pragma mark Book
 - (void)didGetDoubanBooks:(NSDictionary *)userInfo{
-	isLoading = NO;
+	resultTableView.isLoading = NO;
 	totalResults=[[userInfo objectForKey:@"totalResults"] intValue];
 	NSArray *books = [userInfo objectForKey:@"books"];
-	
-	if (startIndex>1) {
-		[activityFooter stopAnimating];
-	}
 	[[loadingViewController view] removeFromSuperview];
 	for (DoubanBook* book in books) {
 		NSLog(@"%@",book);
-		[data addObject:book];
+		[results addObject:book];
 	}
 	[resultTableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
 
@@ -114,7 +110,9 @@
 		bookDetailViewController.title = @"图书详情";
 	}
 	//加入历史记录
-	[[BookGetHistoryDatabase sharedInstance] addBookHistory:book]; 
+	if ([[BookGetHistoryDatabase sharedInstance] addBookHistory:book]) {
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"ReloadHistoryNotification" object:nil];
+	}
 	
 	bookDetailViewController.book = book;
 	
@@ -133,33 +131,38 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [data count];
+	//如果结果数为0，则返回0，否则返回结果数加1，多出来的一行是放加载标识的
+	NSInteger resultCount = [results count];
+    return resultCount ? resultCount + 1 : resultCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"BookCell";
-	
-	
-	BookTableViewCell *cell = (BookTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-		cell = [[[BookTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+	if (indexPath.row < [results count]) {
+		static NSString *CellIdentifier = @"BookCell";
+		BookTableViewCell *cell = (BookTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+		if (cell == nil) {
+			cell = [[[BookTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+		}
+		DoubanBook *book = (DoubanBook *)[results objectAtIndex:indexPath.row];
+		cell.book = book;
+		return cell;
+	}else {
+		LoadingTableViewCell *loadingCell = [resultTableView dequeueReusableLoadingCell];
+		if (!resultTableView.isLoading) {
+            [self performSelector:@selector(loadMore) withObject:nil afterDelay:0.1];            
+        }
+		return loadingCell;
 	}
-	DoubanBook *book = (DoubanBook *)[data objectAtIndex:indexPath.row];
-	cell.book = book;
-    return cell;
+
+
 }
 
 
 #pragma mark -
 #pragma mark UITableView Delegate 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-
-	return 50;
-}
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {	
-	NSString *urlString = ((DoubanBook *)[data objectAtIndex:indexPath.row]).apiURL;
+	NSString *urlString = ((DoubanBook *)[results objectAtIndex:indexPath.row]).apiURL;
 	if (!bookDetailViewController||![bookDetailViewController.book.apiURL isEqual:urlString]) {
 		[[DoubanConnector sharedDoubanConnector] requestBookDataWithAPIURLString:urlString
 																  responseTarget:self 
@@ -171,42 +174,19 @@
 }
 
 
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    if (activityFooter == nil) {
-        CGRect rect = CGRectMake(tableView.frame.size.width/2 - 20, 10, 30, 30);
-        activityFooter = [[UIActivityIndicatorView alloc] initWithFrame:rect];
-        activityFooter.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
-        activityFooter.hidesWhenStopped = YES;
-        activityFooter.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
-    }
-    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 50)];
-    [footerView addSubview:activityFooter];
-    return [footerView autorelease];
-}
-
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ((indexPath.row + 1 >= [self tableView:tableView numberOfRowsInSection:indexPath.section])) {
-        [activityFooter startAnimating];
-        if (!isLoading) {
-			[self loadMore];
-        }
-    }
-}
-
-
 #pragma mark -
 #pragma mark Load Moew Results
 - (void)loadMore {
 	if (startIndex > totalResults) {
-		[activityFooter stopAnimating];
 	}else {
 		NSString *queryString = [NSString stringWithFormat:@"q=%@&start-index=%d&max-results=%d",[self.searchedString urlEncodeString],startIndex,MAX_RESULTS];
 		startIndex += MAX_RESULTS;
 		[[DoubanConnector sharedDoubanConnector] requestQueryBooksWithQueryString:queryString
 																   responseTarget:self
 																   responseAction:@selector(didGetDoubanBooks:)];
-		isLoading = YES;
+		resultTableView.isLoading = YES;
 	}
 }
+
+
 @end

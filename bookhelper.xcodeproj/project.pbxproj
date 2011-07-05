@@ -102,6 +102,8 @@
 		A3C7DAE513C2EFA800472D1F /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DACB13C2EFA800472D1F /* zbar-help.html */; };
 		A3C7DAE613C2EFA800472D1F /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DACC13C2EFA800472D1F /* zbar-helpicons.png */; };
 		A3C7DAE713C2EFA800472D1F /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DACD13C2EFA800472D1F /* zbar-samples.png */; };
+		A3C7DED413C3542B00472D1F /* LoadingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C7DED313C3542B00472D1F /* LoadingTableViewCell.m */; };
+		A3C7DF1A13C36EBA00472D1F /* ContinuousTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C7DF1913C36EBA00472D1F /* ContinuousTableView.m */; };
 		A3D3775213B395FC00632293 /* DoubanURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D3775113B395FC00632293 /* DoubanURLConnection.m */; };
 		A3D3780813B3A4F800632293 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D3780713B3A4F800632293 /* QuartzCore.framework */; };
 		A3D3781E13B3A51300632293 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D3781D13B3A51300632293 /* CoreVideo.framework */; };
@@ -277,6 +279,10 @@
 		A3C7DACB13C2EFA800472D1F /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
 		A3C7DACC13C2EFA800472D1F /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
 		A3C7DACD13C2EFA800472D1F /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		A3C7DED213C3542B00472D1F /* LoadingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingTableViewCell.h; sourceTree = "<group>"; };
+		A3C7DED313C3542B00472D1F /* LoadingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingTableViewCell.m; sourceTree = "<group>"; };
+		A3C7DF1813C36EBA00472D1F /* ContinuousTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContinuousTableView.h; sourceTree = "<group>"; };
+		A3C7DF1913C36EBA00472D1F /* ContinuousTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContinuousTableView.m; sourceTree = "<group>"; };
 		A3D3775013B395FC00632293 /* DoubanURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanURLConnection.h; sourceTree = "<group>"; };
 		A3D3775113B395FC00632293 /* DoubanURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanURLConnection.m; sourceTree = "<group>"; };
 		A3D3780713B3A4F800632293 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -398,6 +404,8 @@
 				A349455613C1FFFE00C25B23 /* ReviewTableViewCell.m */,
 				A34945AF13C2190600C25B23 /* BookTableViewCell.h */,
 				A34945B013C2190600C25B23 /* BookTableViewCell.m */,
+				A3C7DED213C3542B00472D1F /* LoadingTableViewCell.h */,
+				A3C7DED313C3542B00472D1F /* LoadingTableViewCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -418,6 +426,8 @@
 				A3B8C93A13BB8A6600028546 /* TableUIButton.m */,
 				A39A9A5E13BDDE4D00937489 /* ASImageView.h */,
 				A39A9A5F13BDDE4D00937489 /* ASImageView.m */,
+				A3C7DF1813C36EBA00472D1F /* ContinuousTableView.h */,
+				A3C7DF1913C36EBA00472D1F /* ContinuousTableView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -861,6 +871,8 @@
 				A3C7DAE013C2EFA800472D1F /* TFHpple.m in Sources */,
 				A3C7DAE113C2EFA800472D1F /* TFHppleElement.m in Sources */,
 				A3C7DAE213C2EFA800472D1F /* XPathQuery.m in Sources */,
+				A3C7DED413C3542B00472D1F /* LoadingTableViewCell.m in Sources */,
+				A3C7DF1A13C36EBA00472D1F /* ContinuousTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

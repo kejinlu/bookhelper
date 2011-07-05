@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "BookDetailViewController.h"
 #import "LoadingViewController.h"
+#import "ContinuousTableView.h"
 @interface BookGetHistoryViewController : UIViewController<UIActionSheetDelegate> {
-	IBOutlet UITableView *historyTable;
+	IBOutlet ContinuousTableView *historyTable;
 	
 	BOOL filterByStarred;
 	NSInteger totalPages;
@@ -19,9 +20,6 @@
 	
 	BookDetailViewController *bookDetailViewController;
 	LoadingViewController *loadingViewController;
-		
-	BOOL isLoading;
-
 
 }
 
@@ -34,4 +32,6 @@
 - (void)segmentSwitch:(id)sender;
 
 - (void)loadMore;
+
+- (void)reloadFromDB:(NSNotification*)notification;
 @end

@@ -137,7 +137,9 @@
 		//bookDetailViewController.navigationController = [self navigationController];
 	}
 	//加入历史记录
-	[[BookGetHistoryDatabase sharedInstance] addBookHistory:book]; 
+	if ([[BookGetHistoryDatabase sharedInstance] addBookHistory:book]) {
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"ReloadHistoryNotification" object:nil];
+	}
 
 	bookDetailViewController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Books" style:UIBarButtonItemStyleBordered target:self action:@selector(dismissView:)];
 	bookDetailViewController.book = book;

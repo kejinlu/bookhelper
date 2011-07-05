@@ -54,6 +54,7 @@
 	authorLabel.text = book.author;
 	publisherLabel.text = book.publisher;
 	pubDateLabel.text = book.pubDate;
+	[self setNeedsDisplay];
 }
 
 #pragma mark -
