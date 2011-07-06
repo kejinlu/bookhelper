@@ -16,6 +16,7 @@
 		A303133913B9F8C4000BD08C /* PathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A303133813B9F8C4000BD08C /* PathUtilities.m */; };
 		A303139C13BA2123000BD08C /* BookGetHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = A303139B13BA2123000BD08C /* BookGetHistory.m */; };
 		A303142713BA32BF000BD08C /* BookGetHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A303142613BA32BF000BD08C /* BookGetHistoryViewController.m */; };
+		A30A966A13C49A2D0069152B /* PromptModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = A30A966913C49A2D0069152B /* PromptModalView.m */; };
 		A3317F0D13BC8ED500D0E7A6 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3317F0C13BC8ED500D0E7A6 /* MoreViewController.m */; };
 		A349455713C1FFFE00C25B23 /* ReviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A349455613C1FFFE00C25B23 /* ReviewTableViewCell.m */; };
 		A34945B113C2190600C25B23 /* BookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A34945B013C2190600C25B23 /* BookTableViewCell.m */; };
@@ -32,7 +33,6 @@
 		A39A9E0E13BE4E0800937489 /* BookInroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A39A9E0D13BE4E0800937489 /* BookInroViewController.m */; };
 		A39A9FE613BEB5F800937489 /* BookPriceUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A39A9FE513BEB5F800937489 /* BookPriceUtilities.m */; };
 		A3B17ED813B79A7A007B100E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B17ED713B79A7A007B100E /* libsqlite3.dylib */; };
-		A3B1864713B8CB84007B100E /* ShadowedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B1864113B8CB84007B100E /* ShadowedTableView.m */; };
 		A3B1864913B8CB84007B100E /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B1864313B8CB84007B100E /* GradientView.m */; };
 		A3B8C93B13BB8A6600028546 /* TableUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B8C93A13BB8A6600028546 /* TableUIButton.m */; };
 		A3BDF00D13BF7B340027A336 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF00C13BF7B340027A336 /* UIImage+Scale.m */; };
@@ -136,6 +136,8 @@
 		A303139B13BA2123000BD08C /* BookGetHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookGetHistory.m; sourceTree = "<group>"; };
 		A303142513BA32BF000BD08C /* BookGetHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookGetHistoryViewController.h; sourceTree = "<group>"; };
 		A303142613BA32BF000BD08C /* BookGetHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookGetHistoryViewController.m; sourceTree = "<group>"; };
+		A30A966813C49A2D0069152B /* PromptModalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromptModalView.h; sourceTree = "<group>"; };
+		A30A966913C49A2D0069152B /* PromptModalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromptModalView.m; sourceTree = "<group>"; };
 		A3317F0B13BC8ED500D0E7A6 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		A3317F0C13BC8ED500D0E7A6 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		A349455513C1FFFE00C25B23 /* ReviewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewTableViewCell.h; sourceTree = "<group>"; };
@@ -163,9 +165,7 @@
 		A39A9FE413BEB5F800937489 /* BookPriceUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookPriceUtilities.h; sourceTree = "<group>"; };
 		A39A9FE513BEB5F800937489 /* BookPriceUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookPriceUtilities.m; sourceTree = "<group>"; };
 		A3B17ED713B79A7A007B100E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		A3B1864113B8CB84007B100E /* ShadowedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowedTableView.m; sourceTree = "<group>"; };
 		A3B1864313B8CB84007B100E /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
-		A3B1864413B8CB84007B100E /* ShadowedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowedTableView.h; sourceTree = "<group>"; };
 		A3B1864613B8CB84007B100E /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
 		A3B8C93913BB8A6600028546 /* TableUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableUIButton.h; sourceTree = "<group>"; };
 		A3B8C93A13BB8A6600028546 /* TableUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableUIButton.m; sourceTree = "<group>"; };
@@ -414,8 +414,6 @@
 			isa = PBXGroup;
 			children = (
 				A34945AE13C218D400C25B23 /* Cell */,
-				A3B1864413B8CB84007B100E /* ShadowedTableView.h */,
-				A3B1864113B8CB84007B100E /* ShadowedTableView.m */,
 				A3B1864613B8CB84007B100E /* GradientView.h */,
 				A3B1864313B8CB84007B100E /* GradientView.m */,
 				A3791F7013B62AA90061C4DC /* ScannerOverlayView.h */,
@@ -428,6 +426,8 @@
 				A39A9A5F13BDDE4D00937489 /* ASImageView.m */,
 				A3C7DF1813C36EBA00472D1F /* ContinuousTableView.h */,
 				A3C7DF1913C36EBA00472D1F /* ContinuousTableView.m */,
+				A30A966813C49A2D0069152B /* PromptModalView.h */,
+				A30A966913C49A2D0069152B /* PromptModalView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -837,7 +837,6 @@
 				A3791DC413B5D1240061C4DC /* BarCodeScannerViewController.m in Sources */,
 				A3791F7213B62AA90061C4DC /* ScannerOverlayView.m in Sources */,
 				A379223713B7258A0061C4DC /* LoadingViewController.m in Sources */,
-				A3B1864713B8CB84007B100E /* ShadowedTableView.m in Sources */,
 				A3B1864913B8CB84007B100E /* GradientView.m in Sources */,
 				A391AC8F13B90986003CFB40 /* BookGetHistoryDatabase.m in Sources */,
 				A303133913B9F8C4000BD08C /* PathUtilities.m in Sources */,
@@ -873,6 +872,7 @@
 				A3C7DAE213C2EFA800472D1F /* XPathQuery.m in Sources */,
 				A3C7DED413C3542B00472D1F /* LoadingTableViewCell.m in Sources */,
 				A3C7DF1A13C36EBA00472D1F /* ContinuousTableView.m in Sources */,
+				A30A966A13C49A2D0069152B /* PromptModalView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

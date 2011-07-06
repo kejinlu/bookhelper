@@ -9,13 +9,15 @@
 #import "DoubanBook.h"
 #import "BookReviewsViewController.h"
 #import "ASImageView.h"
-
+#import "PromptModalView.h"
 @interface BookDetailViewController : UIViewController {
 	BookPriceComparisonViewController *bookPriceComparisonViewController;
 	BookReviewsViewController *reviewsViewController;
-	DoubanBook *book;
-	//IBOutlet UITableView *tableView;
 	
+	PromptModalView *modalView;
+	NSString *isbn;
+	DoubanBook *book;
+	BOOL isRecord;
 	
 	NSArray *bookItemNames;
 	NSArray *bookItemImageNames;
@@ -24,8 +26,9 @@
 	
 	
 }
+@property(nonatomic,copy)NSString *isbn;
 @property(nonatomic,retain)DoubanBook *book;
-
+@property(nonatomic,assign)BOOL isRecord;
 - (IBAction)dismissPriceComparisonView:(id)sender;
 
 @end

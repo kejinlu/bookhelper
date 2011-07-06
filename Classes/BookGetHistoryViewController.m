@@ -24,7 +24,6 @@
 		filterByStarred = NO;
 		histories = [[NSMutableArray alloc] init];
 		totalPages = [[BookGetHistoryDatabase sharedInstance] totalPagesFilterByStarred:filterByStarred];
-		loadingViewController = [[LoadingViewController alloc] init];
 	}
 	return self;
 }
@@ -175,10 +174,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {	
 	BookGetHistory *history = [histories objectAtIndex:indexPath.row];
-	[[DoubanConnector sharedDoubanConnector] requestBookDataWithISBN:history.isbn
-													  responseTarget:self 
-													  responseAction:@selector(didGetDoubanBook:)];
-	[[self view] addSubview:[loadingViewController view]];
+	NSString *isbnString = history.isbn;
+	
+	BookDetailViewController *bookDetailViewController = [[BookDetailViewController alloc] init];
+	bookDetailViewController.title = @"图书详情";
+	bookDetailViewController.isbn = isbnString;
+	[[self navigationController ] pushViewController:bookDetailViewController animated:YES];
+	[bookDetailViewController release];
 }
 
 
@@ -194,17 +196,7 @@
 
 }
 
-#pragma mark -
-#pragma mark Did GeetBook
-- (void)didGetDoubanBook:(DoubanBook *)book{
-	if (!bookDetailViewController) {
-		bookDetailViewController = [[BookDetailViewController alloc] init];
-		bookDetailViewController.title = @"图书详情";
-	}
-	bookDetailViewController.book = book;
-	[[loadingViewController view] removeFromSuperview];
-	[[self navigationController ] pushViewController:bookDetailViewController animated:YES];
-}
+
 
 #pragma mark Button Action
 

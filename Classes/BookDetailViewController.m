@@ -10,10 +10,13 @@
 #import "BookInroViewController.h"
 #import "BookAuthorIntroViewController.h"
 #import "UIImage+Scale.h"
+#import "BookGetHistoryDatabase.h"
+#import "DoubanConnector.h"
 
 @implementation BookDetailViewController
+@synthesize isbn;
 @synthesize book;
-
+@synthesize isRecord;
 
 - (id)init{
 	if (self = [super initWithNibName:@"BookDetailView" bundle:nil]) {
@@ -46,8 +49,17 @@
 }
  */
 
+//这边要改到viewDidLoad中去
 - (void)viewWillAppear:(BOOL)animated{
-	coverView.urlString = book.coverImageURL;
+	[super viewWillAppear:animated];
+	[[DoubanConnector sharedDoubanConnector] requestBookDataWithISBN:self.isbn
+															  responseTarget:self 
+															  responseAction:@selector(didGetDoubanBook:)];
+	if (modalView == nil) {    
+		modalView = [[PromptModalView alloc] initWithFrame:self.view.bounds];
+	}
+	
+	[self.view addSubview:modalView];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -122,4 +134,24 @@
 	}
 }
 
+
+#pragma mark -
+#pragma mark response action
+- (void)didGetDoubanBook:(DoubanBook *)_book{
+	self.book = _book;
+	//加入历史记录
+	if (self.isRecord) {
+		if ([[BookGetHistoryDatabase sharedInstance] addBookHistory:self.book]) {
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"ReloadHistoryNotification" object:nil];
+		}
+	}
+	
+	coverView.urlString = book.coverImageURL;
+	
+	[modalView animateToHide];
+	[modalView release];
+	modalView = nil;
+	
+	
+}
 @end

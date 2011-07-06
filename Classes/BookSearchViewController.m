@@ -9,8 +9,6 @@
 #import "BookSearchViewController.h"
 #import "NSString+URLEncoding.h"
 #import "DoubanBook.h"
-#import "BookGetHistoryDatabase.h"
-#import "GradientView.h"
 #import "ASImageView.h"
 #import "BookTableViewCell.h"
 #import "ASIHTTPRequest.h"
@@ -34,7 +32,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	results = [[NSMutableArray alloc] initWithCapacity:0];	
-	loadingViewController = [[LoadingViewController alloc] init];
 	[self setupSearchBar];
 }
 
@@ -85,8 +82,10 @@
 															   responseTarget:self 
 															   responseAction:@selector(didGetDoubanBooks:)];
 	[[self searchDisplayController] setActive:NO animated:YES];
-	[[loadingViewController view] setFrame:[resultTableView frame]];
-	[[self view] addSubview:[loadingViewController view]];
+	if (loadingView == nil) {
+		loadingView = [[PromptModalView alloc] initWithFrame:self.view.frame];
+	}
+	[[self view] addSubview:loadingView];
 }
 
 #pragma mark Book
@@ -94,7 +93,7 @@
 	resultTableView.isLoading = NO;
 	totalResults=[[userInfo objectForKey:@"totalResults"] intValue];
 	NSArray *books = [userInfo objectForKey:@"books"];
-	[[loadingViewController view] removeFromSuperview];
+	[loadingView animateToHide];
 	for (DoubanBook* book in books) {
 		NSLog(@"%@",book);
 		[results addObject:book];
@@ -103,23 +102,7 @@
 
 }
 
-- (void)didGetDoubanBook:(DoubanBook *)book{
-	NSLog(@"%@",book);
-	if (!bookDetailViewController) {
-		bookDetailViewController = [[BookDetailViewController alloc] init];
-		bookDetailViewController.title = @"图书详情";
-	}
-	//加入历史记录
-	if ([[BookGetHistoryDatabase sharedInstance] addBookHistory:book]) {
-		[[NSNotificationCenter defaultCenter] postNotificationName:@"ReloadHistoryNotification" object:nil];
-	}
-	
-	bookDetailViewController.book = book;
-	
-	[[self navigationController ] pushViewController:bookDetailViewController animated:YES];
-	[[loadingViewController view] removeFromSuperview];
 
-}
 
 
 #pragma mark -
@@ -162,15 +145,15 @@
 #pragma mark UITableView Delegate 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {	
-	NSString *urlString = ((DoubanBook *)[results objectAtIndex:indexPath.row]).apiURL;
-	if (!bookDetailViewController||![bookDetailViewController.book.apiURL isEqual:urlString]) {
-		[[DoubanConnector sharedDoubanConnector] requestBookDataWithAPIURLString:urlString
-																  responseTarget:self 
-																  responseAction:@selector(didGetDoubanBook:)];
-		[[self view] addSubview:[loadingViewController view]];
-	}else {
-		[[self navigationController ] pushViewController:bookDetailViewController animated:YES];
-	}
+	
+	NSString *isbnString = ((DoubanBook *)[results objectAtIndex:indexPath.row]).isbn13;
+	BookDetailViewController *bookDetailViewController = [[BookDetailViewController alloc] init];
+	bookDetailViewController.title = @"图书详情";
+	bookDetailViewController.isbn = isbnString;
+	bookDetailViewController.isRecord = YES;
+	[[self navigationController ] pushViewController:bookDetailViewController animated:YES];
+	[bookDetailViewController release];
+	
 }
 
 

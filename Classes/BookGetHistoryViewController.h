@@ -17,10 +17,6 @@
 	NSInteger totalPages;
 	NSInteger pageNumber;
 	NSMutableArray *histories;
-	
-	BookDetailViewController *bookDetailViewController;
-	LoadingViewController *loadingViewController;
-
 }
 
 - (void)checkNavigationItemButtons;
