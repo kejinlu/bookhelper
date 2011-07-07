@@ -21,9 +21,7 @@
 - (id)init{
 	if (self = [super initWithNibName:@"BookDetailView" bundle:nil]) {
 		bookItemNames = [[NSArray alloc] initWithObjects:@"内容简介",@"作者简介",@"查看评论",@"图书比价",nil];
-		bookItemImageNames = [[NSArray alloc] initWithObjects:@"info.png",@"author.png",@"comment.png",@"price.png",nil];
-		reviewsViewController = [[BookReviewsViewController alloc] init];
-		
+		bookItemImageNames = [[NSArray alloc] initWithObjects:@"info.png",@"author.png",@"comment.png",@"price.png",nil];		
 		coverView = [[ASImageView alloc] initWithFrame:CGRectMake(10, 10, 120, 160)];
 		coverView.placeHolderImage = [UIImage imageNamed:@"cover_placeholder.jpg"];
 
@@ -38,28 +36,27 @@
 	[super dealloc];
 }
 
-
-- (IBAction)dismissPriceComparisonView:(id)sender{
-	[[self navigationController ] popViewControllerAnimated:YES];
-}
-
-/*
-- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
-	NSLog(@"navigationController%@",book);
-}
- */
-
-//这边要改到viewDidLoad中去
 - (void)viewWillAppear:(BOOL)animated{
 	[super viewWillAppear:animated];
-	[[DoubanConnector sharedDoubanConnector] requestBookDataWithISBN:self.isbn
-															  responseTarget:self 
-															  responseAction:@selector(didGetDoubanBook:)];
-	if (modalView == nil) {    
-		modalView = [[PromptModalView alloc] initWithFrame:self.view.bounds];
+	NSIndexPath *selectedRow = [detailTableView indexPathForSelectedRow];
+    if (selectedRow) {
+        [detailTableView deselectRowAtIndexPath:selectedRow animated:YES];
+    }
+}
+
+- (void)viewDidLoad{
+	[super viewDidLoad];
+	if (self.isbn) {
+		[[DoubanConnector sharedDoubanConnector] requestBookDataWithISBN:self.isbn
+														  responseTarget:self 
+														  responseAction:@selector(didGetDoubanBook:)];
+		if (modalView == nil) {    
+			modalView = [[PromptModalView alloc] initWithFrame:self.view.bounds];
+		}
+		
+		[self.view addSubview:modalView];
 	}
-	
-	[self.view addSubview:modalView];
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -70,7 +67,12 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+	if (self.book) {
+		return 5;
+	}else {
+		return 0;
+	}
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -118,11 +120,14 @@
 	}
 	
 	if (indexPath.row == 3) {
+		BookReviewsViewController *reviewsViewController = [[BookReviewsViewController alloc] init];
 		reviewsViewController.isbn = book.isbn13;
 		[self.navigationController pushViewController:reviewsViewController animated:YES];
+		[reviewsViewController release];
 	}
 	
 	if (indexPath.row == 4) {
+		BookPriceComparisonViewController *bookPriceComparisonViewController = [[BookPriceComparisonViewController alloc] init];
 		if (!bookPriceComparisonViewController) {
 			bookPriceComparisonViewController = [[BookPriceComparisonViewController alloc] init];
 			bookPriceComparisonViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
@@ -131,6 +136,7 @@
 		}
 		bookPriceComparisonViewController.subjectId = [book.apiURL lastPathComponent];
 		[[self navigationController ] pushViewController:bookPriceComparisonViewController animated:YES];
+		[bookPriceComparisonViewController release];
 	}
 }
 
@@ -151,7 +157,7 @@
 	[modalView animateToHide];
 	[modalView release];
 	modalView = nil;
-	
+	[detailTableView reloadData];
 	
 }
 @end

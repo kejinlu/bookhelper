@@ -12,9 +12,22 @@
 #import "ASImageView.h"
 #import "BookTableViewCell.h"
 #import "ASIHTTPRequest.h"
+
+@interface BookSearchViewController()
+- (void)setupSearchBar;
+@end
+
+
 @implementation BookSearchViewController
 @synthesize searchedString;
 
+
+- (id)initWithCoder:(NSCoder *)aDecoder{
+	if (self = [super initWithCoder:aDecoder]) {
+		[self setupSearchBar];
+	}
+	return self;
+}
 
 - (void)setupSearchBar{
 	if (!searchBarViewController) {
@@ -32,7 +45,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	results = [[NSMutableArray alloc] initWithCapacity:0];	
-	[self setupSearchBar];
+	//[self setupSearchBar];
 }
 
 
@@ -73,7 +86,6 @@
 #pragma mark  search bar view controller delegate
 - (void)beginSearchWithString:(NSString *)searchString{
 	self.searchedString = searchString;
-	[results removeAllObjects];
 	startIndex = 1;
 	NSString *queryString = [NSString stringWithFormat:@"q=%@&start-index=%d&max-results=%d",[searchString urlEncodeString]
 							 ,startIndex,MAX_RESULTS];
@@ -86,6 +98,10 @@
 		loadingView = [[PromptModalView alloc] initWithFrame:self.view.frame];
 	}
 	[[self view] addSubview:loadingView];
+	
+	[results removeAllObjects];
+
+	
 }
 
 #pragma mark Book
@@ -95,7 +111,6 @@
 	NSArray *books = [userInfo objectForKey:@"books"];
 	[loadingView animateToHide];
 	for (DoubanBook* book in books) {
-		NSLog(@"%@",book);
 		[results addObject:book];
 	}
 	[resultTableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];

@@ -35,10 +35,6 @@
 						   to: 0];
 		
 		
-		loadingViewController = [[LoadingViewController alloc] init];
-
-		
-		
 	}
 	return self;
 }
@@ -48,6 +44,7 @@
 	barReaderView.frame = CGRectMake(0.0, 0.0, 320.0, 367.0);
 	ScannerOverlayView *overlay = [[ScannerOverlayView alloc]initWithFrame:[barReaderView bounds]];
 	[barReaderViewController setCameraOverlayView:overlay];
+	[self initAudio];
 }
 
 - (void) initAudio
@@ -94,9 +91,6 @@
 
 - (void)  imagePickerController: (UIImagePickerController*) picker didFinishPickingMediaWithInfo: (NSDictionary*) info
 {
-	if (searching) {
-		return;
-	}
     UIImage *image = [info objectForKey: UIImagePickerControllerOriginalImage];
 	
     id <NSFastEnumeration> results = [info objectForKey: ZBarReaderControllerResults];
@@ -112,15 +106,16 @@
 	if (sym.type != ZBAR_ISBN13 && sym.type != ZBAR_ISBN10) {
 		return;
 	}
+	
 	[self performSelector: @selector(playBeep)
 			   withObject: nil
 			   afterDelay: 0.0];
-
-	[[DoubanConnector sharedDoubanConnector] requestBookDataWithISBN:sym.data
-													  responseTarget:self
-													  responseAction:@selector(didGetDoubanBook:)];
-	searching = YES;
-	[[self view] addSubview:[loadingViewController view]];
+	BookDetailViewController *bookDetailViewController = [[BookDetailViewController alloc] init];
+	bookDetailViewController.isbn = sym.data;
+	bookDetailViewController.isRecord = YES;
+	[[self navigationController ] pushViewController:bookDetailViewController animated:YES];
+	[bookDetailViewController release];
+	
 	
 }
 
@@ -130,26 +125,6 @@
 }
 
 
-- (void)didGetDoubanBook:(DoubanBook *)book{
-	if (!bookDetailViewController) {
-		bookDetailViewController = [[BookDetailViewController alloc] init];
-		bookDetailViewController.title = @"图书详情";
-		//bookDetailViewController.navigationController = [self navigationController];
-	}
-	//加入历史记录
-	if ([[BookGetHistoryDatabase sharedInstance] addBookHistory:book]) {
-		[[NSNotificationCenter defaultCenter] postNotificationName:@"ReloadHistoryNotification" object:nil];
-	}
 
-	bookDetailViewController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Books" style:UIBarButtonItemStyleBordered target:self action:@selector(dismissView:)];
-	bookDetailViewController.book = book;
-	
-	[[self navigationController ] pushViewController:bookDetailViewController animated:YES];
-	[[loadingViewController view] removeFromSuperview];
-	searching = NO;
-}
 
-- (IBAction)dismissView:(id)sender{
-	[[self navigationController ] popViewControllerAnimated:YES];
-}
 @end

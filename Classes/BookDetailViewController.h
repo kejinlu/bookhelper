@@ -11,10 +11,9 @@
 #import "ASImageView.h"
 #import "PromptModalView.h"
 @interface BookDetailViewController : UIViewController {
-	BookPriceComparisonViewController *bookPriceComparisonViewController;
-	BookReviewsViewController *reviewsViewController;
 	
 	PromptModalView *modalView;
+	IBOutlet UITableView *detailTableView;
 	NSString *isbn;
 	DoubanBook *book;
 	BOOL isRecord;
@@ -29,6 +28,5 @@
 @property(nonatomic,copy)NSString *isbn;
 @property(nonatomic,retain)DoubanBook *book;
 @property(nonatomic,assign)BOOL isRecord;
-- (IBAction)dismissPriceComparisonView:(id)sender;
 
 @end

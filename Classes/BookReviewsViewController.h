@@ -7,19 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "ContinuousTableView.h"
+#import "PromptModalView.h"
 
 @interface BookReviewsViewController : UIViewController {
+	IBOutlet ContinuousTableView *reviewTableView;
+
+	PromptModalView *loadingView;
+
 	NSMutableArray *reviews;
-	IBOutlet UITableView *reviewTableView;
-	
 	NSString *isbn;
 	NSInteger totalResults;
 	NSInteger startIndex;
-	
 }
 
 @property(nonatomic,copy) NSString *isbn;
 
 - (void)didGetBookReviews:(NSDictionary *)userInfo;
+- (void)loadMore;
 @end

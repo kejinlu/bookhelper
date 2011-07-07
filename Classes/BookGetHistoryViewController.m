@@ -205,7 +205,7 @@
 																	  style:UIBarButtonItemStyleDone
 																	 target:self
 																	 action:@selector(cancel:)] autorelease];
-	[self.navigationItem setLeftBarButtonItem:cancelButton animated:YES];
+	[self.navigationItem setLeftBarButtonItem:cancelButton animated:NO];
 	[historyTable setEditing:YES animated:YES];
 }
 
@@ -214,7 +214,7 @@
 																	style:UIBarButtonItemStylePlain
 																   target:self
 																   action:@selector(edit:)] autorelease];
-    [self.navigationItem setLeftBarButtonItem:editButton animated:YES];
+    [self.navigationItem setLeftBarButtonItem:editButton animated:NO];
     [historyTable setEditing:NO animated:YES];
 }
 
@@ -235,10 +235,14 @@
 	if (actionSheet.tag == TRASH_ACTION_SHEET) {
 		if (buttonIndex == 0) {
 			//删除未加星的
+			[[BookGetHistoryDatabase sharedInstance] deleteUnStarredBookHitories];
 		}else if (buttonIndex == 1) {
 			//删除所有
+			[[BookGetHistoryDatabase sharedInstance] deleteAllBookHistories];
 		}
 	}
+	
+	[self reloadFromDB:nil];
 	return;
 }
 
