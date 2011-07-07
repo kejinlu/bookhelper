@@ -163,7 +163,15 @@
 	}
 }
 
+//禁止末尾的自定义行的删除
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+	if (indexPath.row < [histories count]) {
+		return UITableViewCellEditingStyleDelete;
+	}else {
+		return UITableViewCellEditingStyleNone;
+	}
 
+}
 #pragma mark -
 #pragma mark tableview delegate
 
