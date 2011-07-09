@@ -75,7 +75,7 @@ static DoubanConnector *doubanConnector;
 						responseTarget:(id)target 
 						responseAction:(SEL)action
 {
-	NSString *urlString = [NSString stringWithFormat:@"http://book.douban.com/subject/%@/buylinks",bookId];
+	NSString *urlString = [NSString stringWithFormat:@"http://book.douban.com/subject/%@/buylinks?sortby=price",bookId];
 	
 	[self sendRequestWithURLString:urlString
 							  type:DOUBAN_PRICE
@@ -193,11 +193,10 @@ static DoubanConnector *doubanConnector;
 		[bookArray release];
 		[gdataXMLDocument release];
 	}else if (connection.type == DOUBAN_PRICE) {
-		NSDictionary *priceDictionary = [BookPriceUtilities priceDictionaryFromHTMLData:responseData];
-		NSArray *prices = [NSArray arrayWithArray:[priceDictionary allValues]];
+		NSString *priceHTML = [BookPriceUtilities priceHTMLFromData:responseData];
 		if ([connection.responseTarget respondsToSelector:connection.responseAction]) {
 			[connection.responseTarget performSelector:connection.responseAction
-											withObject:prices];
+											withObject:priceHTML];
 		}
 		
 	}else if (connection.type == DOUBAN_BOOK_REVIEWS) {

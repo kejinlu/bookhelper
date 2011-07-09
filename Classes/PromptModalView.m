@@ -19,8 +19,8 @@
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         self.userInteractionEnabled = YES;
         
-        indicatorWidth = 80.0;
-        indicatorHeight = 80.0;
+        indicatorWidth = 120.0;
+        indicatorHeight = 120.0;
         
         CGSize size = frame.size;
         scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(floor((size.width-indicatorWidth)/2.0),

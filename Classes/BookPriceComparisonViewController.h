@@ -10,13 +10,13 @@
 
 
 @interface BookPriceComparisonViewController : UIViewController {
-	NSArray *bookStoreLogoNames;
-	NSArray *prices;
-	NSString *subjectId;
-	
-	IBOutlet UITableView *priceTableView;
+
+	NSString *subjectId;	
+	IBOutlet UIWebView *priceWebView;
 }
 
 @property(nonatomic,copy) NSString *subjectId;
-- (void)didGetPrices:(NSArray *)priceArray;
+
+- (void)didGetPriceHTML:(NSString *)htmlString;
+
 @end

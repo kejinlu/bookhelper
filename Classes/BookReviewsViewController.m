@@ -88,7 +88,7 @@
 		if (startIndex >= totalResults) {
 			reviewTableView.end = YES;
 		}
-		cell = [reviewTableView dequeueReusableLoadingCell];
+		cell = [reviewTableView dequeueReusableEndCell];
 		if (!reviewTableView.isLoading) {
 			[self performSelector:@selector(loadMore) withObject:nil afterDelay:0.1];            
 		}

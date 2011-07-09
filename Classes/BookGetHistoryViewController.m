@@ -138,7 +138,7 @@
 			historyTable.end = NO;
 		}
 
-		cell = [historyTable  dequeueReusableLoadingCell];
+		cell = [historyTable  dequeueReusableEndCell];
 		if (!historyTable.isLoading) {
 			pageNumber += 1;
 			if (pageNumber <= totalPages) {
@@ -180,15 +180,18 @@
 }
 
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {	
-	BookGetHistory *history = [histories objectAtIndex:indexPath.row];
-	NSString *isbnString = history.isbn;
-	
-	BookDetailViewController *bookDetailViewController = [[BookDetailViewController alloc] init];
-	bookDetailViewController.title = @"图书详情";
-	bookDetailViewController.isbn = isbnString;
-	[[self navigationController ] pushViewController:bookDetailViewController animated:YES];
-	[bookDetailViewController release];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	if (indexPath.row < [histories count]) {
+		BookGetHistory *history = [histories objectAtIndex:indexPath.row];
+		NSString *isbnString = history.isbn;
+		
+		BookDetailViewController *bookDetailViewController = [[BookDetailViewController alloc] init];
+		bookDetailViewController.title = @"图书详情";
+		bookDetailViewController.isbn = isbnString;
+		[[self navigationController ] pushViewController:bookDetailViewController animated:YES];
+		[bookDetailViewController release];
+	}
+
 }
 
 

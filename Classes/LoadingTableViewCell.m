@@ -15,6 +15,7 @@
 @implementation LoadingTableViewCell
 @synthesize indicator;
 @synthesize loadingLabel;
+@synthesize imageView;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
 	if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
@@ -50,6 +51,8 @@
 	[self.contentView addSubview:loadingLabel];
 	
 }
+
+
 
 - (void)layoutSubviews {
     [super layoutSubviews];

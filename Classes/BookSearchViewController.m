@@ -145,11 +145,11 @@
 		cell.book = book;
 		return cell;
 	}else {
-		LoadingTableViewCell *loadingCell = [resultTableView dequeueReusableLoadingCell];
+		UITableViewCell *endCell = [resultTableView dequeueReusableEndCell];
 		if (!resultTableView.isLoading) {
             [self performSelector:@selector(loadMore) withObject:nil afterDelay:0.1];            
         }
-		return loadingCell;
+		return endCell;
 	}
 
 

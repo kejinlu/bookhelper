@@ -12,5 +12,5 @@
 @interface BookPriceUtilities : NSObject {
 
 }
-+ (NSDictionary *)priceDictionaryFromHTMLData:(NSData *)data;
++ (NSString *)priceHTMLFromData:(NSData *)data;
 @end
