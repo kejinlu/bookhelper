@@ -12,6 +12,7 @@
 #import "UIImage+Scale.h"
 #import "BookGetHistoryDatabase.h"
 #import "DoubanConnector.h"
+#import "BookDetailCell.h"
 
 @implementation BookDetailViewController
 @synthesize isbn;
@@ -60,15 +61,15 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	if (indexPath.row == 0) {
-		return 180;
+	if (indexPath.row == 1) {
+		return 150;
 	}
-	return 40.0f;
+	return 38.0f;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	if (self.book) {
-		return 5;
+		return 6;
 	}else {
 		return 0;
 	}
@@ -77,16 +78,25 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	if (indexPath.row == 0) {
-		static NSString *CoverCellIdentifier = @"CoverCell";
-		UITableViewCell *coverCell = [tableView dequeueReusableCellWithIdentifier:CoverCellIdentifier];
-		if (!coverCell) {
-			coverCell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CoverCellIdentifier] autorelease];
-			coverCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-			coverCell.selectionStyle = UITableViewCellSelectionStyleNone;
-			[coverCell.contentView addSubview:coverView];
-			
+		static NSString *BookTitleCellIdentifier = @"BookTitleCell";
+		UITableViewCell *titleCell = [tableView dequeueReusableCellWithIdentifier:BookTitleCellIdentifier];
+		if (!titleCell) {
+			titleCell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:BookTitleCellIdentifier] autorelease];
+			titleCell.textLabel.textAlignment = UITextAlignmentCenter;
+			titleCell.textLabel.textColor = [UIColor colorWithRed:0.176 green:0.651 blue:0.325 alpha:1.0];
 		}
-		return coverCell;
+		titleCell.textLabel.text = book.title;
+		return titleCell;
+		
+	}else if (indexPath.row == 1) {
+		static NSString *DetailCellIdentifier = @"BookDetailCell";
+		BookDetailCell *detailCell = (BookDetailCell *)[tableView dequeueReusableCellWithIdentifier:DetailCellIdentifier];
+		if (!detailCell) {
+			detailCell = [[[BookDetailCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:DetailCellIdentifier] autorelease];
+			detailCell.book = book;
+			detailCell.selectionStyle = UITableViewCellSelectionStyleNone;			
+		}
+		return detailCell;
 	}else {
 		static NSString *CellIdentifier = @"BookItemCell";
 		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -95,15 +105,15 @@
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 		}
 
-		cell.imageView.image = [[UIImage imageNamed:[bookItemImageNames objectAtIndex:indexPath.row - 1]] imageScaledToSize:CGSizeMake(24, 24)];
-		cell.textLabel.text = [bookItemNames objectAtIndex:indexPath.row - 1];
+		cell.imageView.image = [[UIImage imageNamed:[bookItemImageNames objectAtIndex:indexPath.row - 2]] imageScaledToSize:CGSizeMake(24, 24)];
+		cell.textLabel.text = [bookItemNames objectAtIndex:indexPath.row - 2];
 		return cell;
 	}
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	//内容简介
-	if (indexPath.row == 1) {
+	if (indexPath.row == 2) {
 		BookInroViewController *bookIntroViewController = [[BookInroViewController alloc] init];
 		bookIntroViewController.bookTitle = book.title;
 		bookIntroViewController.bookIntro = book.summary;
@@ -111,7 +121,7 @@
 		[bookIntroViewController release];
 	}
 	
-	if (indexPath.row == 2) {
+	if (indexPath.row == 3) {
 		BookAuthorIntroViewController *authorViewController = [[BookAuthorIntroViewController alloc] init];
 		authorViewController.authorName = book.author;
 		authorViewController.authorIntro = book.authorIntro;
@@ -119,22 +129,21 @@
 		[authorViewController release];
 	}
 	
-	if (indexPath.row == 3) {
+	if (indexPath.row == 4) {
 		BookReviewsViewController *reviewsViewController = [[BookReviewsViewController alloc] init];
 		reviewsViewController.isbn = book.isbn13;
+		reviewsViewController.navigationItem.title = [NSString stringWithFormat:@"书评:%@",book.title];
 		[self.navigationController pushViewController:reviewsViewController animated:YES];
 		[reviewsViewController release];
 	}
 	
-	if (indexPath.row == 4) {
+	if (indexPath.row == 5) {
 		BookPriceComparisonViewController *bookPriceComparisonViewController = [[BookPriceComparisonViewController alloc] init];
 		if (!bookPriceComparisonViewController) {
 			bookPriceComparisonViewController = [[BookPriceComparisonViewController alloc] init];
-			bookPriceComparisonViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
-																															   target:self
-																															   action:@selector(dismissPriceComparisonView:)];
 		}
 		bookPriceComparisonViewController.subjectId = [book.apiURL lastPathComponent];
+		bookPriceComparisonViewController.navigationItem.title = [NSString stringWithFormat:@"比价:%@",book.title];
 		[[self navigationController ] pushViewController:bookPriceComparisonViewController animated:YES];
 		[bookPriceComparisonViewController release];
 	}
