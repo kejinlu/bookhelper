@@ -90,6 +90,7 @@
 	NSString *queryString = [NSString stringWithFormat:@"q=%@&start-index=%d&max-results=%d",[searchString urlEncodeString]
 							 ,startIndex,MAX_RESULTS];
 	startIndex += MAX_RESULTS;
+	
 	[[DoubanConnector sharedDoubanConnector] requestQueryBooksWithQueryString:queryString
 															   responseTarget:self 
 															   responseAction:@selector(didGetDoubanBooks:)];
@@ -113,6 +114,12 @@
 	for (DoubanBook* book in books) {
 		[results addObject:book];
 	}
+	if (startIndex > totalResults) {
+		resultTableView.end = YES;
+	}else {
+		resultTableView.end = NO;
+	}
+
 	[resultTableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
 
 }
@@ -160,15 +167,15 @@
 #pragma mark UITableView Delegate 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {	
-	
-	NSString *isbnString = ((DoubanBook *)[results objectAtIndex:indexPath.row]).isbn13;
-	BookDetailViewController *bookDetailViewController = [[BookDetailViewController alloc] init];
-	bookDetailViewController.title = @"图书详情";
-	bookDetailViewController.isbn = isbnString;
-	bookDetailViewController.isRecord = YES;
-	[[self navigationController ] pushViewController:bookDetailViewController animated:YES];
-	[bookDetailViewController release];
-	
+	if (indexPath.row < [results count]) {
+		NSString *isbnString = ((DoubanBook *)[results objectAtIndex:indexPath.row]).isbn13;
+		BookDetailViewController *bookDetailViewController = [[BookDetailViewController alloc] init];
+		bookDetailViewController.title = @"图书详情";
+		bookDetailViewController.isbn = isbnString;
+		bookDetailViewController.isRecord = YES;
+		[[self navigationController ] pushViewController:bookDetailViewController animated:YES];
+		[bookDetailViewController release];
+	}
 }
 
 

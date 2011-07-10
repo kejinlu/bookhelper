@@ -113,6 +113,7 @@
 	BookDetailViewController *bookDetailViewController = [[BookDetailViewController alloc] init];
 	bookDetailViewController.isbn = sym.data;
 	bookDetailViewController.isRecord = YES;
+	bookDetailViewController.navigationItem.title = @"图书详情";
 	[[self navigationController ] pushViewController:bookDetailViewController animated:YES];
 	[bookDetailViewController release];
 	

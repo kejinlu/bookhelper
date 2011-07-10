@@ -68,10 +68,10 @@
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)aSearchBar {
-    [self cancelButtonClicked:nil];
+    [self cancel:nil];
 }
 
-- (void)cancelButtonClicked:(id)sender {
+- (void)cancel:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
 }
 

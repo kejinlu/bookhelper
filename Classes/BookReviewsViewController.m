@@ -85,9 +85,12 @@
 		DoubanBookReviewSummary *review = (DoubanBookReviewSummary *)[reviews objectAtIndex:indexPath.row];
 		((ReviewTableViewCell *)cell).review = review;
 	}else {
-		if (startIndex >= totalResults) {
+		if (startIndex > totalResults) {
 			reviewTableView.end = YES;
+		}else {
+			reviewTableView.end = NO;
 		}
+
 		cell = [reviewTableView dequeueReusableEndCell];
 		if (!reviewTableView.isLoading) {
 			[self performSelector:@selector(loadMore) withObject:nil afterDelay:0.1];            

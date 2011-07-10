@@ -109,7 +109,12 @@
 		if ([@"author-intro" isEqualToString:nameValue]) {
 			book.authorIntro = [dbElement stringValue];
 		}	
-	}	
+	}
+	
+	GDataXMLElement *ratingElement = [[rootElement elementsForName:@"gd:rating"] objectAtIndex:0];
+	if (ratingElement) {
+		book.rating = [[ratingElement attributeForName:@"average"] stringValue];
+	}
 	return [book autorelease];
 	
 }

@@ -23,5 +23,5 @@
 }
 @property(nonatomic,copy) NSString *searchString;
 @property(nonatomic,assign)id delegate;
-- (void)cancelButtonClicked:(id)sender ;
+- (IBAction)cancel:(id)sender ;
 @end

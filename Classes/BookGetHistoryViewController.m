@@ -43,7 +43,7 @@
 																					  action:@selector(launchTrashMenu)] autorelease];
 		self.navigationItem.rightBarButtonItem = trashButton;		
 		
-		UISegmentedControl *segmentedControl = [[[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"所有",@"标注",nil]] autorelease];
+		UISegmentedControl *segmentedControl = [[[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"所有",@"加星",nil]] autorelease];
 	    [segmentedControl setSegmentedControlStyle:UISegmentedControlStyleBar];
 		[segmentedControl setWidth:80 forSegmentAtIndex:0];
 		[segmentedControl setWidth:80 forSegmentAtIndex:1];
