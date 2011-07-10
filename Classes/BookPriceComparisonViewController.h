@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PromptModalView.h"
 
-
-@interface BookPriceComparisonViewController : UIViewController {
+@interface BookPriceComparisonViewController : UIViewController<UIWebViewDelegate> {
 
 	NSString *subjectId;	
 	IBOutlet UIWebView *priceWebView;
+	
+	PromptModalView *modalView;
 }
 
 @property(nonatomic,copy) NSString *subjectId;

@@ -20,16 +20,46 @@
 	return self;
 }
 
+- (void)dealloc{
+	if (modalView) {
+		[modalView release];
+	}
+	[super dealloc];
+}
 
-- (void)viewWillAppear:(BOOL)animated{
-	[super viewWillAppear:animated];
+- (void)viewDidLoad{
+	priceWebView.delegate = self;
+
+	if (modalView == nil) {    
+		modalView = [[PromptModalView alloc] initWithFrame:self.view.bounds];
+	}
+	
+	[self.view addSubview:modalView];
+	
 	[[DoubanConnector sharedDoubanConnector] requestBookPriceHTMLWithBookId:subjectId
 															 responseTarget:self
 															 responseAction:@selector(didGetPriceHTML:)];
 }
 
-
 - (void)didGetPriceHTML:(NSString *)htmlString{
-	[priceWebView loadHTMLString:htmlString baseURL:nil];
+	NSString *html = [NSString stringWithFormat:@"<head><link href=\"prices.css\" rel=\"stylesheet\" type=\"text/css\" /></head><body>%@</body>",htmlString];
+	[priceWebView loadHTMLString:html baseURL:[[NSBundle mainBundle] bundleURL]];
+}
+
+
+#pragma mark web view delegate
+- (void)webViewDidFinishLoad:(UIWebView *)webView {    
+	[modalView animateToHide];
+	[modalView release];
+	modalView = nil;
+}
+
+-(BOOL) webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
+    if ( inType == UIWebViewNavigationTypeLinkClicked ) {
+        [[UIApplication sharedApplication] openURL:[inRequest URL]];
+        return NO;
+    }
+	
+    return YES;
 }
 @end
