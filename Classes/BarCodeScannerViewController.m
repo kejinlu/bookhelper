@@ -19,8 +19,9 @@
 		barReaderViewController.sourceType = UIImagePickerControllerSourceTypeCamera;
 		barReaderViewController.showsCameraControls = NO;
 		barReaderViewController.readerDelegate = self;
-		
+		barReaderViewController.readerView.torchMode = 0;
 		ZBarImageScanner *scanner = barReaderViewController.scanner;
+		
 
 		[scanner setSymbology: ZBAR_ISBN10
 					   config: ZBAR_CFG_ENABLE
@@ -33,7 +34,6 @@
 		[scanner setSymbology: ZBAR_I25
 					   config: ZBAR_CFG_ENABLE
 						   to: 0];
-		
 		
 	}
 	return self;
