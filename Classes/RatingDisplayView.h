@@ -16,9 +16,9 @@
 	
 	NSInteger maxRating;
 	NSInteger minRating;
-	NSInteger rating;
+	CGFloat rating;
 }
-@property(nonatomic,assign) NSInteger rating;
+@property(nonatomic,assign) CGFloat rating;
 
 - (CGRect)rectForStarAtIndex:(NSInteger)index;
 @end

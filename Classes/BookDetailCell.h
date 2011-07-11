@@ -18,7 +18,8 @@
 	UILabel *priceLabel;
 	UILabel *ISBNLabel;
 	RatingDisplayView *ratingView;
-	
+	//UILabel *ratingHeaderLabel;
+	UILabel *ratingTailLabel;
 	DoubanBook *book;
 }
 @property(nonatomic,assign) DoubanBook *book;

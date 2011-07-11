@@ -8,7 +8,6 @@
 
 #import "ASImageView.h"
 #import "NSString+URLEncoding.h"
-//#import "ASIHTTPRequest.h"
 #import "ASIDownloadCache.h"
 @implementation ASImageView
 @synthesize urlString;

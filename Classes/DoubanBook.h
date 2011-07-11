@@ -26,6 +26,7 @@
 	NSString *authorIntro;
 	
 	NSString *rating;
+	NSString *numRaters;
 }
 @property(nonatomic,copy) NSString *apiURL;
 @property(nonatomic,copy) NSString *title;
@@ -43,7 +44,7 @@
 @property(nonatomic,copy) NSString *binding;
 @property(nonatomic,copy) NSString *authorIntro;
 @property(nonatomic,copy) NSString *rating;
-
+@property(nonatomic,copy) NSString *numRaters;
 
 + (DoubanBook *)doubanBookFromXMLElement:(GDataXMLElement *)rootElement;
 @end

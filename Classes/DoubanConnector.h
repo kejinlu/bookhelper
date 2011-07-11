@@ -25,6 +25,8 @@
 //获取单例
 + (DoubanConnector *)sharedDoubanConnector;
 
+- (void)cancel;
+
 - (void)requestBookDataWithAPIURLString:(NSString *)urlString 
 						 responseTarget:(id)target 
 						 responseAction:(SEL)action;

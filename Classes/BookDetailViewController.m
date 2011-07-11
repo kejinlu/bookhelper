@@ -9,11 +9,10 @@
 #import "BookDetailViewController.h"
 #import "BookInroViewController.h"
 #import "BookAuthorIntroViewController.h"
-#import "UIImage+Scale.h"
 #import "BookGetHistoryDatabase.h"
 #import "DoubanConnector.h"
 #import "BookDetailCell.h"
-
+#import "BookDetailItemCell.h"
 @implementation BookDetailViewController
 @synthesize isbn;
 @synthesize book;
@@ -99,14 +98,13 @@
 		return detailCell;
 	}else {
 		static NSString *CellIdentifier = @"BookItemCell";
-		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+		BookDetailItemCell *cell = (BookDetailItemCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 		if (cell == nil) {
-			cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+			cell = [[[BookDetailItemCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
 		}
-
-		cell.imageView.image = [[UIImage imageNamed:[bookItemImageNames objectAtIndex:indexPath.row - 2]] imageScaledToSize:CGSizeMake(24, 24)];
-		cell.textLabel.text = [bookItemNames objectAtIndex:indexPath.row - 2];
+		
+		[cell setIconImage:[UIImage imageNamed:[bookItemImageNames objectAtIndex:indexPath.row - 2]]];
+		[cell setName:[bookItemNames objectAtIndex:indexPath.row - 2]];
 		return cell;
 	}
 }
@@ -160,8 +158,6 @@
 			[[NSNotificationCenter defaultCenter] postNotificationName:@"ReloadHistoryNotification" object:nil];
 		}
 	}
-	
-	coverView.urlString = book.coverImageURL;
 	
 	[modalView animateToHide];
 	[modalView release];

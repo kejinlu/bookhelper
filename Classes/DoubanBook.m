@@ -26,6 +26,7 @@
 @synthesize binding;
 @synthesize authorIntro;
 @synthesize rating;
+@synthesize numRaters;
 
 - (NSString *)description{
 	return [NSString stringWithFormat:@"Douban Book{title:%@,author:%@,summary:%@,alternateURL:%@,coverImageURL:%@,isbn10:%@,isbn13:%@,pages:%@,tranlator:%@,price:%@,publisher:%@,binding:%@,authorIntro:%@,rating:%@}",
@@ -114,6 +115,7 @@
 	GDataXMLElement *ratingElement = [[rootElement elementsForName:@"gd:rating"] objectAtIndex:0];
 	if (ratingElement) {
 		book.rating = [[ratingElement attributeForName:@"average"] stringValue];
+		book.numRaters = [[ratingElement attributeForName:@"numRaters"] stringValue];
 	}
 	return [book autorelease];
 	

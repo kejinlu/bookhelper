@@ -38,6 +38,13 @@ static DoubanConnector *doubanConnector;
 	}
 }
 
+
+- (void)cancel{
+	if (urlConnection) {
+		[urlConnection cancel];
+		[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+	}
+}
 - (void)requestBookDataWithAPIURLString:(NSString *)urlString 
 						 responseTarget:(id)target 
 						 responseAction:(SEL)action{
@@ -112,7 +119,7 @@ static DoubanConnector *doubanConnector;
 		[urlConnection cancel];
 		[urlConnection release];
 		urlConnection = nil;
-		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+		[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 	}
 	
 	//创建本次的请求
@@ -121,7 +128,7 @@ static DoubanConnector *doubanConnector;
 	urlConnection.type = connectionType;
 	urlConnection.responseTarget = target;
 	urlConnection.responseAction = action;
-	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 }
 
 #pragma mark NSURLConnection delegate methods
@@ -146,7 +153,7 @@ static DoubanConnector *doubanConnector;
 - (void)connectionDidFinishLoading:(DoubanURLConnection *)connection
 {	
 	//停止网络指示图标
-	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 	//如果没有返回数据，则直接结束
 	if (!responseData || [responseData length] <= 0) {
 		return;

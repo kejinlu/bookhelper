@@ -11,9 +11,10 @@
 #import "BookGetHistoryDatabase.h"
 #import "TableUIButton.h"
 #import "GradientView.h"
-#import "UIImage+Scale.h"
 #import "DoubanConnector.h"
 #import "DoubanBook.h"
+#import "BookHistoryCell.h"
+
 #define TRASH_ACTION_SHEET 100
 @implementation BookGetHistoryViewController
 
@@ -78,59 +79,17 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	UITableViewCell *cell;
 	if (indexPath.row < [histories count]) {
-		static NSString *CellIdentifier = @"BookCell";
-		cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-		if (cell == nil) {
-			cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+		static NSString *CellIdentifier = @"BookHistoryCell";
+		cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+		if (!cell) {
+			cell = [[[BookHistoryCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
 			cell.backgroundView = [[[GradientView alloc] initWithGradientType:WHITE_GRADIENT] autorelease];
 			cell.selectedBackgroundView = [[[GradientView alloc] initWithGradientType:GREEN_GRADIENT] autorelease];
-			
-			TableUIButton *starButton = [TableUIButton buttonWithType:UIButtonTypeCustom];
-			starButton.frame = CGRectMake(0, 0, 52, 52);
-			starButton.tag = STAR_BUTTON;
-			[starButton addTarget:self action:@selector(starHistory:) forControlEvents:UIControlEventTouchUpInside];
-			[cell.contentView addSubview:starButton];
-			
-			UILabel	*myTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(54, 6, 240, 20)];
-			myTextLabel.tag = BOOK_TITLE;
-			myTextLabel.backgroundColor = [UIColor clearColor];
-			myTextLabel.highlightedTextColor = [UIColor whiteColor];
-			myTextLabel.textColor = [UIColor blackColor];
-			myTextLabel.textAlignment = UITextAlignmentLeft;
-			myTextLabel.font = [UIFont systemFontOfSize:16];
-			[cell.contentView addSubview:myTextLabel];
-			
-			UILabel	*myDetailLabel = [[UILabel alloc] initWithFrame:CGRectMake(54, 28, 240, 20)];
-			myDetailLabel.tag = BOOK_INFO;
-			myDetailLabel.backgroundColor = [UIColor clearColor];
-			myDetailLabel.textColor = [UIColor grayColor];
-			myDetailLabel.highlightedTextColor = [UIColor whiteColor];
-			myDetailLabel.textAlignment = UITextAlignmentLeft;
-			myDetailLabel.font = [UIFont systemFontOfSize:12];
-			[cell.contentView addSubview:myDetailLabel];
-			[myTextLabel release];
-			[myDetailLabel release];
-			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-			cell.textLabel.backgroundColor = [UIColor clearColor];
+			[(BookHistoryCell *)cell addStarTarget:self action:@selector(starHistory:)];
 		}
-		TableUIButton *starButton = (TableUIButton *)[cell viewWithTag:STAR_BUTTON];
-		UILabel *textLabel = (UILabel *)[cell viewWithTag:BOOK_TITLE];
-		UILabel	*detailLabel = (UILabel *)[cell viewWithTag:BOOK_INFO];
-		BookGetHistory *history = (BookGetHistory *)[histories objectAtIndex:indexPath.row];
-		[starButton setImage:[[UIImage imageNamed:history.starred ? @"star.png" : @"unstar.png"] imageScaledToSize:CGSizeMake(16, 16)] 
-					forState:UIControlStateNormal];
-		starButton.row = indexPath.row;
-		textLabel.text = history.bookTitle;
+		((BookHistoryCell *)cell).starButton.row = indexPath.row;
+		((BookHistoryCell *)cell).bookHistory = [histories objectAtIndex:indexPath.row];
 		
-		if (history.author) {
-			detailLabel.text = history.author;
-		}
-		if (history.publisher) {
-			detailLabel.text = [detailLabel.text stringByAppendingFormat:@" / %@",history.publisher];
-		}
-		if (history.pubDate) {
-			detailLabel.text = [detailLabel.text stringByAppendingFormat:@" %@",history.pubDate];
-		}
 	}else {
 		if (pageNumber + 1 > totalPages) {
 			historyTable.end = YES;

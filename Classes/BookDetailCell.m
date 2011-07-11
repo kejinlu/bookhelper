@@ -44,6 +44,8 @@
 	[priceLabel release];
 	[ISBNLabel release];
 	[ratingView release];
+	//[ratingHeaderLabel release];
+	[ratingTailLabel release];
 	[super dealloc];
 }
 
@@ -56,7 +58,8 @@
 	bookPublisherLabel.text = [NSString stringWithFormat:@"出版社: %@",book.publisher];
 	bookPubDateLabel.text = [NSString stringWithFormat:@"出版日期: %@",book.pubDate];
 	ISBNLabel.text = [NSString stringWithFormat:@"ISBN: %@",book.isbn13];
-	ratingView.rating = [book.rating intValue];
+	ratingView.rating = [book.rating floatValue];
+	ratingTailLabel.text = [NSString stringWithFormat:@"(%@,共%@人评分)",book.rating,book.numRaters];
 }
 
 
@@ -71,7 +74,7 @@
 	CGRect rect = CGRectMake(110, 5, 180, 20);
 	bookAuthorLabel = [[UILabel alloc] initWithFrame:rect];
 	bookAuthorLabel.textColor = [UIColor grayColor];
-	bookAuthorLabel.font = [UIFont systemFontOfSize:13];
+	bookAuthorLabel.font = [UIFont systemFontOfSize:14];
 	[self.contentView addSubview:bookAuthorLabel];
 	
 }
@@ -80,7 +83,7 @@
 	CGRect rect = CGRectMake(110, 28, 180, 20);
 	bookPublisherLabel = [[UILabel alloc] initWithFrame:rect];
 	bookPublisherLabel.textColor = [UIColor grayColor];
-	bookPublisherLabel.font = [UIFont systemFontOfSize:13];
+	bookPublisherLabel.font = [UIFont systemFontOfSize:14];
 
 	[self.contentView addSubview:bookPublisherLabel];
 	
@@ -90,7 +93,7 @@
 	CGRect rect = CGRectMake(110, 50, 180, 20);
 	bookPubDateLabel = [[UILabel alloc] initWithFrame:rect];
 	bookPubDateLabel.textColor = [UIColor grayColor];
-	bookPubDateLabel.font = [UIFont systemFontOfSize:13];
+	bookPubDateLabel.font = [UIFont systemFontOfSize:14];
 
 	[self.contentView addSubview:bookPubDateLabel];
 }
@@ -99,7 +102,7 @@
 	CGRect rect = CGRectMake(110, 72, 180, 20);
 	priceLabel = [[UILabel alloc] initWithFrame:rect];
 	priceLabel.textColor = [UIColor grayColor];
-	priceLabel.font = [UIFont systemFontOfSize:13];
+	priceLabel.font = [UIFont systemFontOfSize:14];
 
 	[self.contentView addSubview:priceLabel];
 }
@@ -108,15 +111,27 @@
 	CGRect rect = CGRectMake(110, 94, 180, 20);
 	ISBNLabel = [[UILabel alloc] initWithFrame:rect];
 	ISBNLabel.textColor = [UIColor grayColor];
-	ISBNLabel.font = [UIFont systemFontOfSize:13];
+	ISBNLabel.font = [UIFont systemFontOfSize:14];
 
 	[self.contentView addSubview:ISBNLabel];
 	
 }
 - (void)addRatingView{
+	//ratingHeaderLabel = [[UILabel alloc] initWithFrame:CGRectMake(110, 116, 12, 20)];
+//	ratingHeaderLabel.text = @"评分:";
+//	ratingHeaderLabel.textColor = [UIColor grayColor];
+//	ratingHeaderLabel.font = [UIFont systemFontOfSize:14];
+	//[self.contentView addSubview:ratingHeaderLabel];
+	
+	
 	ratingView = [[RatingDisplayView alloc] init];
 	ratingView.frame = CGRectMake(110, 116,84,16);
 	[self.contentView addSubview:ratingView];
+	
+	ratingTailLabel = [[UILabel alloc] initWithFrame:CGRectMake(196, 116, 100, 20)];
+	ratingTailLabel.textColor = [UIColor grayColor];
+	ratingTailLabel.font = [UIFont systemFontOfSize:13];
+	[self.contentView addSubview:ratingTailLabel];
 }
 
 

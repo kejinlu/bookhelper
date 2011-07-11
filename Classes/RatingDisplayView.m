@@ -29,11 +29,11 @@
 	[super dealloc];
 }
 
-- (void)setRating:(NSInteger)_rating{
-	rating = _rating;
+- (void)setRating:(CGFloat)_rating{
+	rating = round(_rating);
 	NSInteger index;
 	CGFloat x = rating/2.0;
-	for (index = 0; index < floor(x + 0.5); index++) {
+	for (index = 0; index < floor(x); index++) {
 		UIImageView *imageView = [[UIImageView alloc] initWithImage:oneStar];
 		imageView.frame = [self rectForStarAtIndex:index];
 		[self addSubview:imageView];
@@ -45,7 +45,7 @@
 		[self addSubview:imageView];
 		[imageView release];
 	}
-	for (index = floor(x+0.5); index<5; index++) {
+	for (index = ceil(x); index<5; index++) {
 		UIImageView *imageView = [[UIImageView alloc] initWithImage:zeroStar];
 		imageView.frame = [self rectForStarAtIndex:index];
 		[self addSubview:imageView];
