@@ -19,37 +19,36 @@
 @class DoubanBook;
 
 @interface DoubanConnector : NSObject {
-	DoubanURLConnection *urlConnection;
+	NSMutableDictionary *connectionPool;
 	NSMutableData *responseData;
 }
+- (void)removeConnectionWithUUID:(NSString *)uuid;
 //获取单例
 + (DoubanConnector *)sharedDoubanConnector;
 
-- (void)cancel;
-
-- (void)requestBookDataWithAPIURLString:(NSString *)urlString 
+- (NSString *)requestBookDataWithAPIURLString:(NSString *)urlString 
 						 responseTarget:(id)target 
 						 responseAction:(SEL)action;
 
-- (void)requestBookDataWithISBN:(NSString *)isbn 
+- (NSString *)requestBookDataWithISBN:(NSString *)isbn 
 				 responseTarget:(id)target 
 				 responseAction:(SEL)action;
 
-- (void)requestQueryBooksWithQueryString:(NSString *)queryString 
+- (NSString *)requestQueryBooksWithQueryString:(NSString *)queryString 
 						  responseTarget:(id)target 
 						  responseAction:(SEL)action;
 
-- (void)requestBookPriceHTMLWithBookId:(NSString *)bookId 
+- (NSString *)requestBookPriceHTMLWithBookId:(NSString *)bookId 
 						responseTarget:(id)target 
 						responseAction:(SEL)action;
 
 
-- (void)requestBookReviewsWithISBN:(NSString *)isbn 
+- (NSString *)requestBookReviewsWithISBN:(NSString *)isbn 
 					   queryString:(NSString *)string 
 					responseTarget:(id)target 
 					responseAction:(SEL)action;
 
-- (void)sendRequestWithURLString:(NSString *)urlString
+- (NSString *)sendRequestWithURLString:(NSString *)urlString
 							type:(DoubanConnectionType)connectionType 
 				  responseTarget:(id)target 
 				  responseAction:(SEL)action;

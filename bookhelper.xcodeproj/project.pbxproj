@@ -52,6 +52,7 @@
 		A3BDF36A13C044C70027A336 /* BookAuthorIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF36913C044C70027A336 /* BookAuthorIntroViewController.m */; };
 		A3C44EC813CB2EE90027207E /* BookHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C44EC713CB2EE90027207E /* BookHistoryCell.m */; };
 		A3C44EFA13CB39550027207E /* BookDetailItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C44EF913CB39550027207E /* BookDetailItemCell.m */; };
+		A3C4536B13CC8DD60027207E /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C4536A13CC8DD60027207E /* NSString+UUID.m */; };
 		A3C7DA4F13C2EDD200472D1F /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DA2813C2EDD100472D1F /* Icon-72.png */; };
 		A3C7DA5013C2EDD200472D1F /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DA2913C2EDD100472D1F /* Icon-Small-50.png */; };
 		A3C7DA5113C2EDD200472D1F /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DA2A13C2EDD100472D1F /* Icon-Small.png */; };
@@ -206,6 +207,8 @@
 		A3C44EC713CB2EE90027207E /* BookHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookHistoryCell.m; sourceTree = "<group>"; };
 		A3C44EF813CB39550027207E /* BookDetailItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetailItemCell.h; sourceTree = "<group>"; };
 		A3C44EF913CB39550027207E /* BookDetailItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetailItemCell.m; sourceTree = "<group>"; };
+		A3C4536913CC8DD60027207E /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
+		A3C4536A13CC8DD60027207E /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UUID.m"; sourceTree = "<group>"; };
 		A3C7DA2813C2EDD100472D1F /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		A3C7DA2913C2EDD100472D1F /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		A3C7DA2A13C2EDD100472D1F /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
@@ -750,6 +753,8 @@
 			children = (
 				A3D37FCD13B4D6A800632293 /* NSString+URLEncoding.h */,
 				A3D37FCE13B4D6A800632293 /* NSString+URLEncoding.m */,
+				A3C4536913CC8DD60027207E /* NSString+UUID.h */,
+				A3C4536A13CC8DD60027207E /* NSString+UUID.m */,
 				A303133713B9F8C4000BD08C /* PathUtilities.h */,
 				A303133813B9F8C4000BD08C /* PathUtilities.m */,
 			);
@@ -919,6 +924,7 @@
 				A35CCA8B13CA0C7D00135D7E /* RatingDisplayView.m in Sources */,
 				A3C44EC813CB2EE90027207E /* BookHistoryCell.m in Sources */,
 				A3C44EFA13CB39550027207E /* BookDetailItemCell.m in Sources */,
+				A3C4536B13CC8DD60027207E /* NSString+UUID.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

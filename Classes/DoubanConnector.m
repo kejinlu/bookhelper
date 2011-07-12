@@ -25,79 +25,81 @@ static DoubanConnector *doubanConnector;
 - (id)init{
 	if (self = [super init]) {
 		responseData = [[NSMutableData alloc] init];
+		connectionPool = [[NSMutableDictionary alloc] init];
 	}
 	return self;
 }
 - (void)dealloc{
-	if (urlConnection) {
-		[urlConnection cancel];
-		[urlConnection release];
-		urlConnection = nil;
-		[responseData release];
-		[super dealloc];
-	}
+	[responseData release];
+	[connectionPool release];
+	[super dealloc];
 }
 
-
-- (void)cancel{
-	if (urlConnection) {
-		[urlConnection cancel];
+- (void)removeConnectionWithUUID:(NSString *)uuid{
+	DoubanURLConnection *connection = [connectionPool objectForKey:uuid];
+	if (connection) {
+		[connection cancel];
+		[connectionPool removeObjectForKey:uuid];
+	}
+	if ([connectionPool count] == 0) {
 		[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 	}
 }
-- (void)requestBookDataWithAPIURLString:(NSString *)urlString 
+
+
+- (NSString *)requestBookDataWithAPIURLString:(NSString *)urlString 
 						 responseTarget:(id)target 
 						 responseAction:(SEL)action{
-	[self sendRequestWithURLString:urlString
+	return [self sendRequestWithURLString:urlString
 							  type:DOUBAN_BOOK
 					responseTarget:target
 					responseAction:action];
 }
 
 
-- (void)requestBookDataWithISBN:(NSString *)isbn 
+- (NSString *)requestBookDataWithISBN:(NSString *)isbn 
 				 responseTarget:(id)target 
 				 responseAction:(SEL)action
 {
 	NSString *urlString = [NSString stringWithFormat:@"%@/%@?apikey=%@",DOUBAN_BOOK_ISBN_API,isbn,DOUBAN_API_KEY];
-	[self sendRequestWithURLString:urlString
+	return [self sendRequestWithURLString:urlString
 							  type:DOUBAN_BOOK
 					responseTarget:target
 					responseAction:action];
 }
 
 //使用豆瓣API，查询图书
-- (void)requestQueryBooksWithQueryString:(NSString *)queryString 
+- (NSString *)requestQueryBooksWithQueryString:(NSString *)queryString 
 						  responseTarget:(id)target 
 						  responseAction:(SEL)action{
 	NSString *urlString = [NSString stringWithFormat:@"%@?%@&apikey=%@",DOUBAN_BOOK_QUERY_API,queryString,DOUBAN_API_KEY];
-	[self sendRequestWithURLString:urlString
+	return [self sendRequestWithURLString:urlString
 							  type:DOUBAN_BOOKS
 					responseTarget:target
 					responseAction:action];
 	
 }
 
-- (void)requestBookPriceHTMLWithBookId:(NSString *)bookId 
+- (NSString *)requestBookPriceHTMLWithBookId:(NSString *)bookId 
 						responseTarget:(id)target 
 						responseAction:(SEL)action
 {
 	NSString *urlString = [NSString stringWithFormat:@"http://book.douban.com/subject/%@/buylinks?sortby=price",bookId];
 	
-	[self sendRequestWithURLString:urlString
+	return [self sendRequestWithURLString:urlString
 							  type:DOUBAN_PRICE
 					responseTarget:target
 					responseAction:action];
 }
 
-- (void)requestBookReviewsWithISBN:(NSString *)isbn 
+- (NSString *)requestBookReviewsWithISBN:(NSString *)isbn 
 							queryString:(NSString *)string 
 						 responseTarget:(id)target 
 						 responseAction:(SEL)action
 {
 	NSString *urlString = [NSString stringWithFormat:@"http://api.douban.com/book/subject/isbn/%@/reviews?%@&apikey=%@",
 						   isbn,string,DOUBAN_API_KEY];
-	[self sendRequestWithURLString:urlString
+	return [self sendRequestWithURLString:urlString
 							  type:DOUBAN_BOOK_REVIEWS
 					responseTarget:target
 					responseAction:action];
@@ -105,7 +107,7 @@ static DoubanConnector *doubanConnector;
 }
 
 
-- (void)sendRequestWithURLString:(NSString *)urlString
+- (NSString *)sendRequestWithURLString:(NSString *)urlString
 					  type:(DoubanConnectionType)connectionType 
 			responseTarget:(id)target 
 			responseAction:(SEL)action
@@ -114,21 +116,18 @@ static DoubanConnector *doubanConnector;
 	NSURLRequest *theRequest = [NSURLRequest requestWithURL:url
 												cachePolicy:NSURLRequestReturnCacheDataElseLoad 
 											timeoutInterval:30];
-	//如果已经有连接在运行的，取消并释放
-	if (urlConnection) {
-		[urlConnection cancel];
-		[urlConnection release];
-		urlConnection = nil;
-		[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-	}
 	
 	//创建本次的请求
-	urlConnection = [[DoubanURLConnection alloc] 
+	DoubanURLConnection *urlConnection = [[DoubanURLConnection alloc] 
 					 initWithRequest:theRequest delegate:self];
+	NSString *uuid = [urlConnection.uuid copy];
+	[connectionPool setObject:urlConnection forKey:uuid];
 	urlConnection.type = connectionType;
 	urlConnection.responseTarget = target;
 	urlConnection.responseAction = action;
+	[urlConnection release];
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+	return [uuid autorelease];
 }
 
 #pragma mark NSURLConnection delegate methods
@@ -152,8 +151,6 @@ static DoubanConnector *doubanConnector;
 
 - (void)connectionDidFinishLoading:(DoubanURLConnection *)connection
 {	
-	//停止网络指示图标
-	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 	//如果没有返回数据，则直接结束
 	if (!responseData || [responseData length] <= 0) {
 		return;
@@ -233,10 +230,13 @@ static DoubanConnector *doubanConnector;
 		[reviewArray release];
 		[gdataXMLDocument release];
 	}
+	
+	//移除connection
+	[self removeConnectionWithUUID:connection.uuid];
 }
 
--(void)connection:(NSURLConnection *)connection didFailWithError:(NSError*)error{
-	
+-(void)connection:(DoubanURLConnection *)connection didFailWithError:(NSError*)error{
+	[self removeConnectionWithUUID:connection.uuid];
 }
 
 @end

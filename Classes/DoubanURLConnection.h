@@ -14,11 +14,12 @@ typedef enum  {
 } DoubanConnectionType;
 
 @interface DoubanURLConnection : NSURLConnection {
+	NSString *uuid;
 	DoubanConnectionType type;
 	id responseTarget;
 	SEL responseAction;
 }
-
+@property(nonatomic,readonly)NSString *uuid;
 @property(nonatomic,assign)DoubanConnectionType type;
 @property(nonatomic,assign)id responseTarget;
 @property(nonatomic,assign)SEL responseAction;

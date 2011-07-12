@@ -30,18 +30,30 @@
 
 - (void)dealloc{
 	[reviews release];
+	BH_RELEASE(connectionUUID);
 	[super dealloc];
 }
 
+
+-(void) viewWillDisappear:(BOOL)animated {
+    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
+		// back button was pressed.  We know this is true because self is no longer
+		// in the navigation stack. 
+		[[DoubanConnector sharedDoubanConnector] removeConnectionWithUUID:connectionUUID];
+    }
+    [super viewWillDisappear:animated];
+}
 
 - (void)viewDidLoad{
 	[super viewDidLoad];
 	[reviews removeAllObjects];
 	NSString *queryString = [NSString stringWithFormat:@"start-index=%d&max-results=%d&orderby=%@",startIndex,RESULTS_PER_PAGE,TIME];;
-	[[DoubanConnector sharedDoubanConnector] requestBookReviewsWithISBN:isbn 
+	
+	BH_RELEASE(connectionUUID);
+	connectionUUID = [[[DoubanConnector sharedDoubanConnector] requestBookReviewsWithISBN:isbn 
 																 queryString:queryString
 															  responseTarget:self 
-															  responseAction:@selector(didGetBookReviews:)];
+															  responseAction:@selector(didGetBookReviews:)] retain];
 	startIndex += RESULTS_PER_PAGE;
 	
 	if (loadingView == nil) {
@@ -109,10 +121,11 @@
 	}else {
 		NSString *queryString = [NSString stringWithFormat:@"start-index=%d&max-results=%d&orderby=%@",startIndex,RESULTS_PER_PAGE,TIME];;
 		startIndex += RESULTS_PER_PAGE;
-		[[DoubanConnector sharedDoubanConnector] requestBookReviewsWithISBN:isbn 
+		BH_RELEASE(connectionUUID);
+		connectionUUID = [[[DoubanConnector sharedDoubanConnector] requestBookReviewsWithISBN:isbn 
 																queryString:queryString
 															 responseTarget:self 
-															 responseAction:@selector(didGetBookReviews:)];
+															 responseAction:@selector(didGetBookReviews:)] retain];
 		reviewTableView.isLoading = YES;
 	}
 }

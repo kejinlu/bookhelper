@@ -19,6 +19,8 @@
 	NSString *isbn;
 	NSInteger totalResults;
 	NSInteger startIndex;
+	
+	NSString *connectionUUID;
 }
 
 @property(nonatomic,copy) NSString *isbn;

@@ -24,8 +24,20 @@
 	if (modalView) {
 		[modalView release];
 	}
+	BH_RELEASE(connectionUUID);
 	[super dealloc];
 }
+
+
+-(void) viewWillDisappear:(BOOL)animated {
+    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
+		// back button was pressed.  We know this is true because self is no longer
+		// in the navigation stack. 
+		[[DoubanConnector sharedDoubanConnector] removeConnectionWithUUID:connectionUUID];
+    }
+    [super viewWillDisappear:animated];
+}
+
 
 - (void)viewDidLoad{
 	priceWebView.delegate = self;
@@ -35,10 +47,10 @@
 	}
 	
 	[self.view addSubview:modalView];
-	
-	[[DoubanConnector sharedDoubanConnector] requestBookPriceHTMLWithBookId:subjectId
+	BH_RELEASE(connectionUUID);
+	connectionUUID = [[[DoubanConnector sharedDoubanConnector] requestBookPriceHTMLWithBookId:subjectId
 															 responseTarget:self
-															 responseAction:@selector(didGetPriceHTML:)];
+															 responseAction:@selector(didGetPriceHTML:)] retain];
 }
 
 - (void)didGetPriceHTML:(NSString *)htmlString{

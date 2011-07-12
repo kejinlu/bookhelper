@@ -17,6 +17,7 @@
 	NSString *isbn;
 	DoubanBook *book;
 	BOOL isRecord;
+	NSString *connectionUUID;
 	
 	NSArray *bookItemNames;
 	NSArray *bookItemImageNames;

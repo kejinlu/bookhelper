@@ -33,6 +33,9 @@
 	[bookItemNames release];
 	[bookItemImageNames release];
 	[coverView release];
+	if (connectionUUID) {
+		[connectionUUID release];
+	}
 	[super dealloc];
 }
 
@@ -44,12 +47,24 @@
     }
 }
 
+
+-(void) viewWillDisappear:(BOOL)animated {
+    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
+		// back button was pressed.  We know this is true because self is no longer
+		// in the navigation stack. 
+		[[DoubanConnector sharedDoubanConnector] removeConnectionWithUUID:connectionUUID];
+    }
+    [super viewWillDisappear:animated];
+}
+
+
+
 - (void)viewDidLoad{
 	[super viewDidLoad];
 	if (self.isbn) {
-		[[DoubanConnector sharedDoubanConnector] requestBookDataWithISBN:self.isbn
+		connectionUUID = [[[DoubanConnector sharedDoubanConnector] requestBookDataWithISBN:self.isbn
 														  responseTarget:self 
-														  responseAction:@selector(didGetDoubanBook:)];
+														  responseAction:@selector(didGetDoubanBook:)] retain];
 		if (modalView == nil) {    
 			modalView = [[PromptModalView alloc] initWithFrame:self.view.bounds];
 		}

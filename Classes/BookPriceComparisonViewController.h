@@ -15,6 +15,8 @@
 	IBOutlet UIWebView *priceWebView;
 	
 	PromptModalView *modalView;
+	
+	NSString *connectionUUID;
 }
 
 @property(nonatomic,copy) NSString *subjectId;
