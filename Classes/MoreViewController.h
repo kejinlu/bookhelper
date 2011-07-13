@@ -10,7 +10,8 @@
 
 
 @interface MoreViewController : UIViewController {
-
+	NSMutableArray *dataArray;
+	IBOutlet UITableView *moreTableView;
 }
 
 @end
