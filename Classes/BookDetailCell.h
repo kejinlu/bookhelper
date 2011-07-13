@@ -7,18 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ASImageView.h"
 #import "DoubanBook.h"
 #import "RatingDisplayView.h"
 @interface BookDetailCell : UITableViewCell {
-	ASImageView *coverView;
+	UIImageView *coverView;
 	UILabel *bookAuthorLabel;
 	UILabel *bookPublisherLabel;
 	UILabel *bookPubDateLabel;
 	UILabel *priceLabel;
 	UILabel *ISBNLabel;
 	RatingDisplayView *ratingView;
-	//UILabel *ratingHeaderLabel;
+
 	UILabel *ratingTailLabel;
 	DoubanBook *book;
 }

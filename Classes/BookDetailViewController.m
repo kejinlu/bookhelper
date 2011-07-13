@@ -13,6 +13,7 @@
 #import "DoubanConnector.h"
 #import "BookDetailCell.h"
 #import "BookDetailItemCell.h"
+#import "UIImageView+WebCache.h"
 @implementation BookDetailViewController
 @synthesize isbn;
 @synthesize book;
@@ -22,8 +23,7 @@
 	if (self = [super initWithNibName:@"BookDetailView" bundle:nil]) {
 		bookItemNames = [[NSArray alloc] initWithObjects:@"内容简介",@"作者简介",@"查看评论",@"图书比价",nil];
 		bookItemImageNames = [[NSArray alloc] initWithObjects:@"info.png",@"author.png",@"comment.png",@"price.png",nil];		
-		coverView = [[ASImageView alloc] initWithFrame:CGRectMake(10, 10, 120, 160)];
-		coverView.placeHolderImage = [UIImage imageNamed:@"cover_placeholder.jpg"];
+		//coverView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 120, 160)];
 
 	}
 	return self;
@@ -32,7 +32,7 @@
 - (void)dealloc{
 	[bookItemNames release];
 	[bookItemImageNames release];
-	[coverView release];
+	//[coverView release];
 	if (connectionUUID) {
 		[connectionUUID release];
 	}

@@ -9,9 +9,7 @@
 #import "BookSearchViewController.h"
 #import "NSString+URLEncoding.h"
 #import "DoubanBook.h"
-#import "ASImageView.h"
 #import "BookTableViewCell.h"
-#import "ASIHTTPRequest.h"
 
 @interface BookSearchViewController()
 - (void)setupSearchBar;

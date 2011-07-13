@@ -7,6 +7,7 @@
 //
 
 #import "BookDetailCell.h"
+#import "UIImageView+WebCache.h"
 
 @interface BookDetailCell()
 - (void)addCoverView;
@@ -44,7 +45,6 @@
 	[priceLabel release];
 	[ISBNLabel release];
 	[ratingView release];
-	//[ratingHeaderLabel release];
 	[ratingTailLabel release];
 	[super dealloc];
 }
@@ -52,7 +52,8 @@
 
 - (void)setBook:(DoubanBook *)_book{
 	book = _book;
-	coverView.urlString = book.coverImageURL;
+	[coverView setImageWithURL:[NSURL URLWithString:book.coverLargeImageURL]
+					   placeholderImage:[UIImage imageNamed:@"cover_placeholder.png"]];
 	bookAuthorLabel.text = [NSString stringWithFormat:@"作者: %@",book.author];
 	priceLabel.text = [NSString stringWithFormat:@"定价: %@",book.price];
 	bookPublisherLabel.text = [NSString stringWithFormat:@"出版社: %@",book.publisher];
@@ -65,7 +66,7 @@
 
 - (void)addCoverView{
 	CGRect coverViewRect = CGRectMake(8, 8, 90, 130);
-	coverView = [[ASImageView alloc] initWithFrame:coverViewRect];
+	coverView = [[UIImageView alloc] initWithFrame:coverViewRect];
 	[self.contentView addSubview:coverView];
 	
 }
@@ -117,13 +118,6 @@
 	
 }
 - (void)addRatingView{
-	//ratingHeaderLabel = [[UILabel alloc] initWithFrame:CGRectMake(110, 116, 12, 20)];
-//	ratingHeaderLabel.text = @"评分:";
-//	ratingHeaderLabel.textColor = [UIColor grayColor];
-//	ratingHeaderLabel.font = [UIFont systemFontOfSize:14];
-	//[self.contentView addSubview:ratingHeaderLabel];
-	
-	
 	ratingView = [[RatingDisplayView alloc] init];
 	ratingView.frame = CGRectMake(110, 116,84,16);
 	[self.contentView addSubview:ratingView];

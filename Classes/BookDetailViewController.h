@@ -8,7 +8,6 @@
 #import "BookPriceComparisonViewController.h"
 #import "DoubanBook.h"
 #import "BookReviewsViewController.h"
-#import "ASImageView.h"
 #import "PromptModalView.h"
 @interface BookDetailViewController : UIViewController {
 	
@@ -22,7 +21,7 @@
 	NSArray *bookItemNames;
 	NSArray *bookItemImageNames;
 	
-	ASImageView *coverView;
+	//UIImageView *coverView;
 	
 	
 }

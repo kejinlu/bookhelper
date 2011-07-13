@@ -16,6 +16,7 @@
 @synthesize summary;
 @synthesize alternateURL;
 @synthesize coverImageURL;
+@synthesize coverLargeImageURL;
 @synthesize isbn10;
 @synthesize isbn13;
 @synthesize pages;
@@ -70,6 +71,7 @@
 		
 		if ([@"image" isEqualToString:relValue]) {
 			book.coverImageURL = [[linkElement attributeForName:@"href"] stringValue];
+			book.coverLargeImageURL = [book.coverImageURL stringByReplacingOccurrencesOfString:@"spic" withString:@"lpic"];
 		}
 	}
 	

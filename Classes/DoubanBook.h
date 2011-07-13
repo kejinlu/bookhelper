@@ -14,6 +14,7 @@
 	NSString *summary;
 	NSString *alternateURL;
 	NSString *coverImageURL;
+	NSString *coverLargeImageURL;
 	
 	NSString *isbn10;
 	NSString *isbn13;
@@ -34,6 +35,7 @@
 @property(nonatomic,copy) NSString *summary;
 @property(nonatomic,copy) NSString *alternateURL;
 @property(nonatomic,copy) NSString *coverImageURL;
+@property(nonatomic,copy) NSString *coverLargeImageURL;
 @property(nonatomic,copy) NSString *isbn10;
 @property(nonatomic,copy) NSString *isbn13;
 @property(nonatomic,copy) NSString *pages;

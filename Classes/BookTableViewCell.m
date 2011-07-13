@@ -8,9 +8,9 @@
 
 #import "BookTableViewCell.h"
 #import "GradientView.h"
-
+#import "UIImageView+WebCache.h"
 @interface BookTableViewCell()
-- (void)addBookCoverImage;
+- (void)addBookCoverImageView;
 - (void)addTitleLabel;
 - (void)addAuthorLabel;
 - (void)addPublisherLabel;
@@ -23,7 +23,7 @@
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
 	if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-		[self addBookCoverImage];
+		[self addBookCoverImageView];
 		[self addTitleLabel];
 		[self addAuthorLabel];
 		[self addPublisherLabel];
@@ -37,7 +37,7 @@
 }
 
 - (void)dealloc{
-	[bookCoverImage release];
+	[bookCoverImageView release];
 	[titleLabel release];
 	[authorLabel release];
 	[publisherLabel release];
@@ -49,7 +49,8 @@
 #pragma mark set book
 - (void)setBook:(DoubanBook *)aBook{
 	book = aBook;
-	bookCoverImage.urlString = book.coverImageURL;
+	[bookCoverImageView setImageWithURL:[NSURL URLWithString:book.coverImageURL]
+                   placeholderImage:[UIImage imageNamed:@"cover_placeholder.png"]];
 	titleLabel.text = book.title;
 	authorLabel.text = book.author;
 	publisherLabel.text = book.publisher;
@@ -59,10 +60,9 @@
 
 #pragma mark -
 #pragma mark addSubviews
-- (void)addBookCoverImage{
-	bookCoverImage = [[ASImageView alloc] initWithFrame:CGRectMake(5, 10, 60, 80)];
-	bookCoverImage.placeHolderImage = [UIImage imageNamed:@"cover_placeholder.jpg"];
-	[self.contentView addSubview:bookCoverImage];
+- (void)addBookCoverImageView{
+	bookCoverImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 10, 60, 80)];
+	[self.contentView addSubview:bookCoverImageView];
 }
 
 - (void)addTitleLabel{

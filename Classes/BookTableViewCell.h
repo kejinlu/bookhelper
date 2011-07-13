@@ -5,11 +5,10 @@
 //  Created by Luke on 7/4/11.
 //  Copyright 2011 Taobao.
 #import "DoubanBook.h"
-#import "ASImageView.h"
 @interface BookTableViewCell : UITableViewCell {
 	DoubanBook *book;
 	
-	ASImageView *bookCoverImage;
+	UIImageView *bookCoverImageView;
 	UILabel *titleLabel;
 	UILabel *authorLabel;
 	UILabel *publisherLabel;

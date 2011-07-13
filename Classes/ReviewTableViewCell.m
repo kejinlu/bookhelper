@@ -8,9 +8,10 @@
 
 #import "ReviewTableViewCell.h"
 #import <QuartzCore/QuartzCore.h>
+#import "UIImageView+WebCache.h"
 
 @interface ReviewTableViewCell()
-- (void)addAuthorAvatarImage;
+- (void)addAuthorAvatarImageView;
 - (void)addTitleLabel;
 - (void)addAuthorNameLabel;
 - (void)addReviewLabel;
@@ -23,7 +24,7 @@
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
 	if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-		[self addAuthorAvatarImage];
+		[self addAuthorAvatarImageView];
 		[self addTitleLabel];
 		[self addAuthorNameLabel];
 		[self addReviewLabel];
@@ -33,7 +34,7 @@
 }
 
 - (void)dealloc{
-	[authorAvatarImage release];
+	[authorAvatarImageView release];
 	[titleLabel release];
 	[authorNameLabel release];
 	[reviewLabel release];
@@ -44,18 +45,19 @@
 
 - (void)setReview:(DoubanBookReviewSummary *)bookReview{
 	review = bookReview;
-	authorAvatarImage.urlString = review.authorIcon;
+	[authorAvatarImageView setImageWithURL:[NSURL URLWithString:review.authorIcon]
+					   placeholderImage:[UIImage imageNamed:@"user_placeholder.png"]];
 	titleLabel.text = review.title;
 	authorNameLabel.text = review.authorName;
 	reviewLabel.text = review.summary;	
 }
 
-- (void)addAuthorAvatarImage{
+- (void)addAuthorAvatarImageView{
 	CGRect rect = CGRectMake(5, 5, 40, 40);
-	authorAvatarImage = [[ASImageView alloc] initWithFrame:rect];
-	authorAvatarImage.layer.masksToBounds = YES;
-	authorAvatarImage.layer.cornerRadius = 6;
-	[self.contentView addSubview:authorAvatarImage];
+	authorAvatarImageView = [[UIImageView alloc] initWithFrame:rect];
+	authorAvatarImageView.layer.masksToBounds = YES;
+	authorAvatarImageView.layer.cornerRadius = 6;
+	[self.contentView addSubview:authorAvatarImageView];
 }
 
 - (void)addTitleLabel{

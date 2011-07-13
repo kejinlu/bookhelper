@@ -9,7 +9,6 @@
 #import "BookReviewsViewController.h"
 #import "DoubanConnector.h"
 #import "DoubanBookReviewSummary.h"
-#import "ASImageView.h"
 #import <QuartzCore/QuartzCore.h>
 #import "ReviewTableViewCell.h"
 

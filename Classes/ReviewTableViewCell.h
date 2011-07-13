@@ -8,12 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "DoubanBookReviewSummary.h"
-#import "ASImageView.h"
 
 @interface ReviewTableViewCell : UITableViewCell {
 	DoubanBookReviewSummary *review;
 	
-	ASImageView *authorAvatarImage;
+	UIImageView *authorAvatarImageView;
 	UILabel *titleLabel;
 	UILabel *authorNameLabel;
 	UILabel *reviewLabel;
