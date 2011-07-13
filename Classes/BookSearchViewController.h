@@ -17,6 +17,12 @@
 #define MAX_RESULTS 10
 @class DoubanBook;
 @interface BookSearchViewController : UIViewController<BookSearchBarViewControllerDelegate> {
+	
+	//titleView
+	IBOutlet UIView *titleView;
+	IBOutlet UILabel *queryStringLabel;
+	IBOutlet UILabel *resultCountLabel;
+	
 	NSMutableArray *results;	
 	IBOutlet ContinuousTableView *resultTableView;
 	
@@ -33,5 +39,6 @@
 
 - (void)showSearchBarWithSearchString;
 - (void)loadMore;
+- (void)refreshTitleView;
 
 @end

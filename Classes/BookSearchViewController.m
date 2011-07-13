@@ -42,7 +42,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	results = [[NSMutableArray alloc] initWithCapacity:0];	
+	results = [[NSMutableArray alloc] initWithCapacity:0];
+	titleView.frame =  CGRectMake(0, 0, 200, 45);
 	//[self setupSearchBar];
 }
 
@@ -51,6 +52,7 @@
 	if (searchedString == nil||[searchedString isEqualToString:@""]) {
 		[self.navigationController presentModalViewController:searchBarViewController animated:YES];
 	}
+	[self refreshTitleView];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -81,10 +83,28 @@
     [super dealloc];
 }
 
+- (void)refreshTitleView{
+	if (!searchedString || [searchedString isEqualToString:@""]) {
+		self.navigationItem.titleView = nil;
+	}else {
+		queryStringLabel.text = [NSString stringWithFormat:@"\"%@\"",searchedString];
+		resultCountLabel.text = [NSString stringWithFormat:@"共%d本书",totalResults];
+		self.navigationItem.titleView = titleView;
+	}
+
+}
+
 #pragma mark  search bar view controller delegate
 - (void)beginSearchWithString:(NSString *)searchString{
 	self.searchedString = searchString;
 	startIndex = 1;
+	totalResults = 0;
+	if (!searchString || [searchString isEqualToString:@""]) {
+		[results removeAllObjects];
+		[resultTableView reloadData];
+		[self refreshTitleView];
+		return;
+	}
 	NSString *queryString = [NSString stringWithFormat:@"q=%@&start-index=%d&max-results=%d",[searchString urlEncodeString]
 							 ,startIndex,MAX_RESULTS];
 	startIndex += MAX_RESULTS;
@@ -119,7 +139,8 @@
 	}
 
 	[resultTableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
-
+	
+	[self refreshTitleView];
 }
 
 

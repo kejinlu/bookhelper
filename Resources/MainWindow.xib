@@ -12,8 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="148"/>
-			<integer value="2"/>
+			<integer value="133"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -42,11 +41,10 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 			<object class="IBUIWindow" id="380026005">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">1316</int>
 				<object class="NSPSMatrix" key="NSFrameMatrix"/>
 				<string key="NSFrameSize">{320, 480}</string>
-				<reference key="NSSuperview"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
 					<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -68,12 +66,12 @@
 				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<bool key="IBUIHorizontal">NO</bool>
-				<object class="IBUINavigationController" key="IBUISelectedViewController" id="577372462">
-					<object class="IBUITabBarItem" key="IBUITabBarItem" id="509858004">
-						<string key="IBUITitle">条形码</string>
+				<object class="IBUINavigationController" key="IBUISelectedViewController" id="401041503">
+					<object class="IBUITabBarItem" key="IBUITabBarItem" id="475065270">
+						<string key="IBUITitle">搜索</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">barcode.png</string>
+							<string key="NSResourceName">search.png</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<reference key="IBUITabBar"/>
@@ -85,7 +83,7 @@
 					</object>
 					<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					<bool key="IBUIHorizontal">NO</bool>
-					<object class="IBUINavigationBar" key="IBUINavigationBar" id="616267936">
+					<object class="IBUINavigationBar" key="IBUINavigationBar" id="830979219">
 						<nil key="NSNextResponder"/>
 						<int key="NSvFlags">256</int>
 						<string key="NSFrameSize">{0, 0}</string>
@@ -96,14 +94,14 @@
 					</object>
 					<object class="NSMutableArray" key="IBUIViewControllers">
 						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="IBUIViewController" id="693912426">
-							<object class="IBUINavigationItem" key="IBUINavigationItem" id="745123767">
+						<object class="IBUIViewController" id="942477925">
+							<object class="IBUINavigationItem" key="IBUINavigationItem" id="515622518">
 								<reference key="IBUINavigationBar"/>
-								<string key="IBUITitle">条码扫描</string>
+								<string key="IBUITitle">搜索图书</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
-							<reference key="IBUIParentViewController" ref="577372462"/>
-							<string key="IBUINibName">BarCodeScannerView</string>
+							<reference key="IBUIParentViewController" ref="401041503"/>
+							<string key="IBUINibName">BookSearchView</string>
 							<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 								<int key="interfaceOrientation">1</int>
 							</object>
@@ -114,13 +112,12 @@
 				</object>
 				<object class="NSMutableArray" key="IBUIViewControllers">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<reference ref="577372462"/>
-					<object class="IBUINavigationController" id="401041503">
-						<object class="IBUITabBarItem" key="IBUITabBarItem" id="475065270">
-							<string key="IBUITitle">搜索</string>
+					<object class="IBUINavigationController" id="577372462">
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="509858004">
+							<string key="IBUITitle">条形码</string>
 							<object class="NSCustomResource" key="IBUIImage">
 								<string key="NSClassName">NSImage</string>
-								<string key="NSResourceName">search.png</string>
+								<string key="NSResourceName">barcode.png</string>
 							</object>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							<reference key="IBUITabBar"/>
@@ -132,7 +129,7 @@
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUIHorizontal">NO</bool>
-						<object class="IBUINavigationBar" key="IBUINavigationBar" id="830979219">
+						<object class="IBUINavigationBar" key="IBUINavigationBar" id="616267936">
 							<nil key="NSNextResponder"/>
 							<int key="NSvFlags">256</int>
 							<string key="NSFrameSize">{0, 0}</string>
@@ -143,13 +140,13 @@
 						</object>
 						<object class="NSMutableArray" key="IBUIViewControllers">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUIViewController" id="942477925">
-								<object class="IBUINavigationItem" key="IBUINavigationItem" id="515622518">
-									<string key="IBUITitle">搜索</string>
+							<object class="IBUIViewController" id="693912426">
+								<object class="IBUINavigationItem" key="IBUINavigationItem" id="745123767">
+									<string key="IBUITitle">条码扫描</string>
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								</object>
-								<reference key="IBUIParentViewController" ref="401041503"/>
-								<string key="IBUINibName">BookSearchView</string>
+								<reference key="IBUIParentViewController" ref="577372462"/>
+								<string key="IBUINibName">BarCodeScannerView</string>
 								<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 									<int key="interfaceOrientation">1</int>
 								</object>
@@ -158,6 +155,7 @@
 							</object>
 						</object>
 					</object>
+					<reference ref="401041503"/>
 					<object class="IBUINavigationController" id="1051660493">
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="726802219">
 							<string key="IBUITitle">历史</string>
@@ -521,7 +519,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>UIApplication</string>
 					<string>UIResponder</string>
-					<string>{{286, 279}, {320, 480}}</string>
+					<string>{{329, 279}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -551,7 +549,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 						</object>
 					</object>
-					<string>{{229, 373}, {320, 480}}</string>
+					<string>{{329, 373}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>bookhelperAppDelegate</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
