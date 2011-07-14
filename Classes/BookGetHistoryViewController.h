@@ -11,13 +11,15 @@
 #import "LoadingViewController.h"
 #import "ContinuousTableView.h"
 @interface BookGetHistoryViewController : UIViewController<UIActionSheetDelegate> {
-	IBOutlet ContinuousTableView *historyTable;
+	ContinuousTableView *historyTable;
 	
 	BOOL filterByStarred;
 	NSInteger totalPages;
 	NSInteger pageNumber;
 	NSMutableArray *histories;
 }
+
+@property(nonatomic,retain) IBOutlet ContinuousTableView *historyTable;
 
 - (void)checkNavigationItemButtons;
 - (void)launchTrashMenu;

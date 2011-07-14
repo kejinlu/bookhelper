@@ -19,12 +19,13 @@
 @interface BookSearchViewController : UIViewController<BookSearchBarViewControllerDelegate> {
 	
 	//titleView
-	IBOutlet UIView *titleView;
-	IBOutlet UILabel *queryStringLabel;
-	IBOutlet UILabel *resultCountLabel;
+	UIView *titleView;
+	UILabel *queryStringLabel;
+	UILabel *resultCountLabel;	
+	ContinuousTableView *resultTableView;
 	
-	NSMutableArray *results;	
-	IBOutlet ContinuousTableView *resultTableView;
+	
+	NSMutableArray *results;
 	
 	BookSearchBarViewController *searchBarViewController;
 	
@@ -35,6 +36,11 @@
 	NSInteger startIndex;
 	
 }
+@property(nonatomic,retain) IBOutlet UIView *titleView;
+@property(nonatomic,retain) IBOutlet UILabel *queryStringLabel;	
+@property(nonatomic,retain) IBOutlet UILabel *resultCountLabel;	
+@property(nonatomic,retain) IBOutlet ContinuousTableView *resultTableView;
+
 @property(nonatomic,copy)	NSString *searchedString;
 
 - (void)showSearchBarWithSearchString;

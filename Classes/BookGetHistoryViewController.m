@@ -17,6 +17,7 @@
 
 #define TRASH_ACTION_SHEET 100
 @implementation BookGetHistoryViewController
+@synthesize historyTable;
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
 	if (self = [super initWithCoder:aDecoder]) {
@@ -31,6 +32,7 @@
 
 - (void)dealloc{
 	[histories release];
+	BH_RELEASE(historyTable);
 	[super dealloc];
 }
 
@@ -44,7 +46,7 @@
 																					  action:@selector(launchTrashMenu)] autorelease];
 		self.navigationItem.rightBarButtonItem = trashButton;		
 		
-		UISegmentedControl *segmentedControl = [[[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"所有",@"加星",nil]] autorelease];
+		UISegmentedControl *segmentedControl = [[[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"所有",@"收藏夹",nil]] autorelease];
 	    [segmentedControl setSegmentedControlStyle:UISegmentedControlStyleBar];
 		[segmentedControl setWidth:80 forSegmentAtIndex:0];
 		[segmentedControl setWidth:80 forSegmentAtIndex:1];
@@ -54,6 +56,7 @@
 }
 
 - (void)viewDidLoad{
+	[super viewDidLoad];
 	[[NSNotificationCenter defaultCenter] addObserver:self 
 											 selector:@selector(reloadFromDB:) 
 												 name:@"ReloadHistoryNotification"  
@@ -61,6 +64,11 @@
 	[self checkNavigationItemButtons];
 	UISegmentedControl *segmentControl = (UISegmentedControl *)[self navigationItem].titleView;
 	segmentControl.selectedSegmentIndex = 0;
+}
+
+- (void)viewDidUnload{
+	self.historyTable = nil;
+	[super viewDidUnload];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -192,7 +200,7 @@
 - (void)launchTrashMenu{
 	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@""
 															 delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil
-													otherButtonTitles: @"删除未加星的",@"删除所有",nil];
+													otherButtonTitles: @"删除未收藏的",@"删除所有",nil];
 	[actionSheet setActionSheetStyle:UIActionSheetStyleAutomatic];
 	[actionSheet setTag:TRASH_ACTION_SHEET];
 	[actionSheet showFromBarButtonItem:self.navigationItem.rightBarButtonItem animated:YES];
@@ -204,7 +212,7 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
 	if (actionSheet.tag == TRASH_ACTION_SHEET) {
 		if (buttonIndex == 0) {
-			//删除未加星的
+			//删除未收藏的
 			[[BookGetHistoryDatabase sharedInstance] deleteUnStarredBookHitories];
 		}else if (buttonIndex == 1) {
 			//删除所有

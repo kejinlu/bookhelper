@@ -47,7 +47,7 @@
         backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, indicatorWidth, indicatorHeight)];
         [scrollView addSubview:backView];
         
-        activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+        activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
         activityView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
         [activityView sizeToFit];
 

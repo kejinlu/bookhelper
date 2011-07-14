@@ -16,9 +16,10 @@
 	ZBarReaderViewController *barReaderViewController;
 	//扫描成功之后的声音
 	AVAudioPlayer *beep;
+	BOOL isScannerAvailable;
 
 }
-
-- (void) initAudio;
-- (void) playBeep;
+- (void)initBarReaderViewController;
+- (void)initAudio;
+- (void)playBeep;
 @end

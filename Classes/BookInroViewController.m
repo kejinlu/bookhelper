@@ -20,7 +20,7 @@
 	UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, 320, 406)];
 	textView.backgroundColor = [UIColor whiteColor];
 	textView.editable = NO;
-	textView.text = bookIntro;
+	textView.text = !bookIntro||[bookIntro isEqualToString:@""] ? @"本书暂无简介。" : bookIntro;
 	textView.textColor = [UIColor blackColor];
 	textView.font = [UIFont systemFontOfSize:18];
 	[self.view addSubview:textView];

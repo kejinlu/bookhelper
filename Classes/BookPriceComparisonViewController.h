@@ -11,14 +11,13 @@
 
 @interface BookPriceComparisonViewController : UIViewController<UIWebViewDelegate> {
 
-	NSString *subjectId;	
-	IBOutlet UIWebView *priceWebView;
-	
+	UIWebView *priceWebView;
+
+	NSString *subjectId;		
 	PromptModalView *modalView;
-	
 	NSString *connectionUUID;
 }
-
+@property(nonatomic,retain)IBOutlet UIWebView *priceWebView;
 @property(nonatomic,copy) NSString *subjectId;
 
 - (void)didGetPriceHTML:(NSString *)htmlString;

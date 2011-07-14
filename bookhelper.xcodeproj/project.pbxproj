@@ -20,6 +20,8 @@
 		A3317F0D13BC8ED500D0E7A6 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3317F0C13BC8ED500D0E7A6 /* MoreViewController.m */; };
 		A349455713C1FFFE00C25B23 /* ReviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A349455613C1FFFE00C25B23 /* ReviewTableViewCell.m */; };
 		A34945B113C2190600C25B23 /* BookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A34945B013C2190600C25B23 /* BookTableViewCell.m */; };
+		A34E956813CF14DC00DD7487 /* search_background.png in Resources */ = {isa = PBXBuildFile; fileRef = A34E956713CF14DC00DD7487 /* search_background.png */; };
+		A34E96EF13CF536D00DD7487 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = A34E96EE13CF536D00DD7487 /* about.html */; };
 		A35CC85213C84C9D00135D7E /* prices.css in Resources */ = {isa = PBXBuildFile; fileRef = A35CC85113C84C9D00135D7E /* prices.css */; };
 		A35CC9A713C9E85900135D7E /* BookDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A35CC9A613C9E85900135D7E /* BookDetailCell.m */; };
 		A35CCA8B13CA0C7D00135D7E /* RatingDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A35CCA8A13CA0C7D00135D7E /* RatingDisplayView.m */; };
@@ -60,6 +62,7 @@
 		A3C597B313CDACE3000453E9 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C5979713CDACE3000453E9 /* UIImageView+WebCache.m */; };
 		A3C597E113CDB2F6000453E9 /* cover_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C597E013CDB2F6000453E9 /* cover_placeholder.png */; };
 		A3C597E913CDB491000453E9 /* user_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C597E813CDB491000453E9 /* user_placeholder.png */; };
+		A3C59CE613CEC901000453E9 /* search_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C59CE513CEC901000453E9 /* search_background@2x.png */; };
 		A3C7DA4F13C2EDD200472D1F /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DA2813C2EDD100472D1F /* Icon-72.png */; };
 		A3C7DA5013C2EDD200472D1F /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DA2913C2EDD100472D1F /* Icon-Small-50.png */; };
 		A3C7DA5113C2EDD200472D1F /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C7DA2A13C2EDD100472D1F /* Icon-Small.png */; };
@@ -148,6 +151,8 @@
 		A349455613C1FFFE00C25B23 /* ReviewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewTableViewCell.m; sourceTree = "<group>"; };
 		A34945AF13C2190600C25B23 /* BookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookTableViewCell.h; sourceTree = "<group>"; };
 		A34945B013C2190600C25B23 /* BookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookTableViewCell.m; sourceTree = "<group>"; };
+		A34E956713CF14DC00DD7487 /* search_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_background.png; sourceTree = "<group>"; };
+		A34E96EE13CF536D00DD7487 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
 		A35CC85113C84C9D00135D7E /* prices.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = prices.css; sourceTree = "<group>"; };
 		A35CC9A513C9E85900135D7E /* BookDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetailCell.h; sourceTree = "<group>"; };
 		A35CC9A613C9E85900135D7E /* BookDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetailCell.m; sourceTree = "<group>"; };
@@ -216,6 +221,7 @@
 		A3C5979713CDACE3000453E9 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		A3C597E013CDB2F6000453E9 /* cover_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover_placeholder.png; sourceTree = "<group>"; };
 		A3C597E813CDB491000453E9 /* user_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_placeholder.png; sourceTree = "<group>"; };
+		A3C59CE513CEC901000453E9 /* search_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_background@2x.png"; sourceTree = "<group>"; };
 		A3C7DA2813C2EDD100472D1F /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		A3C7DA2913C2EDD100472D1F /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		A3C7DA2A13C2EDD100472D1F /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
@@ -507,6 +513,8 @@
 		A3C7DA2613C2EDD100472D1F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A34E956713CF14DC00DD7487 /* search_background.png */,
+				A3C59CE513CEC901000453E9 /* search_background@2x.png */,
 				A3C597E813CDB491000453E9 /* user_placeholder.png */,
 				A3C597E013CDB2F6000453E9 /* cover_placeholder.png */,
 				A35CCA9013CA11A800135D7E /* onestar.png */,
@@ -543,6 +551,7 @@
 				A3C7DA4D13C2EDD200472D1F /* star.png */,
 				A3C7DA4E13C2EDD200472D1F /* unstar.png */,
 				A35CC85113C84C9D00135D7E /* prices.css */,
+				A34E96EE13CF536D00DD7487 /* about.html */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -821,6 +830,9 @@
 				A3C597AF13CDACE3000453E9 /* README.md in Resources */,
 				A3C597E113CDB2F6000453E9 /* cover_placeholder.png in Resources */,
 				A3C597E913CDB491000453E9 /* user_placeholder.png in Resources */,
+				A3C59CE613CEC901000453E9 /* search_background@2x.png in Resources */,
+				A34E956813CF14DC00DD7487 /* search_background.png in Resources */,
+				A34E96EF13CF536D00DD7487 /* about.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -887,6 +899,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lu Kejin (76G7A94Y3Q)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -899,6 +912,7 @@
 					"\"$(SRCROOT)/Libraries/ZBarSDK\"",
 				);
 				PRODUCT_NAME = bookhelper;
+				PROVISIONING_PROFILE = "703BE824-C3FE-4A5D-84CF-0804BF22B0E8";
 			};
 			name = Debug;
 		};
@@ -906,6 +920,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lu Kejin (76G7A94Y3Q)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = bookhelper_Prefix.pch;
@@ -916,6 +931,7 @@
 					"\"$(SRCROOT)/Libraries/ZBarSDK\"",
 				);
 				PRODUCT_NAME = bookhelper;
+				PROVISIONING_PROFILE = "703BE824-C3FE-4A5D-84CF-0804BF22B0E8";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -924,14 +940,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lu kejin (7ES269D2MX)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lu Kejin (76G7A94Y3Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lu Kejin (76G7A94Y3Q)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Libraries/ZBarSDK";
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C3B85B81-DF62-4D70-839A-50D4815A3156";
+				PROVISIONING_PROFILE = "703BE824-C3FE-4A5D-84CF-0804BF22B0E8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "703BE824-C3FE-4A5D-84CF-0804BF22B0E8";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -940,7 +958,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lu kejin (7ES269D2MX)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lu Kejin (76G7A94Y3Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lu Kejin (76G7A94Y3Q)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -948,7 +967,8 @@
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Libraries/ZBarSDK";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C3B85B81-DF62-4D70-839A-50D4815A3156";
+				PROVISIONING_PROFILE = "703BE824-C3FE-4A5D-84CF-0804BF22B0E8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "703BE824-C3FE-4A5D-84CF-0804BF22B0E8";
 				SDKROOT = iphoneos;
 			};
 			name = Release;

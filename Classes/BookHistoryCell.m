@@ -28,8 +28,8 @@
 }
 
 - (void)dealloc{
-	[self setStarButton:nil];
 	[starImageView release];
+	[self setStarButton:nil];
 	[bookTitleLabel release];
 	[bookInfoLabel release];
 	[self setBookHistory:nil];

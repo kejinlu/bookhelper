@@ -12,7 +12,7 @@
 @interface BookDetailViewController : UIViewController {
 	
 	PromptModalView *modalView;
-	IBOutlet UITableView *detailTableView;
+	UITableView *detailTableView;
 	NSString *isbn;
 	DoubanBook *book;
 	BOOL isRecord;
@@ -25,6 +25,8 @@
 	
 	
 }
+@property(nonatomic,retain) IBOutlet UITableView *detailTableView;
+
 @property(nonatomic,copy)NSString *isbn;
 @property(nonatomic,retain)DoubanBook *book;
 @property(nonatomic,assign)BOOL isRecord;

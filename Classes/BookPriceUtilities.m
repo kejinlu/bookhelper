@@ -20,6 +20,8 @@
 	HTMLNode *contentNode = [[wrapperNode findChildWithAttribute:@"id" matchingName:@"lzform" allowPartial:YES] 
 							 findChildWithAttribute:@"id" matchingName:@"content" allowPartial:YES];
 	HTMLNode *priceNode = [[[contentNode findChildOfClass:@"grid-16-8 clearfix"] findChildOfClass:@"article"] findChildOfClass:@"indent"];
-	return [priceNode rawContents];
+	NSString *priceHTML = [[priceNode rawContents] copy];
+	[htmlParser release];
+	return [priceHTML autorelease];
 }
 @end

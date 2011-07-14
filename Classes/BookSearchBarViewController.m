@@ -10,6 +10,7 @@
 
 
 @implementation BookSearchBarViewController
+@synthesize searchBar;
 @synthesize searchString;
 @synthesize delegate;
 
@@ -21,13 +22,24 @@
 	return self;
 }
 
+- (void)dealloc{
+	BH_RELEASE(searchBar);
+	[super dealloc];
+}
+
 - (void)viewDidLoad{
+	[super viewDidLoad];
 	displayFrame = self.view.frame;
     hiddenFrame = self.view.frame;
     hiddenFrame.origin.y = -60;
     
     self.view.frame = hiddenFrame;
     self.view.alpha = 0;
+}
+
+- (void)viewDidUnload{
+	self.searchBar = nil;
+	[super viewDidUnload];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

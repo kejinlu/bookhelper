@@ -17,15 +17,12 @@
 
 
 @implementation BookSearchViewController
+@synthesize titleView;
+@synthesize queryStringLabel;
+@synthesize resultCountLabel;
+@synthesize resultTableView;
+
 @synthesize searchedString;
-
-
-- (id)initWithCoder:(NSCoder *)aDecoder{
-	if (self = [super initWithCoder:aDecoder]) {
-		[self setupSearchBar];
-	}
-	return self;
-}
 
 - (void)setupSearchBar{
 	if (!searchBarViewController) {
@@ -40,12 +37,6 @@
 	[searchButtonItem release];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-	results = [[NSMutableArray alloc] initWithCapacity:0];
-	titleView.frame =  CGRectMake(0, 0, 200, 45);
-	//[self setupSearchBar];
-}
 
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -71,15 +62,37 @@
     [super didReceiveMemoryWarning];
 	
 	// Release any cached data, images, etc that aren't in use.
+	[results removeAllObjects];
+	self.searchedString = @"";
+	totalResults = 0;
+	[self refreshTitleView];
+	[resultTableView reloadData];
 }
 
-- (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+	results = [[NSMutableArray alloc] initWithCapacity:0];
+	titleView.frame =  CGRectMake(0, 0, 200, 45);
+	[self setupSearchBar];
 }
 
+- (void)viewDidUnload{
+	self.titleView = nil;
+	self.queryStringLabel = nil;
+	self.resultCountLabel = nil;
+	self.resultTableView = nil;
+	[super viewDidUnload];
+}
 
 - (void)dealloc {
+	if (searchBarViewController) {
+		BH_RELEASE(searchBarViewController);
+	}
+	BH_RELEASE(titleView);
+	BH_RELEASE(queryStringLabel);
+	BH_RELEASE(resultCountLabel);
+	BH_RELEASE(resultTableView);
     [super dealloc];
 }
 
@@ -119,7 +132,6 @@
 	[[self view] addSubview:loadingView];
 	
 	[results removeAllObjects];
-
 	
 }
 

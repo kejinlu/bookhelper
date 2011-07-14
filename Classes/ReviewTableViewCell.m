@@ -29,6 +29,7 @@
 		[self addAuthorNameLabel];
 		[self addReviewLabel];
 		[self addDateLabel];
+		self.selectionStyle = UITableViewCellSelectionStyleNone;
 	}
 	return self;
 }
@@ -64,7 +65,7 @@
 	CGRect rect = CGRectMake(50, 6, 260, 20);
 	titleLabel = [[UILabel alloc] initWithFrame:rect];
 	titleLabel.backgroundColor = [UIColor colorWithRed:0.933 green:1.0 blue:0.933 alpha:1.0];
-	titleLabel.font = [UIFont systemFontOfSize:13];
+	titleLabel.font = [UIFont systemFontOfSize:14];
 	titleLabel.textColor =[UIColor colorWithRed:0.2 green:0.431 blue:0.737 alpha:1.0];
 	titleLabel.layer.masksToBounds = YES;
 	titleLabel.layer.cornerRadius = 4;
@@ -75,15 +76,15 @@
 	CGRect rect = CGRectMake(50, 25, 100, 20);
 	authorNameLabel = [[UILabel alloc] initWithFrame:rect];
 	authorNameLabel.backgroundColor = [UIColor clearColor];
-	authorNameLabel.font = [UIFont systemFontOfSize:12];
+	authorNameLabel.font = [UIFont systemFontOfSize:13];
 	[self.contentView addSubview:authorNameLabel];
 }
 
 - (void)addReviewLabel{
-	CGRect rect = CGRectMake(5, 50, 300, 40);
+	CGRect rect = CGRectMake(5, 50, 300, 50);
 	reviewLabel = [[UILabel alloc] initWithFrame:rect];
 	reviewLabel.backgroundColor = [UIColor clearColor];
-	reviewLabel.font = [UIFont systemFontOfSize:12];
+	reviewLabel.font = [UIFont systemFontOfSize:13];
 	reviewLabel.numberOfLines = 0;
 	[self.contentView addSubview:reviewLabel];
 }

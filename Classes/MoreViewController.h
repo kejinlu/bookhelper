@@ -11,7 +11,7 @@
 
 @interface MoreViewController : UIViewController {
 	NSMutableArray *dataArray;
-	IBOutlet UITableView *moreTableView;
+	UITableView *moreTableView;
 }
-
+@property(nonatomic,retain) IBOutlet UITableView *moreTableView;
 @end

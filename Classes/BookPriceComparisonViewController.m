@@ -11,6 +11,7 @@
 
 
 @implementation BookPriceComparisonViewController
+@synthesize priceWebView;
 @synthesize subjectId;
 
 - (id)init{
@@ -21,9 +22,8 @@
 }
 
 - (void)dealloc{
-	if (modalView) {
-		[modalView release];
-	}
+	BH_RELEASE(priceWebView);
+	BH_RELEASE(modalView);
 	BH_RELEASE(connectionUUID);
 	[super dealloc];
 }
@@ -53,7 +53,13 @@
 															 responseAction:@selector(didGetPriceHTML:)] retain];
 }
 
+- (void)viewDidUnload{
+	self.priceWebView = nil;
+	[super viewDidUnload];
+}
+
 - (void)didGetPriceHTML:(NSString *)htmlString{
+	htmlString = htmlString ? htmlString : @"对不起,本书没有比较数据...";
 	NSString *html = [NSString stringWithFormat:@"<head><link href=\"prices.css\" rel=\"stylesheet\" type=\"text/css\" /></head><body>%@</body>",htmlString];
 	[priceWebView loadHTMLString:html baseURL:[[NSBundle mainBundle] bundleURL]];
 }

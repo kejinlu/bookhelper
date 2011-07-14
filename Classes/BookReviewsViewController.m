@@ -17,6 +17,7 @@
 #define RESULTS_PER_PAGE 12
 
 @implementation BookReviewsViewController
+@synthesize reviewTableView;
 @synthesize isbn;
 
 - (id)init{
@@ -29,6 +30,7 @@
 
 - (void)dealloc{
 	[reviews release];
+	BH_RELEASE(reviewTableView);
 	BH_RELEASE(connectionUUID);
 	[super dealloc];
 }
@@ -59,6 +61,11 @@
 		loadingView = [[PromptModalView alloc] initWithFrame:self.view.frame];
 	}
 	[[self view] addSubview:loadingView];
+}
+
+- (void)viewDidUnload{
+	self.reviewTableView = nil;
+	[super viewDidUnload];
 }
 
 - (void)didGetBookReviews:(NSDictionary *)userInfo{

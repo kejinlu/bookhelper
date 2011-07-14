@@ -14,9 +14,9 @@
 - (id)init{
 	CGRect rect = CGRectMake(0, 0, 84, 16);
 	if (self = [super initWithFrame:rect]) {
-		oneStar = [UIImage imageNamed:@"onestar.png"];
-		halfStar = [UIImage imageNamed:@"halfstar.png"];
-		zeroStar = [UIImage imageNamed:@"zerostar.png"];
+		oneStar = [[UIImage imageNamed:@"onestar.png"] retain];
+		halfStar = [[UIImage imageNamed:@"halfstar.png"] retain];
+		zeroStar = [[UIImage imageNamed:@"zerostar.png"] retain];
 	}
 	return self;
 	

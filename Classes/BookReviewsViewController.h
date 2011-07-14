@@ -11,7 +11,7 @@
 #import "PromptModalView.h"
 
 @interface BookReviewsViewController : UIViewController {
-	IBOutlet ContinuousTableView *reviewTableView;
+	ContinuousTableView *reviewTableView;
 
 	PromptModalView *loadingView;
 
@@ -22,7 +22,7 @@
 	
 	NSString *connectionUUID;
 }
-
+@property(nonatomic,retain) IBOutlet ContinuousTableView *reviewTableView; 
 @property(nonatomic,copy) NSString *isbn;
 
 - (void)didGetBookReviews:(NSDictionary *)userInfo;

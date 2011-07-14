@@ -15,12 +15,15 @@
 
 
 @interface BookSearchBarViewController : UIViewController{
-	IBOutlet UISearchBar *searchBar;
+	UISearchBar *searchBar;
 	NSString *searchString;
 	id delegate;
 	CGRect displayFrame;
 	CGRect hiddenFrame;
 }
+
+@property(nonatomic,retain) IBOutlet UISearchBar *searchBar;
+
 @property(nonatomic,copy) NSString *searchString;
 @property(nonatomic,assign)id delegate;
 - (IBAction)cancel:(id)sender ;

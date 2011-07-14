@@ -9,45 +9,68 @@
 #import "BarCodeScannerViewController.h"
 #import "ScannerOverlayView.h"
 #import "BookGetHistoryDatabase.h"
+
 @implementation BarCodeScannerViewController
 
+- (void)viewDidLoad{
+	[super viewDidLoad];
+	
+	[self initBarReaderViewController];
+	[self initAudio];
 
-- (id)initWithCoder:(NSCoder *)aDecoder{
-	if (self = [super initWithCoder:aDecoder]) {
-		barReaderViewController = [ZBarReaderViewController new];
-		[barReaderViewController setShowsZBarControls:NO];
-		barReaderViewController.sourceType = UIImagePickerControllerSourceTypeCamera;
-		barReaderViewController.showsCameraControls = NO;
-		barReaderViewController.readerDelegate = self;
-		barReaderViewController.readerView.torchMode = 0;
-		ZBarImageScanner *scanner = barReaderViewController.scanner;
-		
-
-		[scanner setSymbology: ZBAR_ISBN10
-					   config: ZBAR_CFG_ENABLE
-						   to: 1];
-		[scanner setSymbology: ZBAR_ISBN13
-					   config: ZBAR_CFG_ENABLE
-						   to: 1];
-		
-		// disable rarely used i2/5 to improve performance
-		[scanner setSymbology: ZBAR_I25
-					   config: ZBAR_CFG_ENABLE
-						   to: 0];
-		
-	}
-	return self;
-}
-
--(void)viewDidLoad{
+	//set frame
 	UIView *barReaderView = [barReaderViewController view];
 	barReaderView.frame = CGRectMake(0.0, 0.0, 320.0, 367.0);
-	ScannerOverlayView *overlay = [[ScannerOverlayView alloc]initWithFrame:[barReaderView bounds]];
+	
+	//add overlay for barReaderView
+	ScannerOverlayView *overlay = [[ScannerOverlayView alloc] initWithFrame:[barReaderView bounds]];
 	[barReaderViewController setCameraOverlayView:overlay];
-	[self initAudio];
+	[overlay release];
+	
+	[[self view] addSubview:barReaderView];
+	[barReaderViewController.readerView start];//start scanning
 }
 
-- (void) initAudio
+- (void)viewDidUnload{
+	[super viewDidUnload];
+	if (barReaderViewController) {
+		BH_RELEASE(barReaderViewController);
+	}
+	if (beep) {
+		BH_RELEASE(beep);
+	}
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+	[super viewWillAppear:animated];
+	isScannerAvailable = YES;
+}
+
+
+- (void)initBarReaderViewController{
+	barReaderViewController = [ZBarReaderViewController new];
+	[barReaderViewController setShowsZBarControls:NO];
+	barReaderViewController.sourceType = UIImagePickerControllerSourceTypeCamera;
+	barReaderViewController.showsCameraControls = NO;
+	barReaderViewController.readerDelegate = self;
+	barReaderViewController.readerView.torchMode = 0;
+	ZBarImageScanner *scanner = barReaderViewController.scanner;
+	
+	
+	[scanner setSymbology: ZBAR_ISBN10
+				   config: ZBAR_CFG_ENABLE
+					   to: 1];
+	[scanner setSymbology: ZBAR_ISBN13
+				   config: ZBAR_CFG_ENABLE
+					   to: 1];
+	
+	// disable rarely used i2/5 to improve performance
+	[scanner setSymbology: ZBAR_I25
+				   config: ZBAR_CFG_ENABLE
+					   to: 0];
+}
+
+- (void)initAudio
 {
     if(beep)
         return;
@@ -76,21 +99,13 @@
 }
 
 
-- (void)viewDidAppear:(BOOL)animated{
-	[super viewDidAppear:animated];
-	[[self view] addSubview:[barReaderViewController view]];
-	[barReaderViewController viewWillAppear:animated];
-	[[UIApplication sharedApplication] setStatusBarHidden:NO];
-	
-}
-
-- (void)viewDidDisappear{
-	[[barReaderViewController view] removeFromSuperview];
-}
-
-
 - (void)  imagePickerController: (UIImagePickerController*) picker didFinishPickingMediaWithInfo: (NSDictionary*) info
 {
+	if (!isScannerAvailable) {
+		return;
+	}
+	isScannerAvailable = NO;
+	
     UIImage *image = [info objectForKey: UIImagePickerControllerOriginalImage];
 	
     id <NSFastEnumeration> results = [info objectForKey: ZBarReaderControllerResults];
@@ -116,8 +131,6 @@
 	bookDetailViewController.navigationItem.title = @"图书详情";
 	[[self navigationController ] pushViewController:bookDetailViewController animated:YES];
 	[bookDetailViewController release];
-	
-	
 }
 
 - (void) readerControllerDidFailToRead: (ZBarReaderController*) reader

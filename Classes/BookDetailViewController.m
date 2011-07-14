@@ -15,6 +15,7 @@
 #import "BookDetailItemCell.h"
 #import "UIImageView+WebCache.h"
 @implementation BookDetailViewController
+@synthesize detailTableView;
 @synthesize isbn;
 @synthesize book;
 @synthesize isRecord;
@@ -32,10 +33,8 @@
 - (void)dealloc{
 	[bookItemNames release];
 	[bookItemImageNames release];
-	//[coverView release];
-	if (connectionUUID) {
-		[connectionUUID release];
-	}
+	BH_RELEASE(detailTableView);
+	BH_RELEASE(connectionUUID);
 	[super dealloc];
 }
 
@@ -72,6 +71,11 @@
 		[self.view addSubview:modalView];
 	}
 
+}
+
+- (void)viewDidUnload{
+	self.detailTableView = nil;
+	[super viewDidUnload];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

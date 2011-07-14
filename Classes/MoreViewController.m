@@ -10,6 +10,7 @@
 
 
 @implementation MoreViewController
+@synthesize moreTableView;
 
 - (void)viewDidLoad{
 	[super viewDidLoad];
@@ -18,9 +19,14 @@
 
 - (void)viewDidUnload{
 	[super viewDidUnload];
+	self.moreTableView = nil;
 	BH_RELEASE(dataArray);
 }
 
+- (void)dealloc{
+	BH_RELEASE(moreTableView);
+	[super dealloc];
+}
 
 #pragma mark -
 #pragma mark tableView datasource
