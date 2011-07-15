@@ -18,6 +18,10 @@
 		A303142713BA32BF000BD08C /* BookGetHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A303142613BA32BF000BD08C /* BookGetHistoryViewController.m */; };
 		A30A966A13C49A2D0069152B /* PromptModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = A30A966913C49A2D0069152B /* PromptModalView.m */; };
 		A3317F0D13BC8ED500D0E7A6 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3317F0C13BC8ED500D0E7A6 /* MoreViewController.m */; };
+		A342705C13CFDCDF00A460E1 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A342705B13CFDCDF00A460E1 /* AboutViewController.m */; };
+		A342706413CFE27C00A460E1 /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A342706313CFE27C00A460E1 /* AboutView.xib */; };
+		A342712913CFE7E900A460E1 /* SoftwareNotesController.m in Sources */ = {isa = PBXBuildFile; fileRef = A342712813CFE7E900A460E1 /* SoftwareNotesController.m */; };
+		A34271B913CFF42D00A460E1 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34271B813CFF42D00A460E1 /* MessageUI.framework */; };
 		A349455713C1FFFE00C25B23 /* ReviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A349455613C1FFFE00C25B23 /* ReviewTableViewCell.m */; };
 		A34945B113C2190600C25B23 /* BookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A34945B013C2190600C25B23 /* BookTableViewCell.m */; };
 		A34E956813CF14DC00DD7487 /* search_background.png in Resources */ = {isa = PBXBuildFile; fileRef = A34E956713CF14DC00DD7487 /* search_background.png */; };
@@ -147,6 +151,12 @@
 		A30A966913C49A2D0069152B /* PromptModalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromptModalView.m; sourceTree = "<group>"; };
 		A3317F0B13BC8ED500D0E7A6 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		A3317F0C13BC8ED500D0E7A6 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		A342705A13CFDCDF00A460E1 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		A342705B13CFDCDF00A460E1 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		A342706313CFE27C00A460E1 /* AboutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
+		A342712713CFE7E900A460E1 /* SoftwareNotesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoftwareNotesController.h; sourceTree = "<group>"; };
+		A342712813CFE7E900A460E1 /* SoftwareNotesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoftwareNotesController.m; sourceTree = "<group>"; };
+		A34271B813CFF42D00A460E1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		A349455513C1FFFE00C25B23 /* ReviewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewTableViewCell.h; sourceTree = "<group>"; };
 		A349455613C1FFFE00C25B23 /* ReviewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewTableViewCell.m; sourceTree = "<group>"; };
 		A34945AF13C2190600C25B23 /* BookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookTableViewCell.h; sourceTree = "<group>"; };
@@ -337,6 +347,7 @@
 				A39A9A3C13BDDC1800937489 /* MobileCoreServices.framework in Frameworks */,
 				A39A9A5B13BDDC9100937489 /* libz.dylib in Frameworks */,
 				A3C7DAE313C2EFA800472D1F /* libzbar.a in Frameworks */,
+				A34271B913CFF42D00A460E1 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +416,7 @@
 				A39A9A3313BDDBAA00937489 /* CFNetwork.framework */,
 				A39A9A3B13BDDC1800937489 /* MobileCoreServices.framework */,
 				A39A9A5A13BDDC9100937489 /* libz.dylib */,
+				A34271B813CFF42D00A460E1 /* MessageUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -552,6 +564,7 @@
 				A3C7DA4E13C2EDD200472D1F /* unstar.png */,
 				A35CC85113C84C9D00135D7E /* prices.css */,
 				A34E96EE13CF536D00DD7487 /* about.html */,
+				A342706313CFE27C00A460E1 /* AboutView.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -712,6 +725,10 @@
 				A39A9BB913BE22FA00937489 /* BookSearchBarViewController.m */,
 				A3BDF06B13C00A950027A336 /* BookReviewsViewController.h */,
 				A3BDF06C13C00A950027A336 /* BookReviewsViewController.m */,
+				A342705A13CFDCDF00A460E1 /* AboutViewController.h */,
+				A342705B13CFDCDF00A460E1 /* AboutViewController.m */,
+				A342712713CFE7E900A460E1 /* SoftwareNotesController.h */,
+				A342712813CFE7E900A460E1 /* SoftwareNotesController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -833,6 +850,7 @@
 				A3C59CE613CEC901000453E9 /* search_background@2x.png in Resources */,
 				A34E956813CF14DC00DD7487 /* search_background.png in Resources */,
 				A34E96EF13CF536D00DD7487 /* about.html in Resources */,
+				A342706413CFE27C00A460E1 /* AboutView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -889,6 +907,8 @@
 				A3C597B113CDACE3000453E9 /* SDWebImageDownloader.m in Sources */,
 				A3C597B213CDACE3000453E9 /* SDWebImageManager.m in Sources */,
 				A3C597B313CDACE3000453E9 /* UIImageView+WebCache.m in Sources */,
+				A342705C13CFDCDF00A460E1 /* AboutViewController.m in Sources */,
+				A342712913CFE7E900A460E1 /* SoftwareNotesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -270,5 +270,8 @@
 																	filterByStarred:filterByStarred];
 	[histories addObjectsFromArray:results];
 	[historyTable reloadData];
+	[self checkNavigationItemButtons];
+	UISegmentedControl *segmentControl = (UISegmentedControl *)[self navigationItem].titleView;
+	segmentControl.selectedSegmentIndex = 0;
 }
 @end

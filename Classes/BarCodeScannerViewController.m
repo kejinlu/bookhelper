@@ -119,6 +119,7 @@
         return;
 	
 	if (sym.type != ZBAR_ISBN13 && sym.type != ZBAR_ISBN10) {
+		isScannerAvailable = YES;
 		return;
 	}
 	

@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MessageUI/MessageUI.h>
 
 
-@interface MoreViewController : UIViewController {
+@interface MoreViewController : UIViewController<MFMailComposeViewControllerDelegate> {
 	NSMutableArray *dataArray;
 	UITableView *moreTableView;
 }
 @property(nonatomic,retain) IBOutlet UITableView *moreTableView;
+- (void)displayComposerSheet;
+- (void)launchMailAppOnDevice;
 @end
