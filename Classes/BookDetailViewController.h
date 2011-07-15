@@ -31,4 +31,5 @@
 @property(nonatomic,retain)DoubanBook *book;
 @property(nonatomic,assign)BOOL isRecord;
 
+- (void)didGetDoubanBook:(NSDictionary *)userInfo;
 @end

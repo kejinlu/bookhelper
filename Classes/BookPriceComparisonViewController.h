@@ -20,6 +20,6 @@
 @property(nonatomic,retain)IBOutlet UIWebView *priceWebView;
 @property(nonatomic,copy) NSString *subjectId;
 
-- (void)didGetPriceHTML:(NSString *)htmlString;
+- (void)didGetPriceHTML:(NSDictionary *)userInfo;
 
 @end

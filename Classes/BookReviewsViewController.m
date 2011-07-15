@@ -69,6 +69,18 @@
 }
 
 - (void)didGetBookReviews:(NSDictionary *)userInfo{
+	NSError *error = [userInfo objectForKey:@"error"];
+	if (error) {
+		[loadingView removeFromSuperview];
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误" 
+														message:[error localizedDescription]
+													   delegate:self 
+											  cancelButtonTitle:@"知道了" otherButtonTitles:nil];
+		[alert show];
+		[alert release];
+		return;
+	}
+	
 	reviewTableView.isLoading = NO;
 	totalResults=[[userInfo objectForKey:@"totalResults"] intValue];
 	NSArray *bookReviews = [userInfo objectForKey:@"reviews"];

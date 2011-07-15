@@ -163,10 +163,11 @@ static DoubanConnector *doubanConnector;
 		GDataXMLElement *rootElement = [gdataXMLDocument rootElement];
 		
 		DoubanBook *book = [DoubanBook doubanBookFromXMLElement:rootElement];
+		NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:book,@"book",nil];
 		//执行target action
 		if ([connection.responseTarget respondsToSelector:connection.responseAction]) {
 			[connection.responseTarget performSelector:connection.responseAction
-											withObject:book];
+											withObject:userInfo];
 		}		
 		[gdataXMLDocument release];
 		
@@ -198,9 +199,10 @@ static DoubanConnector *doubanConnector;
 		[gdataXMLDocument release];
 	}else if (connection.type == DOUBAN_PRICE) {
 		NSString *priceHTML = [BookPriceUtilities priceHTMLFromData:responseData];
+		NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:priceHTML,@"html",nil];
 		if ([connection.responseTarget respondsToSelector:connection.responseAction]) {
 			[connection.responseTarget performSelector:connection.responseAction
-											withObject:priceHTML];
+											withObject:userInfo];
 		}
 		
 	}else if (connection.type == DOUBAN_BOOK_REVIEWS) {
@@ -236,6 +238,12 @@ static DoubanConnector *doubanConnector;
 }
 
 -(void)connection:(DoubanURLConnection *)connection didFailWithError:(NSError*)error{
+	NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:error,@"error",nil];
+	
+	if ([connection.responseTarget respondsToSelector:connection.responseAction]) {
+		[connection.responseTarget performSelector:connection.responseAction
+										withObject:userInfo];
+	}
 	[self removeConnectionWithUUID:connection.uuid];
 }
 

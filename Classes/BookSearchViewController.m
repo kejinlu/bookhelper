@@ -137,6 +137,17 @@
 
 #pragma mark Book
 - (void)didGetDoubanBooks:(NSDictionary *)userInfo{
+	NSError *error = [userInfo objectForKey:@"error"];
+	if (error) {
+		[loadingView removeFromSuperview];
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误" 
+														message:[error localizedDescription]
+													   delegate:self 
+											  cancelButtonTitle:@"知道了" otherButtonTitles:nil];
+		[alert show];
+		[alert release];
+		return;
+	}
 	resultTableView.isLoading = NO;
 	totalResults=[[userInfo objectForKey:@"totalResults"] intValue];
 	NSArray *books = [userInfo objectForKey:@"books"];

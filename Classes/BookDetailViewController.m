@@ -169,7 +169,21 @@
 
 #pragma mark -
 #pragma mark response action
-- (void)didGetDoubanBook:(DoubanBook *)_book{
+- (void)didGetDoubanBook:(NSDictionary *)userInfo{
+	
+	NSError *error = [userInfo objectForKey:@"error"];
+	if (error) {
+		[modalView removeFromSuperview];
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误" 
+														message:[error localizedDescription]
+													   delegate:self 
+											  cancelButtonTitle:@"知道了" otherButtonTitles:nil];
+		[alert show];
+		[alert release];
+		return;
+	}
+	
+	DoubanBook *_book = [userInfo objectForKey:@"book"];
 	self.book = _book;
 	//加入历史记录
 	if (self.isRecord) {
