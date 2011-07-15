@@ -54,7 +54,7 @@
 }
 
 - (void)addStarButton{
-	starButton = [TableUIButton buttonWithType:UIButtonTypeCustom];
+	starButton = [[TableUIButton buttonWithType:UIButtonTypeCustom] retain];
 	starButton.frame = CGRectMake(0, 0, 52, 52);
 	starImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 16, 16)];
 	starImageView.center = CGPointMake(starButton.bounds.size.width/2.0, starButton.bounds.size.height/2.0);

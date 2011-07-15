@@ -919,7 +919,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Lu Kejin (76G7A94Y3Q)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: LU KEJIN";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -932,7 +932,7 @@
 					"\"$(SRCROOT)/Libraries/ZBarSDK\"",
 				);
 				PRODUCT_NAME = bookhelper;
-				PROVISIONING_PROFILE = "703BE824-C3FE-4A5D-84CF-0804BF22B0E8";
+				PROVISIONING_PROFILE = "8BE44949-FDB8-4F53-8ED1-D57E383CAAE3";
 			};
 			name = Debug;
 		};
@@ -940,7 +940,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Lu Kejin (76G7A94Y3Q)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: LU KEJIN";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = bookhelper_Prefix.pch;
@@ -951,7 +951,7 @@
 					"\"$(SRCROOT)/Libraries/ZBarSDK\"",
 				);
 				PRODUCT_NAME = bookhelper;
-				PROVISIONING_PROFILE = "703BE824-C3FE-4A5D-84CF-0804BF22B0E8";
+				PROVISIONING_PROFILE = "8BE44949-FDB8-4F53-8ED1-D57E383CAAE3";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -960,16 +960,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Lu Kejin (76G7A94Y3Q)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lu Kejin (76G7A94Y3Q)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: LU KEJIN";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: LU KEJIN";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Libraries/ZBarSDK";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "703BE824-C3FE-4A5D-84CF-0804BF22B0E8";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "703BE824-C3FE-4A5D-84CF-0804BF22B0E8";
+				PROVISIONING_PROFILE = "8BE44949-FDB8-4F53-8ED1-D57E383CAAE3";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8BE44949-FDB8-4F53-8ED1-D57E383CAAE3";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -978,17 +979,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Lu Kejin (76G7A94Y3Q)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lu Kejin (76G7A94Y3Q)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: LU KEJIN";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: LU KEJIN";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Libraries/ZBarSDK";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "703BE824-C3FE-4A5D-84CF-0804BF22B0E8";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "703BE824-C3FE-4A5D-84CF-0804BF22B0E8";
+				PROVISIONING_PROFILE = "8BE44949-FDB8-4F53-8ED1-D57E383CAAE3";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8BE44949-FDB8-4F53-8ED1-D57E383CAAE3";
 				SDKROOT = iphoneos;
 			};
 			name = Release;

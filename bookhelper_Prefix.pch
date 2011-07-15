@@ -8,17 +8,3 @@
 #endif
 
 #define BH_RELEASE(obj) { [obj release]; obj = nil; }
-
-//used for view tag
-#define STAR_BUTTON 12344
-#define BOOK_TITLE 12345
-#define BOOK_AUTHOR 12348
-#define BOOK_PUBLISHER 12349
-#define BOOK_PUB_DATE 12350
-
-#define BOOK_INFO  12346
-#define BOOK_COVER 12347
-
-#define BOOK_REVIEW_AUTHOR_ICON 22345
-#define BOOK_REVIEW_AUTHOR_NAME 22346
-#define BOOK_REVIEW_TEXT  22347

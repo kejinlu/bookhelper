@@ -72,7 +72,7 @@
 	}
 	
 	NSString *htmlString = [userInfo objectForKey:@"html"];
-	htmlString = htmlString ? htmlString : @"对不起,本书没有比较数据...";
+	htmlString = htmlString ? htmlString : @"对不起,本书没有比价数据...";
 	NSString *html = [NSString stringWithFormat:@"<head><link href=\"prices.css\" rel=\"stylesheet\" type=\"text/css\" /></head><body>%@</body>",htmlString];
 	[priceWebView loadHTMLString:html baseURL:[[NSBundle mainBundle] bundleURL]];
 }

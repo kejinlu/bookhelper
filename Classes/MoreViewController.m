@@ -111,6 +111,7 @@
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
 	[self becomeFirstResponder];
 	[self dismissModalViewControllerAnimated:YES];
+	[moreTableView deselectRowAtIndexPath:[moreTableView indexPathForSelectedRow] animated:YES];
 }
 
 - (void)launchMailAppOnDevice{
