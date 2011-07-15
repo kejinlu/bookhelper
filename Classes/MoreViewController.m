@@ -15,7 +15,7 @@
 
 - (void)viewDidLoad{
 	[super viewDidLoad];
-	dataArray = [[NSMutableArray alloc] initWithObjects:[NSArray arrayWithObjects:@"关于豆瓣书友",@"特别说明",@"建议反馈",nil],nil];
+	dataArray = [[NSMutableArray alloc] initWithObjects:[NSArray arrayWithObjects:@"关于豆瓣书友",@"特别说明",@"问题反馈",nil],nil];
 }
 
 - (void)viewDidUnload{
@@ -102,7 +102,7 @@
 	MFMailComposeViewController *controller = [[MFMailComposeViewController alloc] init];
 	controller.mailComposeDelegate = self;
 	[controller setToRecipients:[NSArray arrayWithObjects:@"kejinlu@gmail.com",nil]];
-	[controller setSubject:@"豆瓣书友 意见反馈"];
+	[controller setSubject:@"豆瓣书友 问题反馈"];
 	[controller setMessageBody:@"写点东西呗..." isHTML:NO];
 	[self presentModalViewController:controller animated:YES];
 	[controller release];
