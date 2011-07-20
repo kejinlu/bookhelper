@@ -3,7 +3,7 @@
 //  bookhelper
 //
 //  Created by Luke on 7/11/11.
-//  Copyright 2011 Taobao.com. All rights reserved.
+//  Copyright 2011 Geeklu.com. All rights reserved.
 //
 
 #import "BookHistoryCell.h"
