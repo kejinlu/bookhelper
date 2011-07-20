@@ -30,6 +30,9 @@
 
 - (void)dealloc{
 	[reviews release];
+	if (HUD) {
+		BH_RELEASE(HUD);
+	}
 	BH_RELEASE(reviewTableView);
 	BH_RELEASE(connectionUUID);
 	[super dealloc];
@@ -57,10 +60,13 @@
 															  responseAction:@selector(didGetBookReviews:)] retain];
 	startIndex += RESULTS_PER_PAGE;
 	
-	if (loadingView == nil) {
-		loadingView = [[PromptModalView alloc] initWithFrame:self.view.frame];
+	if (HUD == nil) {
+		HUD = [[MBProgressHUD alloc] initWithView:self.view];
+		HUD.animationType = MBProgressHUDAnimationZoom;
+		HUD.labelText = @"正在加载...";
 	}
-	[[self view] addSubview:loadingView];
+	[[self view] addSubview:HUD];
+	[HUD show:YES];
 }
 
 - (void)viewDidUnload{
@@ -71,7 +77,7 @@
 - (void)didGetBookReviews:(NSDictionary *)userInfo{
 	NSError *error = [userInfo objectForKey:@"error"];
 	if (error) {
-		[loadingView removeFromSuperview];
+		[HUD removeFromSuperview];
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误" 
 														message:[error localizedDescription]
 													   delegate:self 
@@ -86,7 +92,7 @@
 	NSArray *bookReviews = [userInfo objectForKey:@"reviews"];
 	[reviews addObjectsFromArray:bookReviews];
 	
-	[loadingView animateToHide];
+	[HUD hide:YES];
 
 	[reviewTableView reloadData];
 }

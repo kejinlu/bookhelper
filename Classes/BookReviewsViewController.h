@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "ContinuousTableView.h"
-#import "PromptModalView.h"
+#import "MBProgressHUD.h"
 
 @interface BookReviewsViewController : UIViewController {
 	ContinuousTableView *reviewTableView;
 
-	PromptModalView *loadingView;
+	MBProgressHUD *HUD;
 
 	NSMutableArray *reviews;
 	NSString *isbn;

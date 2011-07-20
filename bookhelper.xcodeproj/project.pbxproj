@@ -16,7 +16,6 @@
 		A303133913B9F8C4000BD08C /* PathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A303133813B9F8C4000BD08C /* PathUtilities.m */; };
 		A303139C13BA2123000BD08C /* BookGetHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = A303139B13BA2123000BD08C /* BookGetHistory.m */; };
 		A303142713BA32BF000BD08C /* BookGetHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A303142613BA32BF000BD08C /* BookGetHistoryViewController.m */; };
-		A30A966A13C49A2D0069152B /* PromptModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = A30A966913C49A2D0069152B /* PromptModalView.m */; };
 		A3317F0D13BC8ED500D0E7A6 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3317F0C13BC8ED500D0E7A6 /* MoreViewController.m */; };
 		A342705C13CFDCDF00A460E1 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A342705B13CFDCDF00A460E1 /* AboutViewController.m */; };
 		A342706413CFE27C00A460E1 /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A342706313CFE27C00A460E1 /* AboutView.xib */; };
@@ -55,6 +54,8 @@
 		A3BDF06D13C00A950027A336 /* BookReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF06C13C00A950027A336 /* BookReviewsViewController.m */; };
 		A3BDF07A13C00DDE0027A336 /* DoubanBookReviewSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF07913C00DDE0027A336 /* DoubanBookReviewSummary.m */; };
 		A3BDF36A13C044C70027A336 /* BookAuthorIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDF36913C044C70027A336 /* BookAuthorIntroViewController.m */; };
+		A3C16F2013D707CA00D2FFFF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C16F1E13D707CA00D2FFFF /* MBProgressHUD.m */; };
+		A3C16F2113D707CA00D2FFFF /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = A3C16F1F13D707CA00D2FFFF /* README.mdown */; };
 		A3C44EC813CB2EE90027207E /* BookHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C44EC713CB2EE90027207E /* BookHistoryCell.m */; };
 		A3C44EFA13CB39550027207E /* BookDetailItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C44EF913CB39550027207E /* BookDetailItemCell.m */; };
 		A3C4536B13CC8DD60027207E /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C4536A13CC8DD60027207E /* NSString+UUID.m */; };
@@ -147,8 +148,6 @@
 		A303139B13BA2123000BD08C /* BookGetHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookGetHistory.m; sourceTree = "<group>"; };
 		A303142513BA32BF000BD08C /* BookGetHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookGetHistoryViewController.h; sourceTree = "<group>"; };
 		A303142613BA32BF000BD08C /* BookGetHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookGetHistoryViewController.m; sourceTree = "<group>"; };
-		A30A966813C49A2D0069152B /* PromptModalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromptModalView.h; sourceTree = "<group>"; };
-		A30A966913C49A2D0069152B /* PromptModalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromptModalView.m; sourceTree = "<group>"; };
 		A3317F0B13BC8ED500D0E7A6 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		A3317F0C13BC8ED500D0E7A6 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		A342705A13CFDCDF00A460E1 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
@@ -209,6 +208,9 @@
 		A3BDF07913C00DDE0027A336 /* DoubanBookReviewSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanBookReviewSummary.m; sourceTree = "<group>"; };
 		A3BDF36813C044C70027A336 /* BookAuthorIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookAuthorIntroViewController.h; sourceTree = "<group>"; };
 		A3BDF36913C044C70027A336 /* BookAuthorIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookAuthorIntroViewController.m; sourceTree = "<group>"; };
+		A3C16F1D13D707CA00D2FFFF /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		A3C16F1E13D707CA00D2FFFF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		A3C16F1F13D707CA00D2FFFF /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mdown; sourceTree = "<group>"; };
 		A3C44EC613CB2EE90027207E /* BookHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookHistoryCell.h; sourceTree = "<group>"; };
 		A3C44EC713CB2EE90027207E /* BookHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookHistoryCell.m; sourceTree = "<group>"; };
 		A3C44EF813CB39550027207E /* BookDetailItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetailItemCell.h; sourceTree = "<group>"; };
@@ -456,8 +458,6 @@
 				A3B8C93A13BB8A6600028546 /* TableUIButton.m */,
 				A3C7DF1813C36EBA00472D1F /* ContinuousTableView.h */,
 				A3C7DF1913C36EBA00472D1F /* ContinuousTableView.m */,
-				A30A966813C49A2D0069152B /* PromptModalView.h */,
-				A30A966913C49A2D0069152B /* PromptModalView.m */,
 				A35CCA8913CA0C7D00135D7E /* RatingDisplayView.h */,
 				A35CCA8A13CA0C7D00135D7E /* RatingDisplayView.m */,
 			);
@@ -499,6 +499,16 @@
 				A39EB16C13C8040900DF2232 /* HTMLParser.m */,
 			);
 			path = HTMLParser;
+			sourceTree = "<group>";
+		};
+		A3C16F1C13D707CA00D2FFFF /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				A3C16F1D13D707CA00D2FFFF /* MBProgressHUD.h */,
+				A3C16F1E13D707CA00D2FFFF /* MBProgressHUD.m */,
+				A3C16F1F13D707CA00D2FFFF /* README.mdown */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		A3C5976513CDACE3000453E9 /* SDWebImage */ = {
@@ -586,6 +596,7 @@
 		A3C7DA8313C2EFA800472D1F /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				A3C16F1C13D707CA00D2FFFF /* MBProgressHUD */,
 				A3C5976513CDACE3000453E9 /* SDWebImage */,
 				A39EB16813C8040900DF2232 /* HTMLParser */,
 				A3C7DA9B13C2EFA800472D1F /* fmdb */,
@@ -851,6 +862,7 @@
 				A34E956813CF14DC00DD7487 /* search_background.png in Resources */,
 				A34E96EF13CF536D00DD7487 /* about.html in Resources */,
 				A342706413CFE27C00A460E1 /* AboutView.xib in Resources */,
+				A3C16F2113D707CA00D2FFFF /* README.mdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -894,7 +906,6 @@
 				A3C7DADF13C2EFA800472D1F /* GDataXMLNode.m in Sources */,
 				A3C7DED413C3542B00472D1F /* LoadingTableViewCell.m in Sources */,
 				A3C7DF1A13C36EBA00472D1F /* ContinuousTableView.m in Sources */,
-				A30A966A13C49A2D0069152B /* PromptModalView.m in Sources */,
 				A39EB16D13C8040900DF2232 /* HTMLNode.m in Sources */,
 				A39EB16E13C8040900DF2232 /* HTMLParser.m in Sources */,
 				A39EB1E913C8123800DF2232 /* EndStreamTableViewCell.m in Sources */,
@@ -909,6 +920,7 @@
 				A3C597B313CDACE3000453E9 /* UIImageView+WebCache.m in Sources */,
 				A342705C13CFDCDF00A460E1 /* AboutViewController.m in Sources */,
 				A342712913CFE7E900A460E1 /* SoftwareNotesController.m in Sources */,
+				A3C16F2013D707CA00D2FFFF /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

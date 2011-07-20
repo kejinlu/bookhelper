@@ -8,10 +8,10 @@
 #import "BookPriceComparisonViewController.h"
 #import "DoubanBook.h"
 #import "BookReviewsViewController.h"
-#import "PromptModalView.h"
+#import "MBProgressHUD.h"
 @interface BookDetailViewController : UIViewController {
 	
-	PromptModalView *modalView;
+	MBProgressHUD *HUD;
 	UITableView *detailTableView;
 	NSString *isbn;
 	DoubanBook *book;

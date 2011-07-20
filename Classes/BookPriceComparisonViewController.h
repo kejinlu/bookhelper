@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PromptModalView.h"
+#import "MBProgressHUD.h"
 
 @interface BookPriceComparisonViewController : UIViewController<UIWebViewDelegate> {
 
 	UIWebView *priceWebView;
 
 	NSString *subjectId;		
-	PromptModalView *modalView;
+	MBProgressHUD *HUD;
 	NSString *connectionUUID;
 }
 @property(nonatomic,retain)IBOutlet UIWebView *priceWebView;

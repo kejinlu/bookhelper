@@ -23,7 +23,9 @@
 
 - (void)dealloc{
 	BH_RELEASE(priceWebView);
-	BH_RELEASE(modalView);
+	if (HUD) {
+		BH_RELEASE(HUD);
+	}
 	BH_RELEASE(connectionUUID);
 	[super dealloc];
 }
@@ -42,11 +44,14 @@
 - (void)viewDidLoad{
 	priceWebView.delegate = self;
 
-	if (modalView == nil) {    
-		modalView = [[PromptModalView alloc] initWithFrame:self.view.bounds];
+	if (HUD == nil) {    
+		HUD = [[MBProgressHUD alloc] initWithView:self.view];
+		HUD.animationType = MBProgressHUDAnimationZoom;
+		HUD.labelText = @"正在加载...";
 	}
 	
-	[self.view addSubview:modalView];
+	[self.view addSubview:HUD];
+	[HUD show:YES];
 	BH_RELEASE(connectionUUID);
 	connectionUUID = [[[DoubanConnector sharedDoubanConnector] requestBookPriceHTMLWithBookId:subjectId
 															 responseTarget:self
@@ -61,7 +66,7 @@
 - (void)didGetPriceHTML:(NSDictionary *)userInfo{
 	NSError *error = [userInfo objectForKey:@"error"];
 	if (error) {
-		[modalView removeFromSuperview];
+		[HUD removeFromSuperview];
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误" 
 														message:[error localizedDescription]
 													   delegate:self 
@@ -80,9 +85,8 @@
 
 #pragma mark web view delegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView {    
-	[modalView animateToHide];
-	[modalView release];
-	modalView = nil;
+	[HUD hide:YES];
+	[HUD removeFromSuperview];
 }
 
 -(BOOL) webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {

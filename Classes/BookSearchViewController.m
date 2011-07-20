@@ -89,6 +89,9 @@
 	if (searchBarViewController) {
 		BH_RELEASE(searchBarViewController);
 	}
+	if (HUD) {
+		BH_RELEASE(HUD);
+	}
 	BH_RELEASE(titleView);
 	BH_RELEASE(queryStringLabel);
 	BH_RELEASE(resultCountLabel);
@@ -126,11 +129,13 @@
 															   responseTarget:self 
 															   responseAction:@selector(didGetDoubanBooks:)];
 	[[self searchDisplayController] setActive:NO animated:YES];
-	if (loadingView == nil) {
-		loadingView = [[PromptModalView alloc] initWithFrame:self.view.frame];
+	if (HUD == nil) {
+		HUD = [[MBProgressHUD alloc] initWithView:self.view];
+		HUD.animationType = MBProgressHUDAnimationZoom;
+		HUD.labelText = @"正在加载...";
 	}
-	[[self view] addSubview:loadingView];
-	
+	[[self view] addSubview:HUD];
+	[HUD show:YES];
 	[results removeAllObjects];
 	
 }
@@ -139,7 +144,7 @@
 - (void)didGetDoubanBooks:(NSDictionary *)userInfo{
 	NSError *error = [userInfo objectForKey:@"error"];
 	if (error) {
-		[loadingView removeFromSuperview];
+		[HUD removeFromSuperview];
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"错误" 
 														message:[error localizedDescription]
 													   delegate:self 
@@ -151,7 +156,8 @@
 	resultTableView.isLoading = NO;
 	totalResults=[[userInfo objectForKey:@"totalResults"] intValue];
 	NSArray *books = [userInfo objectForKey:@"books"];
-	[loadingView animateToHide];
+	[HUD hide:YES];
+	[HUD removeFromSuperview];
 	for (DoubanBook* book in books) {
 		[results addObject:book];
 	}

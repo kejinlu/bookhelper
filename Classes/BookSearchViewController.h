@@ -13,7 +13,7 @@
 #import "LoadingViewController.h"
 #import "BookSearchBarViewController.h"
 #import "ContinuousTableView.h"
-#import "PromptModalView.h"
+#import "MBProgressHUD.h"
 #define MAX_RESULTS 10
 @class DoubanBook;
 @interface BookSearchViewController : UIViewController<BookSearchBarViewControllerDelegate> {
@@ -29,7 +29,7 @@
 	
 	BookSearchBarViewController *searchBarViewController;
 	
-	PromptModalView *loadingView;
+	MBProgressHUD *HUD;
 	
 	NSString *searchedString;
 	NSInteger totalResults;
